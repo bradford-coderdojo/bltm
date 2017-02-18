@@ -387,14 +387,14 @@ R R R R r r r r
 ]]},
 
 {0x0500,"coin",[[
-. . . . . . . . 
-. . Y Y Y Y . . 
-. Y Y 0 0 Y Y . 
-Y Y 0 Y Y 0 Y Y 
-Y Y Y 0 0 Y Y Y 
-Y Y 0 Y Y 0 Y Y 
-. Y Y 0 0 Y Y . 
-. . Y Y Y Y . . 
+. wrw . . . . . 
+. wrw . . . . . . 
+. wrw . . . . . . 
+. wrw . . . . . . 
+. wrw . . . . . . 
+. wrw . . . . . .  
+. wrw . . . . . . 
+. wrw. . . . . .
 ]]},
 
 {0x0600,"body_p1",[[
