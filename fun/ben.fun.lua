@@ -37,8 +37,8 @@ hardware={
 	{
 		component="tiles",
 		name="tiles",
-		tile_size={16,16},
-		bitmap_size={32,32},
+		tile_size={8,8},
+		bitmap_size={64,16},
 	},
 	{
 		component="copper",
@@ -63,7 +63,7 @@ hardware={
 		component="tilemap",
 		name="text",
 		tiles="tiles",
-		tile_size={16,16}, -- use half width tiles for font
+		tile_size={8,8}, -- use half width tiles for font
 		tilemap_size={math.ceil(screen.hx/4),math.ceil(screen.hy/8)},
 		layer=3,
 	},
@@ -382,22 +382,14 @@ R R R R r r r r
 ]]},
 
 {0x0500,"coin",[[
-. . . . . . 0 0 0 0 0 . . . . . 
-. . . . . 0 m m m m m 0 . . . .
-. . . . . 0 m m m m m 7 0 . . .
-. . . . 0 m m m m m m 7 0 . . .
-. . 0 0 m m m m m m 7 7 0 . . .
-. 0 m m m m m m m 7 7 F 0 . . .
-. 0 m m m m m m m 7 7 F 0 . . .
-0 m m m m m m m 7 7 F 0 . . . .
-0 m m m m 7 7 7 7 F F 0 . . . .
-0 F m 7 7 7 7 F F F 0 . . . . .
-0 F F F F F F F 0 0 . . . . . .
-. 0 0 F F F 0 0 . . . . . . . .
-. . . 0 0 0 . . . . . . . . . .
-. . . . . . . . . . . . . . . .
-. . . . . . . . . . . . . . . .
-. . . . . . . . . . . . . . . .
+. . . 0 0 0 0 . 
+. . 0 m m m 0 0
+. 0 0 m m 7 7 0
+0 0 m m m 7 F 0
+0 m m m 7 7 F 0
+0 F 7 7 7 F 0 .
+. 0 F F F 0 . .
+. . 0 0 0 . . .
 ]]},
 
 {0x0600,"body_p1",[[
