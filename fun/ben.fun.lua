@@ -38,7 +38,7 @@ hardware={
 		component="tiles",
 		name="tiles",
 		tile_size={16,16},
-		bitmap_size={64,16},
+		bitmap_size={32,32},
 	},
 	{
 		component="copper",
