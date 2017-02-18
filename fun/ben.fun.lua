@@ -25,7 +25,6 @@ hardware={
 	{
 		component="screen",
 		size={screen.hx,screen.hy},
-		bloom=fatpix and 0.75 or 0,
 		filter=fatpix or nil,
 		scale=screen.ss,
 		fps=screen.fps,
@@ -64,7 +63,7 @@ hardware={
 		component="tilemap",
 		name="text",
 		tiles="tiles",
-		tile_size={13,13}, -- use half width tiles for font
+		tile_size={16,16}, -- use half width tiles for font
 		tilemap_size={math.ceil(screen.hx/4),math.ceil(screen.hy/8)},
 		layer=3,
 	},
