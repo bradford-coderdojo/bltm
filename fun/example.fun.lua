@@ -1989,7 +1989,7 @@ local fat_controller=coroutine.create(function()
 -- setup game
 	entities_reset()
 
-	setup_level(0) -- load map
+	setup_level(1) -- load map
 	setup_score() -- gui for the score
 
 	setup_dust() -- dust particles
