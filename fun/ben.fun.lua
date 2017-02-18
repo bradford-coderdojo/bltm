@@ -27,7 +27,6 @@ hardware={
 		size={screen.hx,screen.hy},
 		bloom=fatpix and 0.75 or 0,
 		filter=fatpix or nil,
-		shadow=fatpix and "drop" or nil,
 		scale=screen.ss,
 		fps=screen.fps,
 		layers=3,
@@ -39,7 +38,7 @@ hardware={
 	{
 		component="tiles",
 		name="tiles",
-		tile_size={8,8},
+		tile_size={13,13},
 		bitmap_size={64,16},
 	},
 	{
