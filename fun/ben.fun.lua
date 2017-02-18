@@ -64,7 +64,7 @@ hardware={
 		component="tilemap",
 		name="text",
 		tiles="tiles",
-		tile_size={4,8}, -- use half width tiles for font
+		tile_size={13,13}, -- use half width tiles for font
 		tilemap_size={math.ceil(screen.hx/4),math.ceil(screen.hy/8)},
 		layer=3,
 	},
