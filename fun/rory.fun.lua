@@ -2020,7 +2020,7 @@ local fat_controller=coroutine.create(function()
 
 
 end)
-
+s is to summun spiders which kill monsters
 
 -- this is the main function, code below called repeatedly to update and draw or handle other messages (eg mouse)
 
