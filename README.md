@@ -9,5 +9,6 @@ Create a platforming game - I already have an idea for a really difficult one th
 
 # Project Description
 
+A platforming game which the characters are Bacon, Lettuce and Tomato. The enemy is the mayonaise, (it will splat the BLT?)
 
 # About team
