@@ -1,6 +1,6 @@
 ![BLTM](/img/logo.png)
 
-bacon lettuce tomato mayo
+# Bacon Lettuce Tomato Mayo
 
 # Project Aims
 Create a website
