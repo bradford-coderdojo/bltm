@@ -18,11 +18,7 @@ local chat_text=[[
 	A rare bread of NPC who will fulfil all your conversational desires for 
 	a very good price.
 
->welcome
-
-		...ERROR...EOF...PLEASE...RESTART...
-
-<welome
+<welcome
 	Ugh, watch where You're walking! You just bumped into me! Watch Out next time!
 
 	>question1
