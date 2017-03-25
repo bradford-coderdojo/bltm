@@ -40,19 +40,19 @@ local chat_text=[[
 	
 	Excuse me? What did you just say to me?
 
-	>convo
+	<convo
 
 <apologetic_sensitive
 	
-	Oh, it's fine. Wanna be friends?
+	Oh, it's fine. Why
 
-	>convo
+	<convo
 	
 <ignorant
 
 	Are you listening to me?
 
-	>convo
+	<convo
 
 <convo
 	
