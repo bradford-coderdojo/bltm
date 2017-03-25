@@ -514,7 +514,7 @@ local setup_chat=function(chat,chats,chat_name,response_name)
 
 			local ss=v and v.text or {} if type(ss)=="string" then ss={ss} end
 
-			local color=10
+			local color=30
 			if chat.viewed[v.name] then color=2 end -- we have already seen the response to this decision
 			
 			local f=function(item,menu)
