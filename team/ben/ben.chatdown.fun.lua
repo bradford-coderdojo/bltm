@@ -749,7 +749,7 @@ function setup_menu(items)
 		end
 		
 		for i,v in ipairs(menu.lines) do
-			tprint(v.s,menu.cx+4,menu.cy+i+1,v.color or 15,1)
+			tprint(v.s,menu.cx+4,menu.cy+i+1,v.color or 31,1)
 		end
 		
 		local it=nil
