@@ -13,7 +13,7 @@ local ls=function(t) print(require("wetgenes.string").dump(t)) end
 
 local chat_text=[[
 
-#example Conversation NPC
+#Options Conversation NPC
 
 	A rare bread of NPC who will fulfil all your conversational desires for 
 	a very good price.
