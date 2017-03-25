@@ -31,8 +31,12 @@ No, it stands for bacon, lettuce and tomato sandwiches!
 	What is bacon?
 
 >question2
-	How do I killer bacon?
+	How do I kill a bacon?
 
+<question1
+	Meat.
+<question2
+	You can't kill a bacon you have to cure it!
 ]]
 
 -----------------------------------------------------------------------------
