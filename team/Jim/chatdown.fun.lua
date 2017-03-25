@@ -4,17 +4,6 @@ hardware,main=system.configurator({
 	mode="fun64", -- select the standard 320x240 screen using the swanky32 palette.
 	update=function() update() end, -- called repeatedly to update+draw
 })
-I love BLT sandwiches!
-Have you got any?
-Erm, what does BLTS stand for? I've never heard of it, is it a plane? 
-No, it stands for bacon, lettuce and tomato sandwiches!
-
-question 1
-	What is bacon?
-
-question 2
-	How do I killer bacon?
-
 
 -- debug text dump
 local ls=function(t) print(require("wetgenes.string").dump(t)) end
@@ -28,9 +17,31 @@ local chat_text=[[
 
 	A rare bread of NPC who will fulfil all your conversational desires for 
 	a very good price.
+
+	=sir sir
+
+	>convo
+
+		Is this the right room for a conversation?
+		
+	>welcome
+	
+		...ERROR...EOF...PLEASE...RESTART...
+
 <welcome
 
-	]]
+	I love BLT sandwiches!
+Have you got any?
+Erm, what does BLTS stand for? I've never heard of it, is it a plane? 
+No, it stands for bacon, lettuce and tomato sandwiches!
+
+question 1
+	What is bacon?
+
+question 2
+	How do I killer bacon?
+
+]]
 
 -----------------------------------------------------------------------------
 --[[#parse_chats
