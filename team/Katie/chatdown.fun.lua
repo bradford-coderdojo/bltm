@@ -21,26 +21,26 @@ local chat_text=[[
 <welcome
 	Ugh, watch where You're walking! You just bumped into me! Watch Out next time!
 
-	>question1
+	>rude
 		
 		Whatever. Ok. *whispers to no-one in particular* I won't!
 	
-	>question2
+	>apologetic
 
 		Oh I'm soooooooooooooooo sorry, I was coding on GitHub!
 
-	>question3
+	>ignorant
 		*still engrossed in phone* Right. Yep. Will do.
 
-<question1
+<rude
 	
 	Excuse me? What did you just say to me?
 
-<question2
+<apologetic
 	
 	Oh, it's fine. Wanna be friends?
 
-<question3
+<ignorant
 
 	Are you listening to me?
 
