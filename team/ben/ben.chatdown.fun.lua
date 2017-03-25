@@ -35,6 +35,23 @@ local chat_text=[[
 
 	>end
 		Okay thanks...
+<option1b
+	Sure, that's $100 please
+
+	>option2b
+		Here's the money
+	>option3b
+		I don't have enough money
+<option2b
+	It's yours
+
+	>welcome
+		Restart
+
+<option3b
+	Then go away you peasant!
+	>welcome
+		Restart
 
 <end
 	>welcome
