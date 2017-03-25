@@ -14,7 +14,7 @@ local chat_text=[[
 
 #example Conversation NPC
 
-u	A rare bread of NPC who will fulfil all your conversational desires for 
+	A rare bread of NPC who will fulfil all your conversational desires for 
 	a very good price.
 
 <welome
