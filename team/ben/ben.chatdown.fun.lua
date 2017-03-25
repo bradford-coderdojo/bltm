@@ -32,11 +32,11 @@ local chat_text=[[
 
 	Bonjour {sir},
 	
-	>morning
+	>notfrench
 
 		Je ne parle pas Francais bien
 
-	>afternoon
+	>isfrench
 
 		Bonjour, ca va?
 
@@ -67,15 +67,15 @@ local chat_text=[[
 
 		=sir sir
 
-<afternoon
+<isfrench
 	
-	Then good afternoon {sir},
+	Ca va bien merci, 
 	
 	>convo
 
-<morning
+<notfrench
 	
-	and how may I help {sir} today?
+	fine, i'll do it your way then
 	
 	>convo
 
