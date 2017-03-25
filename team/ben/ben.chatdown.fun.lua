@@ -30,19 +30,19 @@ local chat_text=[[
 
 <welcome
 
-	Buenos Dias {sir},
+	Bonjour {sir},
 	
 	>morning
 
-		Good morning to you too.
+		Je ne parle pas Francais bien
 
 	>afternoon
 
-		I think you will find it is now afternoon.
+		Bonjour, ca va?
 
 	>sir
 
-		How dare you call me {sir}!
+		Don't call me {sir}!
 
 <sir
 
