@@ -18,15 +18,7 @@ local chat_text=[[
 	A rare bread of NPC who will fulfil all your conversational desires for 
 	a very good price.
 
-	=sir sir
 
-	>convo
-
-		Is this the right room for a conversation?
-		
-	>welcome
-	
-		...ERROR...EOF...PLEASE...RESTART...
 
 <welcome
 
@@ -35,10 +27,10 @@ Have you got any?
 Erm, what does BLTS stand for? I've never heard of it, is it a plane? 
 No, it stands for bacon, lettuce and tomato sandwiches!
 
-question 1
+>question1
 	What is bacon?
 
-question 2
+>question2
 	How do I killer bacon?
 
 ]]
