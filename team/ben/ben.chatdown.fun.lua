@@ -745,11 +745,11 @@ function setup_menu(items)
 		if menu.items.title then
 			local title=" "..(menu.items.title).." "
 			local wo2=math.floor(#title/2)
-			tprint(title,menu.cx+(menu.width/2)-wo2,menu.cy+0,31,2)
+			tprint(title,menu.cx+(menu.width/2)-wo2,menu.cy+0,30,2)
 		end
 		
 		for i,v in ipairs(menu.lines) do
-			tprint(v.s,menu.cx+4,menu.cy+i+1,v.color or 31,1)
+			tprint(v.s,menu.cx+4,menu.cy+i+1,v.color or 30,1)
 		end
 		
 		local it=nil
@@ -785,7 +785,7 @@ update=function()
 
 	if not setup_done then
 		chats=setup_chats(chat_text)
-		menu=setup_menu( chats.get_menu_items("") )
+		menu=setup_menu( chats.get_menu_items("Options") )
 		setup_done=true
 	end
 	
