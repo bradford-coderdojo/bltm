@@ -29,6 +29,9 @@ local chat_text=[[
 
 	>option1b
 		I want to buy a flamethrower
+
+	>option1c
+		Estoy interesado en comprar algunos productos ilegales de calidad
 <option1a
 	
 	Head away from the park, then take the second right turn
