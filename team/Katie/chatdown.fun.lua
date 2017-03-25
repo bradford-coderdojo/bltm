@@ -38,8 +38,8 @@ local chat_text=[[
 
 <rude
 	
-	Excuse me? What did you just say to me? Why are you here, by the way?
-
+	Excuse me? What did you just say to me? Why are you here?
+	
 	>convo
 
 <apologetic_sensitive
