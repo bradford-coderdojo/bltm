@@ -18,7 +18,7 @@ local chat_text=[[
 	A rare bread of NPC who will fulfil all your conversational desires for 
 	a very good price.
 
-	=sir sir
+	=Jim Jim
 
 	>convo
 
@@ -30,7 +30,7 @@ local chat_text=[[
 
 <welcome
 
-	Good Morning {sir},
+	Good Morning Jim,
 	
 	>morning
 
@@ -40,22 +40,22 @@ local chat_text=[[
 
 		I think you will find it is now afternoon.
 
-	>sir
+	>Jim
 
-		How dare you call me {sir}!
+		How dare you call me Jim!
 
-<sir
+<Jim
 
 	My apologise, I am afraid that I am but an NPC with very little 
 	brain, how might I address you?
 	
 	>welcome.1?sir!=madam
 
-		You may address me as Madam.
+		You may address me as Jim.
 
 		=sir madam
 
-	>welcome.2?sir!=God
+	>welcome.2?Jim!=God
 
 		You may address me as God.
 
@@ -69,7 +69,7 @@ local chat_text=[[
 
 <afternoon
 	
-	Then good afternoon {sir},
+	Then good afternoon {Jim},
 	
 	>convo
 
