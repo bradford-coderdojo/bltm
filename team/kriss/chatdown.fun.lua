@@ -18,101 +18,48 @@ local chat_text=[[
 	A rare bread of NPC who will fulfil all your conversational desires for 
 	a very good price.
 
-	=sir sir
-
-	>convo
-
-		Is this the right room for a conversation?
-		
-	>welcome
-	
-		...ERROR...EOF...PLEASE...RESTART...
 
 <welcome
 
-	Good Morning {sir},
+	Oh, hi there! Didn't see you there, sorry.
+
+	>question1
+
+		Hi, where am I?
+
+	>question2
+
+		Eww, go away.
+
+	>question3
+
+		Sorry, didn't mean to scare you. Who are you?
+
+
+<question1
 	
-	>morning
+	You are in the internet. Welcome.
 
-		Good morning to you too.
-
-	>afternoon
-
-		I think you will find it is now afternoon.
-
-	>sir
-
-		How dare you call me {sir}!
-
-<sir
-
-	My apologise, I am afraid that I am but an NPC with very little 
-	brain, how might I address you?
-	
-	>welcome.1?sir!=madam
-
-		You may address me as Madam.
-
-		=sir madam
-
-	>welcome.2?sir!=God
-
-		You may address me as God.
-
-		=sir God
-
-	>welcome.3?sir!=sir
-
-		You may address me as Sir.
-
-		=sir sir
-
-<afternoon
-	
-	Then good afternoon {sir},
-	
-	>convo
-
-<morning
-	
-	and how may I help {sir} today?
-	
-	>convo
-
-
-<convo
-
-	Indeed it is, would you like the full conversation or just the quick natter?
-
-	>convo_full
-	
-		How long is the full conversation?
-
-	>convo_quick
-
-		A quick natter sounds just perfect.
-
-<convo_full
-
-	The full conversation is very full and long so much so that you 
-	will have to page through many pages before you get to make a 
-	decision
-	
-	>
-		Like this?
-	<
-	
-	Yes just like this. In fact I think you can see that we are already 
-	doing it.
-			
-	
 	>welcome
 
-<convo_quick
+		Thanks!
 
-	...
-	
+<question2
+
+	No, you go away! :D
+
 	>welcome
+
+		Thanks!
+
+<question3
+
+	Hi, I'm the internet. Nice to meet you.
+
+	>welcome
+
+		Thanks!
+
 
 ]]
 
