@@ -27,13 +27,16 @@ local chat_text=[[
                 A quest to find gems!
                 
         >question3
-          
                we start now...
+
+	>question4
+		YAAAAAAAAAAAAAAAAAAAY
                 
 <question1
 
         what kind of quest? 
         >welcome
+
 <question2
 
         cool when do we start?
@@ -42,7 +45,12 @@ local chat_text=[[
 <question3
 
         well lets go :D
-        >welome
+        >welcome
+
+<question4
+	ok, erm.. whatever dude, let's just go....weirdo
+	>welcome
+
 ]]
 
 -----------------------------------------------------------------------------
