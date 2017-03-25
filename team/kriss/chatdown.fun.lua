@@ -1,3 +1,5 @@
+
+
 hardware,main=system.configurator({
 	mode="fun64", -- select the standard 320x240 screen using the swanky32 palette.
 	update=function() update() end, -- called repeatedly to update+draw
@@ -11,33 +13,53 @@ local ls=function(t) print(require("wetgenes.string").dump(t)) end
 
 local chat_text=[[
 
-Bard NPC
+#example Conversation NPC
 
-	A rare bread of NPC who will fulfil all your conversational desires for 
+	A rare breed of NPC who will fulfil all your conversational desires for 
 	a very good price.
 
-	
+
 <welcome
 
-        Oh hi there
+	Oh, hi there! Didn't see you there, sorry.
 
 	>question1
-Who are you?
 
-        >question2
-Why don`t you go?
+		Hi, where am I?
 
-        >question3
-Why are you not starving?
+	>question2
 
->question1
-I am a bard.
+		Eww, go away.
 
->question2
-Because I am writing about the monsters.
->question3
-There`s golden BLTM sandwiches in the caves.
->welcome
+	>question3
+
+		Sorry, didn't mean to scare you. Who are you?
+
+
+<question1
+	
+	You are in the internet. Welcome.
+
+	>welcome
+
+		Thanks!
+
+<question2
+
+	No, you go away! :D
+
+	>welcome
+
+		Thanks!
+
+<question3
+
+	Hi, I'm the internet. Nice to meet you.
+
+	>welcome
+
+		Thanks!
+
 
 ]]
 

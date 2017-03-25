@@ -29,8 +29,7 @@ local chat_text=[[
 
 <welcome
 
-	Good Morning {sir},
-	
+	Good Morning {sir},	
 	>morning
 
 		Good morning to you too.
@@ -60,11 +59,11 @@ local chat_text=[[
 
 		=sir God
 
-	>welcome.3?sir!=sir
+	>welcome.3?sir!=Moose
 
-		You may address me as Sir.
+		You may address me as Moose.
 
-		=sir sir
+		=sir Moose
 
 <afternoon
 	

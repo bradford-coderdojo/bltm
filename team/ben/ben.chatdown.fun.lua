@@ -18,101 +18,56 @@ local chat_text=[[
 	A rare bread of NPC who will fulfil all your conversational desires for 
 	a very good price.
 
-	=sir sir
 
-	>convo
-
-		Is this the right room for a conversation?
-		
-	>welcome
-	
-		...ERROR...EOF...PLEASE...RESTART...
 
 <welcome
 
-	Buenos Dias {sir},
+	What brings you to this part of town
+
+	>option1a
+		I'm just lost, can you tell me the way out
+
+	>option1b
+		I want to buy a flamethrower
+
+	>option1c
+		Estoy interesado en comprar algunos productos ilegales de calidad
+<option1a
 	
-	>morning
+	Head away from the park, then take the second right turn
 
-		Good morning to you too.
+	>end
+		Okay thanks...
+<option1b
+	Sure, that's $100 please
 
-	>afternoon
+	>option2b
+		Here's the money
+	>option3b
+		I don't have enough money
+<option2b
+	It's yours
 
-		I think you will find it is now afternoon.
-
-	>sir
-
-		How dare you call me {sir}!
-
-<sir
-
-	My apologise, I am afraid that I am but an NPC with very little 
-	brain, how might I address you?
-	
-	>welcome.1?sir!=madam
-
-		You may address me as Madam.
-
-		=sir madam
-
-	>welcome.2?sir!=God
-
-		You may address me as God.
-
-		=sir God
-
-	>welcome.3?sir!=sir
-
-		You may address me as Sir.
-
-		=sir sir
-
-<afternoon
-	
-	Then good afternoon {sir},
-	
-	>convo
-
-<morning
-	
-	and how may I help {sir} today?
-	
-	>convo
-
-
-<convo
-
-	Indeed it is, would you like the full conversation or just the quick natter?
-
-	>convo_full
-	
-		How long is the full conversation?
-
-	>convo_quick
-
-		A quick natter sounds just perfect.
-
-<convo_full
-
-	The full conversation is very full and long so much so that you 
-	will have to page through many pages before you get to make a 
-	decision
-	
-	>
-		Like this?
-	<
-	
-	Yes just like this. In fact I think you can see that we are already 
-	doing it.
-			
-	
 	>welcome
+		Restart
 
-<convo_quick
-
-	...
-	
+<option3b
+	Then go away you peasant!
 	>welcome
+		Restart
+
+<option1c
+	
+	¿Tu hablas español? ¡Estupendo! Tenemos fuegos artificiales, armas y espadas.
+	
+	>option2c
+		Puedo comprar algunos fuegos artificiales
+	>option3c
+		Mi arma se rompió, ¿puedo comprar una nueva?
+<end
+	>welcome
+		Restart
+
 
 ]]
 
