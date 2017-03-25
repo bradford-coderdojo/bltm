@@ -1,3 +1,7 @@
+```diff
+- DON'T FORGET TO COMMIT YOUR CHANGES!! THIS SAVES ALL YOUR WORK.
+```
+
 # Team directory
 
 Create a new folder and add a readme.md file with an introduction.
