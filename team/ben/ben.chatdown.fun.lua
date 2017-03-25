@@ -20,21 +20,24 @@ local chat_text=[[
 
 
 
-<end
+<welcome
 
 	What brings you to this part of town
 
 	>option1a
 		I'm just lost, can you tell me the way out
+
+	>option1b
+		I want to buy a flamethrower
 <option1a
 	
 	Head away from the park, then take the second right turn
 
-	>option2a
+	>end
 		Okay thanks...
 
-<option2a
-	>end
+<end
+	>welcome
 		Restart
 
 
