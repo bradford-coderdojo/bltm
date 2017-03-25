@@ -514,7 +514,7 @@ local setup_chat=function(chat,chats,chat_name,response_name)
 
 			local ss=v and v.text or {} if type(ss)=="string" then ss={ss} end
 
-			local color=15
+			local color=30
 			if chat.viewed[v.name] then color=28 end -- we have already seen the response to this decision
 			
 			local f=function(item,menu)
@@ -749,7 +749,7 @@ function setup_menu(items)
 		end
 		
 		for i,v in ipairs(menu.lines) do
-			tprint(v.s,menu.cx+4,menu.cy+i+1,v.color or 31,1)
+			tprint(v.s,menu.cx+4,menu.cy+i+1,v.color or 15,1)
 		end
 		
 		local it=nil
