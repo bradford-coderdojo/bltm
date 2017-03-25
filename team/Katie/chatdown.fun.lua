@@ -4,7 +4,7 @@ hardware,main=system.configurator({
 	update=function() update() end, -- called repeatedly to update+draw
 })
 
--- debug text dump
+h-- debug text dump
 local ls=function(t) print(require("wetgenes.string").dump(t)) end
 
 
@@ -14,103 +14,34 @@ local chat_text=[[
 
 #example Conversation NPC
 
-	A rare bread of NPC who will fulfil all your conversational desires for 
+u	A rare bread of NPC who will fulfil all your conversational desires for 
 	a very good price.
 
-	=sir sir
+<welome
+	Ugh, watch where You're walking! You just bumped into me! Watch Out next time!
 
-	>convo
-
-		Is this the right room for a conversation?
+	>question1
 		
-	>welcome
+		Whatever. Ok. *whispers to no-one in particular* I won't!
 	
-		...ERROR...EOF...PLEASE...RESTART...
+	>question2
 
-<welcome
+		Oh I'm soooooooooooooooo sorry, I was coding on GitHub!
 
-	Good Morning {sir},	
-	>morning
+	>question3
+		*still engrossed in phone* Right. Yep. Will do.
 
-		Good morning to you too.
-
-	>afternoon
-
-		I think you will find it is now afternoon.
-
-	>sir
-
-		How dare you call me {sir}!
-
-<sir
-
-	My apologise, I am afraid that I am but an NPC with very little 
-	brain, how might I address you?
+<question1
 	
-	>welcome.1?sir!=madam
+	Excuse me? What did you just say to me?
 
-		You may address me as Madam.
-
-		=sir madam
-
-	>welcome.2?sir!=God
-
-		You may address me as God.
-
-		=sir God
-
-	>welcome.3?sir!=Moose
-
-		You may address me as Moose.
-
-		=sir Moose
-
-<afternoon
+<question2
 	
-	Then good afternoon {sir},
-	
-	>convo
+	Oh, it's fine. Wanna be friends?
 
-<morning
-	
-	and how may I help {sir} today?
-	
-	>convo
+<question3
 
-
-<convo
-
-	Indeed it is, would you like the full conversation or just the quick natter?
-
-	>convo_full
-	
-		How long is the full conversation?
-
-	>convo_quick
-
-		A quick natter sounds just perfect.
-
-<convo_full
-
-	The full conversation is very full and long so much so that you 
-	will have to page through many pages before you get to make a 
-	decision
-	
-	>
-		Like this?
-	<
-	
-	Yes just like this. In fact I think you can see that we are already 
-	doing it.
-			
-	
-	>welcome
-
-<convo_quick
-
-	...
-	
-	>welcome
+	Are you listening to me?
 
 ]]
 
