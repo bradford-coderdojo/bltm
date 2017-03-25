@@ -20,8 +20,6 @@ local chat_text=[[
 
 >welcome
 
-	
-
 		...ERROR...EOF...PLEASE...RESTART...
 
 <welome
