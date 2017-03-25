@@ -4,7 +4,7 @@ hardware,main=system.configurator({
 	update=function() update() end, -- called repeatedly to update+draw
 })
 
-h-- debug text dump
+-- debug text dump
 local ls=function(t) print(require("wetgenes.string").dump(t)) end
 
 
