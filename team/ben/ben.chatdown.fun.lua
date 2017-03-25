@@ -30,7 +30,7 @@ local chat_text=[[
 
 <welcome
 
-	Good Morning {sir},
+	Buenos Dias {sir},
 	
 	>morning
 
