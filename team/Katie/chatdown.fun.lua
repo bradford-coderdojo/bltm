@@ -1,7 +1,7 @@
 
 
 hardware,main=system.configurator({
-	mode="fun64", -- select the standard 360x360 screen using the swanky32 palette.
+	mode="fun64", -- select the standard 360x360 screen using the swagger32 palette.
 	update=function() update() end, -- called repeatedly to update+draw
 })
 
