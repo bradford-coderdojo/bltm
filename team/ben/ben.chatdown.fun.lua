@@ -648,7 +648,7 @@ function setup_menu(items)
 
 	menu.stack={}
 
-	menu.width=80-4
+	menu.width=80-8
 	menu.cursor=0
 	menu.cx=math.floor((80-menu.width)/2)
 	menu.cy=0
@@ -745,11 +745,11 @@ function setup_menu(items)
 		if menu.items.title then
 			local title=" "..(menu.items.title).." "
 			local wo2=math.floor(#title/2)
-			tprint(title,menu.cx+(menu.width/2)-wo2,menu.cy+0,30,2)
+			tprint(title,menu.cx+(menu.width/2)-wo2,menu.cy+0,31,2)
 		end
 		
 		for i,v in ipairs(menu.lines) do
-			tprint(v.s,menu.cx+4,menu.cy+i+1,v.color or 30,1)
+			tprint(v.s,menu.cx+4,menu.cy+i+1,v.color or 31,1)
 		end
 		
 		local it=nil
