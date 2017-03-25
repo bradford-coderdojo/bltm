@@ -11,106 +11,33 @@ local ls=function(t) print(require("wetgenes.string").dump(t)) end
 
 local chat_text=[[
 
-#example Conversation NPC
+Bard NPC
 
 	A rare bread of NPC who will fulfil all your conversational desires for 
 	a very good price.
 
-	=sir sir
-
-	>convo
-
-		Is this the right room for a conversation?
-		
-	>welcome
 	
-		...ERROR...EOF...PLEASE...RESTART...
-
 <welcome
 
-	Good Morning {sir},
-	
-	>morning
+        Oh hi there
 
-		Good morning to you too.
+	>question1
+Who are you?
 
-	>afternoon
+        >question2
+Why don`t you go?
 
-		I think you will find it is now afternoon.
+        >question3
+Why are you not starving?
 
-	>sir
+>question1
+I am a bard.
 
-		How dare you call me {sir}!
-
-<sir
-
-	My apologise, I am afraid that I am but an NPC with very little 
-	brain, how might I address you?
-	
-	>welcome.1?sir!=madam
-
-		You may address me as Madam.
-
-		=sir madam
-
-	>welcome.2?sir!=God
-
-		You may address me as God.
-
-		=sir God
-
-	>welcome.3?sir!=sir
-
-		You may address me as Sir.
-
-		=sir sir
-
-<afternoon
-	
-	Then good afternoon {sir},
-	
-	>convo
-
-<morning
-	
-	and how may I help {sir} today?
-	
-	>convo
-
-
-<convo
-
-	Indeed it is, would you like the full conversation or just the quick natter?
-
-	>convo_full
-	
-		How long is the full conversation?
-
-	>convo_quick
-
-		A quick natter sounds just perfect.
-
-<convo_full
-
-	The full conversation is very full and long so much so that you 
-	will have to page through many pages before you get to make a 
-	decision
-	
-	>
-		Like this?
-	<
-	
-	Yes just like this. In fact I think you can see that we are already 
-	doing it.
-			
-	
-	>welcome
-
-<convo_quick
-
-	...
-	
-	>welcome
+>question2
+Because I am writing about the monsters.
+>question3
+There`s golden BLTM sandwiches in the caves.
+>welcome
 
 ]]
 
