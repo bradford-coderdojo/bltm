@@ -20,7 +20,7 @@ local chat_text=[[
 
 >convo 
 
-	What am I doing here?
+	Umm...
 
 <welcome
 	Ugh, watch where You're walking! You just bumped into me! Watch Out next time!
@@ -38,33 +38,32 @@ local chat_text=[[
 
 <rude
 	
-	Excuse me? What did you just say to me?
+	Excuse me? What did you just say to me? Why are you here, by the way?
 
 	>convo
 
 <apologetic_sensitive
 	
-	Oh, it's fine. Why
+	Oh, it's fine. Why are you here, by the way?
 
 	>convo
 	
 <ignorant
 
-	Are you listening to me?
+	Are you listening to me? Oh, by the way, why are you here?
 
 	>convo
 
 <convo
 	
 	>convo_1
-	Umm.. Becuase I'm Walking to my friend's house. Why are YOU here?
+	Becuase I'm Walking to my friend's house. Why are YOU here?
 		
 	>convo_2
-	U-Umm... I-I'm... Going to the shops t-to meet my cousins...
+	I-I'm... Going to the shops t-to meet my cousins...
 	
 	>convo_3
-	W-What? Can you repeat that? I wasn't listnening...
-
+	Huh? W-What? Can you repeat that? I wasn't listnening... xD :3
 ]]
 
 -----------------------------------------------------------------------------
