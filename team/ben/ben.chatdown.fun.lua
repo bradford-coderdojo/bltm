@@ -18,101 +18,25 @@ local chat_text=[[
 	A rare bread of NPC who will fulfil all your conversational desires for 
 	a very good price.
 
-	=sir sir
 
-	>convo
-
-		Is this the right room for a conversation?
-		
-	>welcome
-	
-		...ERROR...EOF...PLEASE...RESTART...
 
 <welcome
 
-	Bonjour {sir},
+	What brings you to this part of town
+
+	>option1a
+		I'm just lost, can you tell me the way out
+<option1a
 	
-	>notfrench
+	Head away from the park, then take the second right turn
 
-		Je ne parle pas Francais bien
+	>option2a
+		Okay thanks...
 
-	>isfrench
+<option2a
+	>end
+		Restart
 
-		Bonjour, ca va?
-
-	>sir
-
-		Don't call me {sir}!
-
-<sir
-
-	My apologise, I am afraid that I am but an NPC with very little 
-	brain, how might I address you?
-	
-	>welcome.1?sir!=madam
-
-		You may address me as Madam.
-
-		=sir madam
-
-	>welcome.2?sir!=God
-
-		You may address me as God.
-
-		=sir God
-
-	>welcome.3?sir!=sir
-
-		You may address me as Sir.
-
-		=sir sir
-
-<isfrench
-	
-	Ca va bien merci, 
-	
-	>convo
-
-<notfrench
-	
-	fine, i'll do it your way then
-	
-	>convo
-
-
-<convo
-
-	Indeed it is, would you like the full conversation or just the quick natter?
-
-	>convo_full
-	
-		How long is the full conversation?
-
-	>convo_quick
-
-		A quick natter sounds just perfect.
-
-<convo_full
-
-	The full conversation is very full and long so much so that you 
-	will have to page through many pages before you get to make a 
-	decision
-	
-	>
-		Like this?
-	<
-	
-	Yes just like this. In fact I think you can see that we are already 
-	doing it.
-			
-	
-	>welcome
-
-<convo_quick
-
-	...
-	
-	>welcome
 
 ]]
 
