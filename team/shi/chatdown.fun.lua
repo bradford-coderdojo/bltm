@@ -30,73 +30,65 @@ local chat_text=[[
 
 <welcome
 
-	Good Morning {sir},
+	Oh, hello there! Where were you hiding? I didn't see you there. 
+	Were you here the whole time?
 	
 	>morning
 
-		Good morning to you too.
+		Umm, hi.
 
 	>afternoon
 
-		I think you will find it is now afternoon.
+		Woah, who are you?
 
 	>sir
 
-		How dare you call me {sir}!
+		I wasn't hiding...LOL, hi.
 
 <sir
 
-	My apologise, I am afraid that I am but an NPC with very little 
-	brain, how might I address you?
+	Ok, sure. If that's true, you are like a ninja!
 	
-	>welcome.1?sir!=madam
-
-		You may address me as Madam.
-
-		=sir madam
-
-	>welcome.2?sir!=God
-
-		You may address me as God.
-
-		=sir God
-
-	>welcome.3?sir!=sir
-
-		You may address me as Sir.
-
-		=sir sir
+	>convo
+	
+		Thanks, I've got really sneaky shoes.
 
 <afternoon
 	
-	Then good afternoon {sir},
+	My name is shi - I live around here. Nice to meet you!
 	
 	>convo
 
 <morning
 	
-	and how may I help {sir} today?
+	Hi! Are you lost?
 	
 	>convo
+	
+		No, not lost. Just found myself here. I know my way around.
+		
+	>convo_full
+	
+		Yes, what am I doing here? Do you know where I am?
 
 
 <convo
 
-	Indeed it is, would you like the full conversation or just the quick natter?
+	It's nice here isn't it? Lots of screens for you to look at and 
+	you're never without a thing to do.
 
 	>convo_full
 	
-		How long is the full conversation?
+		Where is here?
 
 	>convo_quick
 
-		A quick natter sounds just perfect.
+		Yes, I quite agree. Nice to meet you. I'll see you around.
 
 <convo_full
 
-	The full conversation is very full and long so much so that you 
-	will have to page through many pages before you get to make a 
-	decision
+	Here is the internet. As you can see, it's not made of tubes at all 
+	but there are plenty of screens around. Try one.
 	
 	>
 		Like this?
