@@ -18,7 +18,7 @@ local chat_text=[[
 	A rare bread of NPC who will fulfil all your conversational desires for 
 	a very good price.
 
->convo 
+<convo 
 
 	Why are you here?
 
