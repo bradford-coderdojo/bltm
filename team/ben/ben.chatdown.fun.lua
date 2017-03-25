@@ -785,7 +785,7 @@ update=function()
 
 	if not setup_done then
 		chats=setup_chats(chat_text)
-		menu=setup_menu( chats.get_menu_items("example") )
+		menu=setup_menu( chats.get_menu_items("") )
 		setup_done=true
 	end
 	
