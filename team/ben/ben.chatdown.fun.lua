@@ -58,7 +58,7 @@ local chat_text=[[
 
 <option1c
 	
-	¿Tu hablas español? ¡Estupendo! Tenemos fireworkos, pistolas y stabbas.
+	Tu hablas espanol? Estupendo! Tenemos fireworkos, pistolas y stabbas.
 	
 	>option2c
 		Puedo comprar alugno stabba
@@ -69,12 +69,12 @@ local chat_text=[[
 	Si! As you could speak Spanish, you may have a half price discount
 
 	>end
-		¡Excellente!
+		Excellente!
 <option3c
 	Si! As you could speak Spanish, you may have a half price discount
 	
 	>end
-		¡Excellente!
+		Excellente!
 
 <end
 	>welcome
@@ -514,7 +514,7 @@ local setup_chat=function(chat,chats,chat_name,response_name)
 
 			local ss=v and v.text or {} if type(ss)=="string" then ss={ss} end
 
-			local color=30
+			local color=15
 			if chat.viewed[v.name] then color=28 end -- we have already seen the response to this decision
 			
 			local f=function(item,menu)
