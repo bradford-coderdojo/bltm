@@ -20,7 +20,7 @@ local chat_text=[[
 
 
 
-<welcome
+<end
 
 	What brings you to this part of town
 
