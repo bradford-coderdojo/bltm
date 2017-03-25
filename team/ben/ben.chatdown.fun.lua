@@ -648,7 +648,7 @@ function setup_menu(items)
 
 	menu.stack={}
 
-	menu.width=80-8
+	menu.width=80-4
 	menu.cursor=0
 	menu.cx=math.floor((80-menu.width)/2)
 	menu.cy=0
