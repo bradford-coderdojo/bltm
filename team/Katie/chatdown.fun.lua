@@ -29,7 +29,7 @@ local chat_text=[[
 		
 		Whatever. Ok. *whispers to no-one in particular* I won't!
 	
-	>apologetic
+	>apologetic_sensitive
 
 		Oh I'm soooooooooooooooo sorry, I was coding on GitHub!
 
@@ -42,7 +42,7 @@ local chat_text=[[
 
 	>convo
 
-<apologetic
+<apologetic_sensitive
 	
 	Oh, it's fine. Wanna be friends?
 
@@ -53,6 +53,18 @@ local chat_text=[[
 	Are you listening to me?
 
 	>convo
+
+<convo
+	
+	>convo_1
+	Umm.. Becuase I'm Walking to my friend's house. Why are YOU here?
+		
+	>convo_2
+	U-Umm... I-I'm... Going to the shops t-to meet my cousins...
+	
+	>convo_3
+	W-What? Can you repeat that? I wasn't listnening...
+
 ]]
 
 -----------------------------------------------------------------------------
