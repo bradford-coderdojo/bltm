@@ -58,12 +58,24 @@ local chat_text=[[
 
 <option1c
 	
-	¿Tu hablas español? ¡Estupendo! Tenemos fuegos artificiales, armas y espadas.
+	¿Tu hablas español? ¡Estupendo! Tenemos fireworkos, pistolas y stabbas.
 	
 	>option2c
-		Puedo comprar algunos fuegos artificiales
+		Puedo comprar alugno stabba
 	>option3c
-		Mi arma se rompió, ¿puedo comprar una nueva?
+		Mi pistola se rompió, ¿puedo comprar una nueva?
+<option2c
+
+	Si! As you could speak Spanish, you may have a half price discount
+
+	>end
+		¡Excellente!
+<option3c
+	Si! As you could speak Spanish, you may have a half price discount
+	
+	>end
+		¡Excellente!
+
 <end
 	>welcome
 		Restart
