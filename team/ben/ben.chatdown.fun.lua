@@ -56,6 +56,14 @@ local chat_text=[[
 	>welcome
 		Restart
 
+<option1c
+	
+	¿Tu hablas español? ¡Estupendo! Tenemos fuegos artificiales, armas y espadas.
+	
+	>option2c
+		Puedo comprar algunos fuegos artificiales
+	>option3c
+		Mi arma se rompió, ¿puedo comprar una nueva?
 <end
 	>welcome
 		Restart
