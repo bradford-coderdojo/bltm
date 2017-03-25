@@ -18,9 +18,9 @@ local chat_text=[[
 	A rare bread of NPC who will fulfil all your conversational desires for 
 	a very good price.
 
-<convo 
+>convo 
 
-	Why are you here?
+	What am I doing here?
 
 <welcome
 	Ugh, watch where You're walking! You just bumped into me! Watch Out next time!
@@ -40,19 +40,19 @@ local chat_text=[[
 	
 	Excuse me? What did you just say to me?
 
-	<convo
+	>convo
 
 <apologetic_sensitive
 	
 	Oh, it's fine. Why
 
-	<convo
+	>convo
 	
 <ignorant
 
 	Are you listening to me?
 
-	<convo
+	>convo
 
 <convo
 	
