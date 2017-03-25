@@ -13,7 +13,7 @@ local ls=function(t) print(require("wetgenes.string").dump(t)) end
 
 local chat_text=[[
 
-#Options Conversation NPC
+#This is a rather stupid conversation that makes no sense Conversation NPC
 
 	A rare bread of NPC who will fulfil all your conversational desires for 
 	a very good price.
@@ -785,7 +785,7 @@ update=function()
 
 	if not setup_done then
 		chats=setup_chats(chat_text)
-		menu=setup_menu( chats.get_menu_items("Options") )
+		menu=setup_menu( chats.get_menu_items("This is a rather stupid conversation that makes no sense") )
 		setup_done=true
 	end
 	
