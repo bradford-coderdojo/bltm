@@ -64,6 +64,18 @@ local chat_text=[[
 	
 	>convo_3
 	Huh? W-What? Can you repeat that? I wasn't listnening... xD :3
+
+<convo_1
+
+	Umm ok, rude. Anyway, I'm going to the shops. Won't see you later!
+
+<convo_2
+
+	Are you ok? You seem stuttery...
+
+<convo_3
+
+	CAN YOU JUST LISTEN TO ME?!?!?!?!
 ]]
 
 -----------------------------------------------------------------------------
