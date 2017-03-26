@@ -13,7 +13,7 @@ local ls=function(t) print(require("wetgenes.string").dump(t)) end
 
 local chat_text=[[
 
-#example Conversation NPC
+#Options Conversation NPC
 
 	A rare bread of NPC who will fulfil all your conversational desires for 
 	a very good price.
@@ -58,12 +58,24 @@ local chat_text=[[
 
 <option1c
 	
-	¿Tu hablas español? ¡Estupendo! Tenemos fuegos artificiales, armas y espadas.
+	Tu hablas espanol? Estupendo! Tenemos fireworkos, pistolas y stabbas.
 	
 	>option2c
-		Puedo comprar algunos fuegos artificiales
+		Puedo comprar alugno stabba
 	>option3c
-		Mi arma se rompió, ¿puedo comprar una nueva?
+		Mi pistola se rompió, ¿puedo comprar una nueva?
+<option2c
+
+	Si! As you could speak Spanish, you may have a half price discount
+
+	>end
+		Excellente!
+<option3c
+	Si! As you could speak Spanish, you may have a half price discount
+	
+	>end
+		Excellente!
+
 <end
 	>welcome
 		Restart
@@ -503,7 +515,7 @@ local setup_chat=function(chat,chats,chat_name,response_name)
 			local ss=v and v.text or {} if type(ss)=="string" then ss={ss} end
 
 			local color=30
-			if chat.viewed[v.name] then color=28 end -- we have already seen the response to this decision
+			if chat.viewed[v.name] then color=30 end -- we have already seen the response to this decision
 			
 			local f=function(item,menu)
 
@@ -773,7 +785,7 @@ update=function()
 
 	if not setup_done then
 		chats=setup_chats(chat_text)
-		menu=setup_menu( chats.get_menu_items("example") )
+		menu=setup_menu( chats.get_menu_items("Options") )
 		setup_done=true
 	end
 	

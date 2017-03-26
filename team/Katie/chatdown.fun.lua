@@ -1,6 +1,7 @@
 
+
 hardware,main=system.configurator({
-	mode="fun64", -- select the standard 320x240 screen using the swanky32 palette.
+	mode="fun64", -- select the standard 360x360 screen using the swagger32 palette.
 	update=function() update() end, -- called repeatedly to update+draw
 })
 
@@ -17,101 +18,64 @@ local chat_text=[[
 	A rare bread of NPC who will fulfil all your conversational desires for 
 	a very good price.
 
-	=sir sir
+>convo 
 
-	>convo
-
-		Is this the right room for a conversation?
-		
-	>welcome
-	
-		...ERROR...EOF...PLEASE...RESTART...
+	Umm...
 
 <welcome
+	Ugh, watch where You're walking! You just bumped into me! Watch Out next time!
 
-	Good Morning {sir},	
-	>morning
-
-		Good morning to you too.
-
-	>afternoon
-
-		I think you will find it is now afternoon.
-
-	>sir
-
-		How dare you call me {sir}!
-
-<sir
-
-	My apologise, I am afraid that I am but an NPC with very little 
-	brain, how might I address you?
+	>rude
+		
+		Whatever. Ok. *whispers to no-one in particular* I won't!
 	
-	>welcome.1?sir!=madam
+	>apologetic_sensitive
 
-		You may address me as Madam.
+		Oh I'm soooooooooooooooo sorry, I was coding on GitHub!
 
-		=sir madam
+	>ignorant
+		*still engrossed in phone* Right. Yep. Will do.
 
-	>welcome.2?sir!=God
-
-		You may address me as God.
-
-		=sir God
-
-	>welcome.3?sir!=Moose
-
-		You may address me as Moose.
-
-		=sir Moose
-
-<afternoon
+<rude
 	
-	Then good afternoon {sir},
+	Excuse me? What did you just say to me? Why are you here?
 	
 	>convo
 
-<morning
+<apologetic_sensitive
 	
-	and how may I help {sir} today?
-	
-	>convo
+	Oh, it's fine. Why are you here, by the way?
 
+	>convo
+	
+<ignorant
+
+	Are you listening to me? Oh, by the way, why are you here?
+
+	>convo
 
 <convo
-
-	Indeed it is, would you like the full conversation or just the quick natter?
-
-	>convo_full
 	
-		How long is the full conversation?
-
-	>convo_quick
-
-		A quick natter sounds just perfect.
-
-<convo_full
-
-	The full conversation is very full and long so much so that you 
-	will have to page through many pages before you get to make a 
-	decision
+	>convo_1
+	Becuase I'm Walking to my friend's house. Why are YOU here?
+		
+	>convo_2
+	I-I'm... Going to the shops t-to meet my cousins...
 	
-	>
-		Like this?
-	<
-	
-	Yes just like this. In fact I think you can see that we are already 
-	doing it.
-			
-	
-	>welcome
+	>convo_3
+	Huh? W-What? Can you repeat that? I wasn't listnening... xD :3
 
-<convo_quick
+<convo_1
 
-	...
-	
-	>welcome
+	Umm ok, rude. Anyway, I'm going to the shops. Won't see you later!
 
+<convo_2
+
+	Are you ok? You seem stuttery...
+
+<convo_3
+
+	CAN YOU JUST LISTEN TO ME?!?!?!?!
 ]]
 
 -----------------------------------------------------------------------------

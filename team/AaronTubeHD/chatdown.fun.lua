@@ -10,55 +10,61 @@ local ls=function(t) print(require("wetgenes.string").dump(t)) end
 
 
 local chat_text=[[
-
-#example Bard NPC
-
+#example Conversation NPC
 	A rare bread of NPC who will fulfil all your conversational desires for 
 	a very good price.
-
-	
-<welcome
-
-        Oh hi there
-
-	>question1
-Who are you?
-
+		
+	<welcome
+  
+  Hello
+          
+        >question1
+          
+                would you like to do a quest?
+                
         >question2
-Why don`t you go?
-
+          
+                A quest to find gems!
+                
         >question3
-Why are you not starving?
+               we start now...
 
->question1
-I am a bard.
+	>question4
+		YAAAAAAAAAAAAAAAAAAAY
+                
+<question1
 
->question2
-Because I am writing about the monsters.
->question3
-There`s golden BLTM sandwiches in the caves.
->welcome
+        what kind of quest? 
+        >welcome
+
+<question2
+
+        cool when do we start?
+        >welcome
+        
+<question3
+
+        well lets go :D
+        >welcome
+
+<question4
+	ok, erm.. whatever dude, let's just go....weirdo
+	>welcome
 
 ]]
 
 -----------------------------------------------------------------------------
 --[[#parse_chats
-
 	chats = parse_chats(text)
-
 Parse text from flat text chatdown format into heirachical chat data, 
 something that can be output easily as json.
-
 This gives us a readonly data structure that can be used to control 
 what text is displayed during a chat session.
-
 This is intended to be descriptive and logic less, any decision logic 
 should be added using a real language that operates on this data and 
 gets triggered by the names used. EG, filter out decisions unless 
 certain conditions are met or change responses to redirect to an 
 alternative.
-
-
 ]]
 -----------------------------------------------------------------------------
 local parse_chats=function(chat_text)
@@ -263,14 +269,10 @@ end
 
 -----------------------------------------------------------------------------
 --[[#setup_chat
-
 	chat = setup_chat(chats,chat_name,response_name)
-
 Setup the state for a chat using this array of chats as text data to be 
 displayed.
-
 We manage proxy data and callbacks from decisions here.
-
 ]]
 -----------------------------------------------------------------------------
 local setup_chat=function(chat,chats,chat_name,response_name)
@@ -503,11 +505,8 @@ end
 
 -----------------------------------------------------------------------------
 --[[#setup_chats
-
 	chats = setup_chats(chat_text)
-
 parse and initialise state data for every chat chunk
-
 ]]
 -----------------------------------------------------------------------------
 local setup_chats=function(chat_text)
@@ -586,16 +585,11 @@ end
 
 -----------------------------------------------------------------------------
 --[[#setup_menu
-
 	menu = setup_menu()
-
 Create a displayable and controllable menu system that can be fed chat 
 data for user display.
-
 After setup, provide it with menu items to display using 
 menu.show(items) then call update and draw each frame.
-
-
 ]]
 -----------------------------------------------------------------------------
 function setup_menu(items)
@@ -732,11 +726,8 @@ end
 
 -----------------------------------------------------------------------------
 --[[#update
-
 	update()
-
 Update and draw loop, called every frame.
-
 ]]
 -----------------------------------------------------------------------------
 update=function()
