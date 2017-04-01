@@ -20,7 +20,7 @@ local fatpix=not(args and args.pixel or false) -- pass --pixel on command line t
 
 --request this hardware setup !The components will not exist until after main has been called!
 cmap=bitdown.cmap -- use default swanky32 colors
-screen={hx=424,hy=240,ss=3,fps=60}
+screen={hx=848,hy=480,ss=3,fps=25}
 hardware={
 	{
 		component="screen",
@@ -37,8 +37,8 @@ hardware={
 	{
 		component="tiles",
 		name="tiles",
-		tile_size={8,8},
-		bitmap_size={64,16},
+		tile_size={16,16},
+		bitmap_size={128,32},
 	},
 	{
 		component="copper",
@@ -63,7 +63,7 @@ hardware={
 		component="tilemap",
 		name="text",
 		tiles="tiles",
-		tile_size={8,8}, -- use half width tiles for font
+		tile_size={16,16}, -- use half width tiles for font
 		tilemap_size={math.ceil(screen.hx/4),math.ceil(screen.hy/8)},
 		layer=3,
 	},
