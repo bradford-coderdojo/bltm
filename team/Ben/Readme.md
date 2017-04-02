@@ -1,4 +1,4 @@
-**Don't edit or delete any of my files**
+**Don't edit or delete any of these files!**
 
 You can play my BLTM game here, but it's probably completely broken at the moment:
 
