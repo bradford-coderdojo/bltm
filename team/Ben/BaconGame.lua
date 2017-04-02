@@ -384,22 +384,22 @@ R R R R r r r r
 	--Bacon Sprite
 	
 {0x0500,"coin",[[
-1 1 1 . 
-R m 1 1 
-R m S 1 
-m R S 1 
-m S s 1 
-S S f 1 
-S s f 1 
-s f j 1 
-f f 1 1 
-f 1 1 . 
-1 1 . . 
-. . . . 
-. . . . 
-. . . . 
-. . . . 
-. . . .  
+1 1 1 1 . 
+m R m 1 1 
+m R m S 1 
+m m R S 1 
+R m S s 1 
+R S S f 1 
+m S s f 1 
+S s f j 1 
+s f f 1 1 
+f f 1 1 . 
+1 1 1 . . 
+1 . . . . 
+. . . . . 
+. . . . . 
+. . . . . 
+. . . . .  
 ]]},
 
 {0x0600,"body_p1",[[
