@@ -117,17 +117,29 @@ local chat_text=[[
 	
 	>exit
 
-#npc2 Conversation NPC2
+#Tom Conversation NPC2
 
-	Not a real boy.
+	Hi. How are you?
 
 <welcome
 
-	Sorry but I am not a real boy.
+	Hi. How are you?
 	
 	>exit
 	
 		Bye bye.
+	>fine
+		I'm fine! Thanks for asking.
+	>bad
+		I'm terrible!
+<bad
+	What happened?
+
+	>cat
+		My cat died! Boo hoo
+
+<fine
+	You're welcome.
 
 
 #npc3 Conversation NPC3
@@ -416,7 +428,7 @@ local default_legend={
 -- items not tiles, so display tile 0 and we will add a sprite for display
 	["S "]={ name="char_empty",	start=1,	},
 	["N1"]={ name="char_empty",	npc="npc1",				sprite="npc1", },
-	["N2"]={ name="char_empty",	npc="npc2",				sprite="npc2", },
+	["N2"]={ name="char_empty",	npc="Tom",				sprite="npc2", },
 	["N3"]={ name="char_empty",	npc="npc3",				sprite="npc3", },
 
 }
