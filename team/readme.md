@@ -2,6 +2,13 @@
 - DON'T FORGET TO COMMIT YOUR CHANGES!! THIS SAVES YOUR WORK.
 ```
 
+# Table of Contents
+
+1. [Team directory](#team-directory)
+2. [Adding a link](#add-a-link-to-your-chat)
+3. [Test your game](#test-your-game)
+4. [How to get RAW link](#how-to-get-raw-link)
+
 # Team directory
 
 Create a new folder and add a readme.md file with an introduction.
@@ -27,3 +34,18 @@ Create a new folder and add a readme.md file with an introduction.
 5. Copy the ```url``` of this link and paste into your ```readme.md``` file
     ![url_end](https://cloud.githubusercontent.com/assets/1515961/24321789/feb7fd0a-114c-11e7-816d-8c1a59e9a211.png)
 6. Commit your changes
+
+----------
+
+# Test your game
+
+1. Paste the *raw* URL of your code into https://xriss.github.io/fun64/run/
+    - For example: ```https://raw.githubusercontent.com/bradford-coderdojo/bltm/master/team/shi/platchat.fun.lua```
+    
+----------
+
+# How to get RAW link
+
+1. Go to the page of the code you want (it usually ends with ```filename.fun.lua```)
+2. On the top right, click on the **Raw** button (next to Blame and History)
+3. Copy the URL of this link (it should start with ```https://raw.githubusercontent.com/```)
