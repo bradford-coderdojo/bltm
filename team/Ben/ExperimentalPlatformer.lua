@@ -8,7 +8,7 @@ hardware,main=system.configurator({
 	mode="fun64", -- select the standard 320x240 screen using the swanky32 palette.
 	graphics=function() return graphics end,
 	update=function() update() end, -- called repeatedly to update+drawcmap=bitdown.cmap -- use default swanky32 colors
-	})screen={hx=552,hy=240,ss=3,fps=25}
+	})screen={hx=320,hy=320,ss=3,fps=25}
 hardware={
 	{
 		component="screen",
