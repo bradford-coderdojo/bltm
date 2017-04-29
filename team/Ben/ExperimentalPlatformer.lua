@@ -8,8 +8,7 @@ hardware,main=system.configurator({
 	mode="fun64", -- select the standard 320x240 screen using the swanky32 palette.
 	graphics=function() return graphics end,
 	update=function() update() end, -- called repeatedly to update+drawcmap=bitdown.cmap -- use default swanky32 colors
-	})screen={hx=320,hy=320,ss=3,fps=25}
-hardware={
+	})hardware={
 	{
 		component="screen",
 		size={screen.hx,screen.hy},
@@ -18,44 +17,7 @@ hardware={
 		fps=screen.fps,
 		layers=3,
 	},
-	{
-		component="colors",
-		cmap=cmap, -- swanky32 palette
-	},
-	{
-		component="tiles",
-		name="tiles",
-		tile_size={8,8},
-		bitmap_size={64,16},
-	},
-	{
-		component="copper",
-		name="copper",
-		size={screen.hx,screen.hy},
-		layer=1,
-	},
-	{
-		component="tilemap",
-		name="map",
-		tiles="tiles",
-		tilemap_size={math.ceil(screen.hx/8),math.ceil(screen.hy/8)},
-		layer=2,
-	},
-	{
-		component="sprites",
-		name="sprites",
-		tiles="tiles",
-		layer=2,
-	},
-	{
-		component="tilemap",
-		name="text",
-		tiles="tiles",
-		tile_size={8,8}, -- use half width tiles for font
-		tilemap_size={math.ceil(screen.hx/4),math.ceil(screen.hy/8)},
-		layer=3,
-	},
-}
+	
 
 -- debug text dump
 local ls=function(t) print(require("wetgenes.string").dump(t)) end
