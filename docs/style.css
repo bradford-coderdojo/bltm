@@ -9,9 +9,14 @@ body {
 	border-radius: 60px;
 	width: 100%;
 	text-align: center;
+	background-color: #bbb;
 }
 
 #content {
-	position: relative;	
+	position: absolute;
+	top: 20%;
+	left: 0px;
+	background-color: #bbb;
+	width: 64%;
 }
 
