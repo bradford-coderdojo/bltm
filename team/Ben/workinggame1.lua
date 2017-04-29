@@ -553,11 +553,11 @@ local default_legend={
 	["Bb"]={ name="char_blue_box",				solid=1},				-- box
 	["E-"]={ name="char_blue_leftedge",			solid=1},				-- floor left edge
 	["-E"]={ name="char_blue_rightedge",			solid=1},				-- floor right edge
-	["D2"]={ name="char_door2",				},		
-	["D3"]={ name="char_door3",				},	
-	["D4"]={ name="char_door4",				},	
-	["D5"]={ name="char_door5",				},	
-	["D6"]={ name="char_door6",				},	
+	["D2"]={ name="char_door2",				solid=1},		
+	["D3"]={ name="char_door3",				solid=1},	
+	["D4"]={ name="char_door4",				solid=1},	
+	["D5"]={ name="char_door5",				solid=1},	
+	["D6"]={ name="char_door6",				solid=1},	
 
 
 -- items not tiles, so display tile 0 and we will add a sprite for display
