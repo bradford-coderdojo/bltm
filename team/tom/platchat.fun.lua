@@ -138,6 +138,10 @@ local chat_text=[[
 	>cat
 		My cat died! Boo hoo
 
+<cat
+	>exit
+		Oh! Ifeel sorry for you
+
 <fine
 	You're welcome.
 
