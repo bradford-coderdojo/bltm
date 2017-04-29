@@ -55,11 +55,14 @@ The example below can be tweaked for any files on Github. **Don't forget to comm
 
 # Test your game
 
-There are 2 ways to test your code online https://xriss.github.io/fun64/run/
+There are **2 ways** to test your code online https://xriss.github.io/fun64/run/
 
-1. Paste the *raw* URL of your code into the white box
+- Paste the *raw* URL of your code into the white box
     - For example: ```https://raw.githubusercontent.com/bradford-coderdojo/bltm/master/team/shi/platchat.fun.lua```    
-2. Cut and paste your code by clicking on the **copypasta** link
+
+**or**
+
+- Cut and paste your code by clicking on the **copypasta** link
     
 ----------
 
