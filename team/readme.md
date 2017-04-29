@@ -2,6 +2,8 @@
 - DON'T FORGET TO COMMIT YOUR CHANGES!! THIS SAVES YOUR WORK.
 ```
 
+**Welcome to the team!** In front of you is a challenging and trecherous journey, full of loot and adventure. It's dangerous to go alone! But no fear! We are here with you all the way, together with your team mates - [if you have any questions at all or need some help with your code or want some feedback on your game, ask away here](https://github.com/bradford-coderdojo/bltm/issues).
+
 # Table of Contents
 
 1. [How to create a team directory](#team-directory)
