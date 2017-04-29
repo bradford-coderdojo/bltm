@@ -5,7 +5,7 @@ body {
 #title {
 	position: absolute;
 	top: 0px;
-	left: 0px;
+	left: 20px;
 	border-radius: 60px;
 	width: 100%;
 	text-align: center;
@@ -14,9 +14,11 @@ body {
 
 #content {
 	position: absolute;
-	top: 40%;
-	left: 0px;
+	top: 35%;
+	left: 20px;
 	background-color: #bbb;
 	width: 64%;
+	border-radius: 40px;
+
 }
 
