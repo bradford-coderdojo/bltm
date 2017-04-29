@@ -159,27 +159,44 @@ local chat_text=[[
 		Bye bye.
 
 #npc4 Conversation NPC4
+
 <welcome
+
 	Hi.
+	
 	>hi
+	
 		Hi.
+		
 <hi
+
 	I love your face.
+	
 	>exit
+	
 		Err...OK!
 
 #npc5 Conversation NPC5
-<welcome
-	Hi.
-	>hi
-		Hi
-	>exit
-		...
-<hi
-	I am a wherewolf!
-	>exit
-		Errmm...
 
+<welcome
+
+	Hi.
+	
+	>hi
+	
+		Hi
+		
+	>exit
+	
+		...
+		
+<hi
+
+	I am a wherewolf!
+	
+	>exit
+	
+		Errmm...
 
 ]]
 
