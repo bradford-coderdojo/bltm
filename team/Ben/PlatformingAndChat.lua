@@ -18,108 +18,38 @@ local chat_text=[[
 
 #npc1 Conversation NPC1
 
-	A rare bread of NPC who will fulfil all your conversational desires for 
-	a very good price.
-
-	=sir sir/madam
-
-	>convo
-
-		Is this the right room for a conversation?
-		
-	>exit
-	
-		...ERROR...EOF...PLEASE...RESTART...
-
 <welcome
 
-	Good Morning {sir},
+	Good Morning
 	
-	>morning
+	>kitchen1
 
-		Good morning to you too.
+		Do you know the way to the KITCHEN?
+	>tomato1
 
-	>afternoon
+		I am a lost TOMATO, can you help me?
+<kitchen1
 
-		I think you will find it is now afternoon.
-
-	>sir
-
-		How dare you call me {sir}!
-
-<sir
-
-	My apologies, I am afraid that I am but an NPC with very little 
-	brain, how might I address you?
+	I don't know, but you will need to ask the other people upstairs.
 	
-	>welcome.1?sir!=madam
+	>end
 
-		You may address me as Madam.
+	Thank you, that's all I need to know
 
-		=sir madam
-
-	>welcome.2?sir!=God
-
-		You may address me as God.
-
-		=sir God
-
-	>welcome.3?sir!=sir
-
-		You may address me as Sir.
-
-		=sir sir
-
-<afternoon
+<tomato1
 	
-	Then good afternoon {sir},
+	I need to warn you that there's MAYONNAISE about, they will splat and kill you.
+
+	>tomato11
 	
-	>convo
+	How do I avoid them?
 
-<morning
+<tomato11
 	
-	and how may I help {sir} today?
+	empty
 	
-	>convo
-
-
-<convo
-
-	Indeed it is, would you like the full conversation or just the quick natter?
-
-	>convo_full
-	
-		How long is the full conversation?
-
-	>convo_quick
-
-		A quick natter sounds just perfect.
-
-<convo_full
-
-	The full conversation is very full and long so much so that you 
-	will have to page through many pages before you get to make a 
-	decision
-	
-	>
-		Like this?
-	<
-	
-	Yes just like this. In fact I think you can see that we are already 
-	doing it.
-			
-	
-	>exit
-
-<convo_quick
-
-	...
-	
-	>exit
-
-#npc2 Conversation NPC2
-
-	Not a real boy.
+	>end
+		end
 
 <welcome
 
