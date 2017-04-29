@@ -199,7 +199,7 @@ R . . . R . . .
 . . R . . . R . 
 R R R R R R R R 
 ]]},
-{0x0110,"tile_redgrid_tlborder",[[
+{0x0300,"tile_redgrid_tlborder",[[
 R R R R R R R R 
 R R . . . R . . 
 R . R . . . R . 
@@ -209,7 +209,7 @@ R R . . . R . .
 R . R . . . R . 
 R . . R . . . R 
 ]]},
-{0x0111,"tile_redgrid_trborder",[[
+{0x0301,"tile_redgrid_trborder",[[
 R R R R R R R R 
 . R . . . R . R 
 . . R . . . R R 
@@ -219,7 +219,7 @@ R . . . R . . R
 . . R . . . R R 
 . . . R . . . R 
 ]]},
-{0x0112,"tile_redgrid_lborder",[[
+{0x0302,"tile_redgrid_lborder",[[
 R . . . R . . . 
 R R . . . R . . 
 R . R . . . R . 
@@ -229,7 +229,7 @@ R R . . . R . .
 R . R . . . R . 
 R . . R . . . R 
 ]]},
-{0x0113,"tile_redgrid_rborder",[[
+{0x0303,"tile_redgrid_rborder",[[
 R . . . R . . R 
 . R . . . R . R 
 . . R . . . R R 
