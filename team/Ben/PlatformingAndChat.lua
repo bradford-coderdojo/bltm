@@ -117,14 +117,14 @@ graphics={
 0 0 0 0 0 0 0 0 
 ]]},
 {0x0102,"char_wall",[[
-R . . . R . . R
-R R . . . R . R
-R . R . . . R R
-R . . R . . . R
-R . . . R . . R
-R R . . . R . R
-R . R . . . R R
-R . . R . . . R
+Y . . Y . . . Y 
+Y . Y . . . Y Y 
+Y Y . . . Y . Y 
+Y . . . Y . . Y 
+Y . . Y . . . Y 
+Y . Y . . . Y Y 
+Y Y . . . Y . Y 
+Y . . . Y . . Y 
 
 ]]},
 {0x0103,"char_floor",[[
