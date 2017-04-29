@@ -172,14 +172,14 @@ graphics={
 0 0 0 0 0 0 0 0 
 ]]},
 {0x0102,"char_wall",[[
+R R R S R R R S
+S S S S S S S S
+R R S R R R S R
+S S S S S S S S
+R S R R R S R R
+S S S S S S S S
+S R R R S R R R
 0 0 0 0 0 0 0 0
-R R S 0 R R S 0
-S S S 0 S S S 0
-0 0 0 0 0 0 0 0
-R R S 0 R R S 0
-S S S 0 S S S 0
-0 0 0 0 0 0 0 0
-r r s 0 r r s 0
 ]]},
 {0x0103,"char_floor",[[
 R R R R R R R R 
