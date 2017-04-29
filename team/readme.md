@@ -4,9 +4,9 @@
 
 # Table of Contents
 
-1. [Team directory](#team-directory)
-2. [Adding a link](#add-a-link-to-your-chat)
-3. [Test your game](#test-your-game)
+1. [How to create a team directory](#team-directory)
+2. [How to add a link](#add-a-link-to-your-chat)
+3. [How to test your game](#test-your-game)
 4. [How to get RAW link](#how-to-get-raw-link)
 
 # Team directory
@@ -34,6 +34,13 @@ Create a new folder and add a readme.md file with an introduction.
 5. Copy the ```url``` of this link and paste into your ```readme.md``` file
     ![url_end](https://cloud.githubusercontent.com/assets/1515961/24321789/feb7fd0a-114c-11e7-816d-8c1a59e9a211.png)
 6. Commit your changes
+
+## Adding a link to anything
+
+1. Put a URL in any part of Github and it will automatically turn into a link
+    - _This link can be rather long and ugly_
+2. Use ```[Nicer and shorter link name](http://uglyandlongurl.goeshere)```
+    - _Replace the text between the square brackets with anything you prefer_
 
 ----------
 
