@@ -16,7 +16,7 @@ local ls=function(t) print(require("wetgenes.string").dump(t)) end
 
 local chat_text=[[
 
-#npc4 Conversation NPC4
+#npc1 Conversation NPC1
     Jonny McGhee
 
 <welcome
@@ -53,58 +53,13 @@ local chat_text=[[
     >yes
         Yes, of course, anything for a friend
     >exit
-        No, I'm far to busy to do anything for the likes of a new friend like you
+        No, I'm far to busy to do anything for the likes of a new friend
 
 <yes
     YAY, can you go and get that apple for me please?
     >exit
         OK
 
-#npc2 Conversation NPC2
-
-	Not a real boy.
-
-<welcome
-
-	Sorry but I am not a real boy.
-    
-    >hello
-        Hello
-
-	>exit
-		Bye bye.
-
-<hello
-    Hello
-    >how
-	How are you today?
-
-    >exit
-        ...
-
-<how
-	I am fine, how are you?
-	>exit.1
-		Good
-	>exit.2
-		fine
-	>exit.3
-		OK
-	>exit.4
-		AAAARRRRRRRGGGGHHHHHH
-
-
-#npc3 Conversation NPC3
-
-	Not a real girl.
-
-<welcome
-
-	Sorry but I am not a real girl.
-	
-	>exit
-	
-		Bye bye.
 
 ]]
 
@@ -280,90 +235,19 @@ Y Y 0 Y Y 0 Y Y
 . Y Y 0 0 Y Y . 
 . . Y Y Y Y . . 
 ]]},
+{0x0501,"apple",[[
+. . G . . G . . 
+. . R G G R . . 
+. R R r r R R . 
+R R r R R r R R 
+R R R r r R R R 
+R R r R R r R R 
+. R R R R R R . 
+. . R R R R . . 
+]]},
 
 
 {0x0800,"npc1",[[
-. . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . R R R R R . . . . . . . . . 
-. . . . . . . . . . R R R R R R R . . . . . . . . 
-. . . . . . . . . . R R R R R R R . . . . . . . . 
-. . . . . . . . . . . Y 0 Y Y R R . . . . . . . . 
-. . . . . . . . . . M Y m m Y R R . . . . . . . . 
-. . . . . . . . . . . Y Y Y Y . R . R . . . . . . 
-. . . . . . . . . . . . Y Y . . . R . . . . . . . 
-. . . . . . . . . . . Y b b Y . . . . . . . . . . 
-. . . . . . . . . . Y b b b b Y . . . . . . . . . 
-. . . . . . . . . . Y b b b b Y . . . . . . . . . 
-. . . . . . . . . Y Y b . b b Y Y . . . . . . . . 
-. . . . . . . . . Y Y . b b b Y Y . . . . . . . . 
-. . . . . . . . . . . b b b b . . . . . . . . . . 
-. . . . . . . . . . Y I . Y Y I . . . . . . . . . 
-. . . . . . . . . . Y I I . Y I . . . . . . . . . 
-. . . . . . . . . I I I . I I I . . . . . . . . . 
-]]},
-
-{0x0803,"npc2",[[
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . I I I . . . . . . . . . . 
-. . . . . . . . . . I I I I I . . . . . . . . . 
-. . . . . . . . . I I I I I I I . . . . . . . . 
-. . . . . . . b b b b b b b b b . . . . . . . . 
-. . . . . . . . . j j j j j j j . . . . . . . . 
-. . . . . . . . . . s 0 s j j j . . . . . . . . 
-. . . . . . . . . M s F F s j . . . . . . . . . 
-. . . . . . . . . . s s s s . . . . . . . . . . 
-. . . . . . . . . . . s s . . . . . . . . . . . 
-. . . . . . . . . . 4 G G 4 . . . . . . . . . . 
-. . . . . . . . . 4 G G G G 4 . . . . . . . . . 
-. . . . . . . . . 4 G G G G 4 . . . . . . . . . 
-. . . . . . . . s s G . G 2 s s . . . . . . . . 
-. . . . . . . . s s . 2 2 2 s s . . . . . . . . 
-. . . . . . . . . . 2 2 2 2 . . . . . . . . . . 
-. . . . . . . . . 7 7 . 7 7 B . . . . . . . . . 
-. . . . . . . . . 5 5 B . 5 B . . . . . . . . . 
-. . . . . . . . B B B . B B B . . . . . . . . . 
-]]},
-
-{0x0806,"npc3",[[
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . o o . . . . . . . . . . 
-. . . . . . . . . . o o o o o . . . . . . . . . 
-. . . . . . . . o o o o o o o o . . . . . . . . 
-. . . . . . . . . o o 4 4 o o o . . . . . . . . 
-. . . . . . . . . . 4 0 4 4 o o . . . . . . . . 
-. . . . . . . . . 5 4 m m 4 4 o . . . . . . . . 
-. . . . . . . . . . 4 4 4 4 o o . . . . . . . . 
-. . . . . . . . . . . 4 4 . o o . . . . . . . . 
-. . . . . . . . . . j 5 5 j . . . . . . . . . . 
-. . . . . . . . . 5 f j j f 5 . . . . . . . . . 
-. . . . . . . . . 5 j j j j 5 . . . . . . . . . 
-. . . . . . . . 4 4 j . j j 4 4 . . . . . . . . 
-. . . . . . . . 4 4 . j j j 4 4 . . . . . . . . 
-. . . . . . . . . . g g g g . . . . . . . . . . 
-. . . . . . . . . g g . g g d . . . . . . . . . 
-. . . . . . . . . g g d . g d . . . . . . . . . 
-. . . . . . . . d d d . d d d . . . . . . . . . 
-]]},
-
-{0x0809,"npc4",[[
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -376,6 +260,32 @@ Y Y 0 Y Y 0 Y Y
 . . . . . . . . . d d d d d d d . . . . . . . . 
 . . . . . . . . . d d d d d d d . . . . . . . . 
 . . . . . . . . . . s 0 s j d d . . . . . . . . 
+. . . . . . . . . M s F F s d . . . . . . . . . 
+. . . . . . . . . . s s s s . . . . . . . . . . 
+. . . . . . . . . . . s s . . . . . . . . . . . 
+. . . . . . . . . . R R R R . . . . . . . . . . 
+. . . . . . . . . R R R R R R . . . . . . . . . 
+. . . . . . . . . R R R R R R . . . . . . . . . 
+. . . . . . . . s s R . R R s s . . . . . . . . 
+. . . . . . . . s s . R R R s s . . . . . . . . 
+. . . . . . . . . . R R R R . . . . . . . . . . 
+. . . . . . . . . 7 7 . 7 7 F . . . . . . . . . 
+. . . . . . . . . 5 5 F . 5 F . . . . . . . . . 
+. . . . . . . . F F F . F F F . . . . . . . . . 
+]]},
+{0x0801,"npc2",[[
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . d d d d . . . . . . . . . . 
+. . . . . . . . . d d d d d d . . . . . . . . . 
+. . . . . . . . . d d d d d d . . . . . . . . . 
+. . . . . . . . . . s 0 s j d . . . . . . . . . 
 . . . . . . . . . M s F F s d . . . . . . . . . 
 . . . . . . . . . . s s s s . . . . . . . . . . 
 . . . . . . . . . . . s s . . . . . . . . . . . 
@@ -418,9 +328,9 @@ local default_legend={
 -- items not tiles, so display tile 0 and we will add a sprite for display
 	["S "]={ name="char_empty",	start=1,	},
 	["N1"]={ name="char_empty",	npc="npc1",				sprite="npc1", },
-	["N2"]={ name="char_empty",	npc="npc2",				sprite="npc2", },
-	["N3"]={ name="char_empty",	npc="npc3",				sprite="npc3", },
-	["N4"]={ name="char_empty",	npc="npc4",				sprite="npc4", },
+	["N2"]={ name="char_empty",	npc="npc2", active=0,	sprite="npc2", },
+
+    ["AA"]={ name="char_empty", loot=1},
 
 }
 	
@@ -517,10 +427,10 @@ map=[[
 ||. . . . . ==. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . .?= . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||?=. . . . . . //. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . /////////////// . . . . . . . . . . . . . . . . . . . N4. ||
+||. . . . . . . . . /////////////// . . . . . . . . . . . . . . . . . . N1. . ||
 ||. . ?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . S . . . .//// ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . S . . . . /// ||
+||. . . . . . . . . . . . . . . . . . . . . . . . . . . . AA. . . . . . . . . ||
 ||. . .?= . . . . . . . . . . . . . . . . . . . . . . . /////////////// . . . ||
 ||?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
@@ -532,7 +442,7 @@ map=[[
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . //. . . . . . . . . . . ||
 ||. . ?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||==. . . . . . . . . . . . . . . . . . . ////. . . . . . . . . . . . . . . . ||
+||==. . . . . . . . N2. . . . . . . . . . ////. . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . .===========//////////////////. . . . . . ////////. . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
@@ -780,6 +690,28 @@ function add_item()
 	return item
 end
 
+function add_loot()
+	local space=entities_get("space")
+	local loot=entities_add{caste="loot"}
+	loot.update=function()
+		if loot.active then				
+			if loot.player then
+				loot.player.score=loot.player.score+1
+				loot.player.tomato=1
+				loot.active=false
+				space:remove(loot.shape)
+			end
+		end
+	end
+	loot.draw=function()
+		if loot.active then
+			local time=entities_get("time")
+			local b=math.sin( (time.game*8 + (loot.px+loot.py)/16 ) )*2
+			system.components.sprites.list_add({t=0x0501,h=8,px=loot.px,py=loot.py+b})				
+		end
+	end
+	return loot
+end
 
 function setup_score()
 
@@ -962,6 +894,7 @@ function add_player(i)
 
 	player.idx=i
 	player.score=0
+    player.tomato=0
 	
 	local t=bitdown.cmap[ players_colors[i] ]
 	player.color={}
