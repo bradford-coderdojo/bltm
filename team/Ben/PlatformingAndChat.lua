@@ -137,7 +137,7 @@ R . . . R . . .
 . . R . . . R . 
 R R R R R R R R 
 ]]},
-{0x0999,"char_newfloorbox",[[
+{0x0104,"char_newfloorbox",[[
 R R R R R R R R 
 R R . . . R . R 
 R . R . . . R R 
