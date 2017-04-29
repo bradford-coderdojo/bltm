@@ -443,7 +443,7 @@ levels[1]={
 legend=combine_legends(default_legend,{
 	["?0"]={ name="char_empty" },
 }),
-title="This is a test.",
+title="Find the door...",
 map=[[
 ||0000000000000000000000000000000000000000000000000000000000000000000000000000||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
