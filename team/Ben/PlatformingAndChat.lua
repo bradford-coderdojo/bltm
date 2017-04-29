@@ -30,7 +30,7 @@ local chat_text=[[
 		I am a lost TOMATO, can you help me?
 <kitchen1
 
-	I don't know, but you will need to ask the other people upstairs.
+	I don't know, but the person on the next floor knows how to get to about anywhere.
 	
 	>exit
 
@@ -65,6 +65,14 @@ local chat_text=[[
 
 	>exit
 		Thanks that really helped,
+
+	>route11
+		So what what are you doing here?
+<route11
+	I know everything about these parts, and I'm here to help those.
+
+	>exit
+		Interesting.
 
 
 #npc3 Conversation NPC3
