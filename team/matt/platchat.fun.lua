@@ -25,7 +25,7 @@ local chat_text=[[
 
 	>convo
 
-		Is this the right room for a conversation?
+		Hello?
 		
 	>exit
 	
@@ -85,7 +85,7 @@ local chat_text=[[
 
 <convo
 
-	Indeed it is, would you like the full conversation or just the quick natter?
+	Hello
 
 	>convo_full
 	
@@ -133,8 +133,22 @@ local chat_text=[[
 
 <hello
     Hello
+    >how
+	How are you today?
+
     >exit
         ...
+
+<how
+	I am fine, how are you?
+	>exit?1
+		good
+	>exit?2
+		fine
+	>exit?3
+		OK
+	>exit?4
+		AAAARRRRRRRGGGGHHHHHH
 
 
 #npc3 Conversation NPC3
