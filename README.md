@@ -1,4 +1,4 @@
-![BLTM](/img/logo.png)
+![BLTM](/docs/logo.png)
 
 # Bacon Lettuce Tomato Mayo
 
