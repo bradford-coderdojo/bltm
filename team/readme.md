@@ -5,7 +5,7 @@
 # Table of Contents
 
 1. [How to create a team directory](#team-directory)
-2. [How to add a link](#add-a-link-to-your-chat)
+2. [How to add a link](#adding-a-link)
 3. [How to test your game](#test-your-game)
 4. [How to get RAW link](#how-to-get-raw-link)
 
@@ -22,7 +22,21 @@ Create a new folder and add a readme.md file with an introduction.
     
 ----------
 
-# Add a link to your CHAT
+# Adding a link
+
+Github allows links in the discussion forum, wiki and files found in your folder.
+
+1. Put a URL in any part of Github and it will automatically turn into a clickable link
+    - _This link can be rather long and ugly_
+2. Use ```[Nicer and shorter link name](http://uglyandlongurl.goeshere)```
+    - _Replace the text between the square brackets with anything you prefer_
+
+
+## Add a link to your CHAT
+
+A readme.md file can be found in your own folder. This is the first thing anyone sees if they visit your folder in the repository. It's always nice to present links to your game in here so anyone can have a go at all the hard work you've done!
+
+The example below can be tweaked for any files on Github. **Don't forget to commit your changes!**
 
 1. Edit the ```readme.md``` file in **your own folder**
 2. Get the *raw* version of your ```chatdown.fun.lua``` file
@@ -34,13 +48,6 @@ Create a new folder and add a readme.md file with an introduction.
 5. Copy the ```url``` of this link and paste into your ```readme.md``` file
     ![url_end](https://cloud.githubusercontent.com/assets/1515961/24321789/feb7fd0a-114c-11e7-816d-8c1a59e9a211.png)
 6. Commit your changes
-
-## Adding a link to anything
-
-1. Put a URL in any part of Github and it will automatically turn into a link
-    - _This link can be rather long and ugly_
-2. Use ```[Nicer and shorter link name](http://uglyandlongurl.goeshere)```
-    - _Replace the text between the square brackets with anything you prefer_
 
 ----------
 
