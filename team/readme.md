@@ -46,8 +46,11 @@ Create a new folder and add a readme.md file with an introduction.
 
 # Test your game
 
-1. Paste the *raw* URL of your code into https://xriss.github.io/fun64/run/
-    - For example: ```https://raw.githubusercontent.com/bradford-coderdojo/bltm/master/team/shi/platchat.fun.lua```
+There are 2 ways to test your code online https://xriss.github.io/fun64/run/
+
+1. Paste the *raw* URL of your code into the white box
+    - For example: ```https://raw.githubusercontent.com/bradford-coderdojo/bltm/master/team/shi/platchat.fun.lua```    
+2. Cut and paste your code by clicking on the **copypasta** link
     
 ----------
 
