@@ -50,7 +50,7 @@ local chat_text=[[
 
 	>exit
 		Exit
-#npc2 Conversaton NPC2
+#npc2 Conversation NPC2
 
 <welcome
 
