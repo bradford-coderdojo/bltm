@@ -384,8 +384,8 @@ local default_legend={
 
 -- items not tiles, so display tile 0 and we will add a sprite for display
 	["S "]={ name="char_empty",	start=1,	},
-	["N1"]={ name="char_empty",	npc="npc1",				sprite="npc1", },
-	["N2"]={ name="char_empty",	npc="npc2", active=0,	sprite="npc2", },
+	["N1"]={ name="char_empty",	npc="npc1",			  },
+	["N2"]={ name="char_empty",	npc="npc2", active=0, },
 
     ["AA"]={ name="char_empty", loot=1},
 
@@ -760,8 +760,9 @@ function add_loot()
 
 				for i,npc in pairs(entities_items("npc")) do
 					if npc.shape.npc == 'npc1' then
-						ls(npc)
+--						ls(npc)
 						space:remove(npc.shape)
+						npc.active=false
 					end
 				end
 			end
@@ -776,6 +777,24 @@ function add_loot()
 	end
 	return loot
 end
+
+-- items, can be used for general things, EG physics shapes with no special actions
+function add_npc()
+	local npc=entities_add{caste="npc"}
+	npc.draw=function()
+		if npc.active then
+			local px,py,rz=npc.px,npc.py,npc.rz
+			if npc.body then -- from fizix
+				px,py=npc.body:position()
+				rz=npc.body:angle()
+			end
+			rz=npc.draw_rz or rz -- always face up?
+			system.components.sprites.list_add({t=npc.sprite,h=npc.h,hx=npc.hx,hy=npc.hy,s=npc.s,sx=npc.sx,sy=npc.sy,px=px,py=py,rz=180*rz/math.pi,color=npc.color,pz=npc.pz})
+		end
+	end
+	return npc
+end
+
 
 function setup_score()
 
@@ -1430,8 +1449,15 @@ function setup_level(idx)
 				item.pz=-1
 			end
 			if tile.npc then
-				--local item=add_item()
-				local item=entities_add{caste="npc"}
+				local item=add_npc()
+				item.active=true
+				item.px=tile.x*8+4
+				item.py=tile.y*8+4
+				item.sprite = names[tile.npc].idx
+				item.h=24
+				item.s=1
+				item.draw_rz=0
+				item.pz=-1
 
 				item.shape=space.static:shape("box", (x-1)*8,(y-1)*8, (x+2)*8,(y+2)*8,0)
 
