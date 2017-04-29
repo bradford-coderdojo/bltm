@@ -183,13 +183,13 @@ o o o o r r r r
 ]]},
 {0x0103,"char_floor",[[
 R R R R R R R R 
-r r r r r r r r 
-r r r r r r r r 
-. r r r r r r . 
-. . r . r r . . 
-. . . . r r . . 
-. . . . . r . . 
-. . . . . . . . 
+. R . . . R . . 
+. . R . . . R . 
+. . . R . . . R 
+R . . . R . . . 
+. R . . . R . . 
+. . R . . . R . 
+R R R R R R R R 
 ]]},
 
 {0x0200,"player_f1",[[
