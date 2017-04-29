@@ -160,6 +160,8 @@ local chat_text=[[
 
 #npc4 Conversation NPC4
 
+	test
+
 <welcome
 
 	Hi.
@@ -177,6 +179,8 @@ local chat_text=[[
 		Err...OK!
 
 #npc5 Conversation NPC5
+
+	test
 
 <welcome
 
@@ -595,7 +599,7 @@ Y Y 0 Y Y 0 Y Y
 . . . . . . . . . g g . g g d . . . . . . . . . 
 . . . . . . . . . g g d . g d . . . . . . . . . 
 . . . . . . . . d d d . d d d . . . . . . . . . 
-]]},
+]]}
 
 
 }
