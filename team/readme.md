@@ -10,6 +10,7 @@
 2. [How to add a link](#adding-a-link)
 3. [How to test your game](#test-your-game)
 4. [How to get RAW link](#how-to-get-raw-link)
+5. [It's not working, help!](#something-is-wrong)
 
 # Team directory
 
@@ -72,3 +73,14 @@ There are **2 ways** to test your code online https://xriss.github.io/fun64/run/
 1. Go to the page of the code you want (it usually ends with ```filename.fun.lua```)
 2. On the top right, click on the **Raw** button (next to Blame and History)
 3. Copy the URL of this link (it should start with ```https://raw.githubusercontent.com/```)
+
+    
+----------
+
+# Something is wrong
+
+Make sure you have the latest version of everything.
+
+We make changes to the game engine all the time so update Gamecake if things are not working.
+
+If you still need help or have any questions at all, [just raise an issue in the forum](https://github.com/bradford-coderdojo/bltm/issues) :}
