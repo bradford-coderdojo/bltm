@@ -199,46 +199,46 @@ R . . . R . . .
 . . R . . . R . 
 R R R R R R R R 
 ]]},
-{0x0300,"tile_redgrid_tlborder",[[
-R R R R R R R R 
-R R . . . R . . 
-R . R . . . R . 
-R . . R . . . R 
-R . . . R . . . 
-R R . . . R . . 
-R . R . . . R . 
-R . . R . . . R 
-]]},
-{0x0301,"tile_redgrid_trborder",[[
-R R R R R R R R 
-. R . . . R . R 
-. . R . . . R R 
-. . . R . . . R 
-R . . . R . . R 
-. R . . . R . R 
-. . R . . . R R 
-. . . R . . . R 
-]]},
-{0x0302,"tile_redgrid_lborder",[[
-R . . . R . . . 
-R R . . . R . . 
-R . R . . . R . 
-R . . R . . . R 
-R . . . R . . . 
-R R . . . R . . 
-R . R . . . R . 
-R . . R . . . R 
-]]},
-{0x0303,"tile_redgrid_rborder",[[
-R . . . R . . R 
-. R . . . R . R 
-. . R . . . R R 
-. . . R . . . R 
-R . . . R . . R 
-. R . . . R . R 
-. . R . . . R R 
-. . . R . . . R 
-]]},
+--{0x0300,"tile_redgrid_tlborder",[[
+--R R R R R R R R 
+--R R . . . R . . 
+--R . R . . . R . 
+--R . . R . . . R 
+--R . . . R . . . 
+--R R . . . R . . 
+--R . R . . . R . 
+--R . . R . . . R 
+--]]},
+--{0x0301,"tile_redgrid_trborder",[[
+--R R R R R R R R 
+--. R . . . R . R 
+--. . R . . . R R 
+--. . . R . . . R 
+--R . . . R . . R 
+--. R . . . R . R 
+--. . R . . . R R 
+--. . . R . . . R 
+--]]},
+--{0x0302,"tile_redgrid_lborder",[[
+--R . . . R . . . 
+--R R . . . R . . 
+--R . R . . . R . 
+--R . . R . . . R 
+--R . . . R . . . 
+--R R . . . R . . 
+--R . R . . . R . 
+--R . . R . . . R 
+--]]},
+--{0x0303,"tile_redgrid_rborder",[[
+--R . . . R . . R 
+--. R . . . R . R 
+--. . R . . . R R 
+--. . . R . . . R 
+--R . . . R . . R 
+--. R . . . R . R 
+--. . R . . . R R 
+--. . . R . . . R 
+--]]},
 {0x0200,"player_f1",[[
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . 4 4 4 4 . . . . . . . . . . 
@@ -465,10 +465,10 @@ local default_legend={
 	["TO"]={ name="tile_redgrid_tborder",			solid=1},				-- toponly
 	["BO"]={ name="tile_redgrid_bborder",			solid=1},				-- bottomonly
 	["NB"]={ name="tile_redgrid",				solid=1},				-- noborders
-	["LO"]={ name="tile_redgrid_lborder",			solid=1},			
-	["RO"]={ name="tile_redgrid_rborder",			solid=1},	
-	["LC"]={ name="tile_redgrid_tlborder",			solid=1},			
-	["RC"]={ name="tile_redgrid_trborder",			solid=1},
+	--["LO"]={ name="tile_redgrid_lborder",			solid=1},			
+	--["RO"]={ name="tile_redgrid_rborder",			solid=1},	
+	--["LC"]={ name="tile_redgrid_tlborder",			solid=1},			
+	--["RC"]={ name="tile_redgrid_trborder",			solid=1},
 	
 -- items not tiles, so display tile 0 and we will add a sprite for display
 	["S "]={ name="char_empty",	start=1,	},
@@ -500,8 +500,8 @@ map=[[
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||========RR. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . LCTOTOTOTORC. . . . N2. . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . LONBNBNBNBRO. . . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . TOTOTOTOTOTO. . . . N2. . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . NBNBNBNBNBNB. . . . . . . . . ||
 ||====RR. . . . BB. . . LL======================BOBOBOBOBOBO==================||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
