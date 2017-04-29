@@ -141,13 +141,13 @@ local chat_text=[[
 
 <how
 	I am fine, how are you?
-	>exit?1
+	>exit
 		good
-	>exit?2
+	>exit
 		fine
-	>exit?3
+	>exit
 		OK
-	>exit?4
+	>exit
 		AAAARRRRRRRGGGGHHHHHH
 
 
