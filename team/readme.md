@@ -63,7 +63,7 @@ There are **2 ways** to test your code online https://xriss.github.io/fun64/run/
 **or**
 
 - Copy and paste your entire code by clicking on the **copypasta** link
-    - Click on the pen icon when you're on code page, select all the code (**ctrl a**), copy (**ctrl c**) & paste (**ctrl v**)
+    - Edit your file by clicking on the pen icon, select all the code (**ctrl a**), copy (**ctrl c**) & paste (**ctrl v**)
     
 ----------
 
