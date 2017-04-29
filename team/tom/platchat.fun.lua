@@ -167,6 +167,20 @@ local chat_text=[[
 	I love your face.
 	>exit
 		Err...OK!
+
+#npc5 Conversation NPC5
+<welcome
+	Hi.
+	>hi
+		Hi
+	>exit
+		...
+<hi
+	I am a wherewolf!
+	>exit
+		Errmm...
+
+
 ]]
 
 
@@ -216,6 +230,104 @@ r r r r r r r r
 . . . . . r . . 
 . . . . . . . . 
 ]]},
+
+{0x0104,"char_box",[[
+R R R R R R R R 
+R R . R . R . R 
+R . R . R . R R 
+R R . R . R . R 
+R . R . R . R R 
+R R . R . R . R 
+R . R . R . R R 
+R R R R R R R R 
+]]},
+
+{0x0105,"char_yellowwall",[[
+Y . . Y . . . Y 
+Y . Y . . . Y Y 
+Y Y . . . Y . Y 
+Y . . . Y . . Y 
+Y . . Y . . . Y 
+Y . Y . . . Y Y 
+Y Y . . . Y . Y 
+Y . . . Y . . Y 
+]]},
+
+{0x0106,"char_door",[[
+. . F F F F . . 
+. F . . . . F . 
+F . . . . . . F 
+F . . . . . . F 
+F . . . . . . F 
+F . . . . . . F 
+F . . . . . . F 
+F F F F F F F F 
+]]},
+
+{0x0107,"char_yellowwalltopl",[[
+Y Y Y Y Y Y Y Y 
+Y . Y . . . Y Y 
+Y Y . . . Y . Y 
+Y . . . Y . . Y 
+Y . . Y . . . Y 
+Y . Y . . . Y Y 
+Y Y . . . Y . Y 
+Y . . . Y . . Y 
+]]},
+
+{0x0108,"char_yellowwalLbotl",[[
+Y . . Y . . . Y 
+Y . Y . . . Y Y 
+Y Y . . . Y . Y 
+Y . . . Y . . Y 
+Y . . Y . . . Y 
+Y . Y . . . Y Y 
+Y Y . . . Y . Y 
+Y Y Y Y Y Y Y Y 
+]]},
+
+{0x0109,"char_yellowwallbotr",[[
+Y . . Y . . . Y 
+Y . Y . . . Y Y 
+Y Y . . . Y . Y 
+Y . . . Y . . Y 
+Y . . Y . . . Y 
+Y . Y . . . Y Y 
+Y Y . . . Y . Y 
+Y Y Y Y Y Y Y Y 
+]]},
+
+{0x010A,"char_yellowwalltopr",[[
+Y Y Y Y Y Y Y Y 
+Y . Y . . . Y Y 
+Y Y . . . Y . Y 
+Y . . . Y . . Y 
+Y . . Y . . . Y 
+Y . Y . . . Y Y 
+Y Y . . . Y . Y 
+Y . . . Y . . Y 
+]]},
+{0x010B,"char_yellowwalltop",[[
+Y Y Y Y Y Y Y Y 
+Y . Y . . . Y Y 
+Y Y . . . Y . Y 
+Y . . . Y . . Y 
+Y . . Y . . . Y 
+Y . Y . . . Y Y 
+Y Y . . . Y . Y 
+Y . . . Y . . Y 
+]]},
+{0x010C,"char_yellowwallbot",[[
+Y . . Y . . . Y 
+Y . Y . . . Y Y 
+Y Y . . . Y . Y 
+Y . . . Y . . Y 
+Y . . Y . . . Y 
+Y . Y . . . Y Y 
+Y Y . . . Y . Y 
+Y Y Y Y Y Y Y Y 
+]]},
+
 
 {0x0200,"player_f1",[[
 . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -490,9 +602,16 @@ local default_legend={
 	["00"]={ name="char_black",				solid=1, dense=1, },		-- black border
 	["0 "]={ name="char_empty",				solid=1, dense=1, },		-- empty border
 
-	["||"]={ name="char_wall",				solid=1},				-- wall
-	["=="]={ name="char_floor",				solid=1},				-- floor
-
+	["##"]={ name="char_wall",				solid=1},				-- wall
+	["--"]={ name="char_floor",				solid=1},				-- floor
+	["||"]={ name="char_yellowwall",			solid=1},
+	["=="]={ name="char_box",				solid=1},
+	["tr"]={ name="char_yellowwalltopr",			solid=1},
+	["tl"]={ name="char_yellowwalltopl",			solid=1},
+	["br"]={ name="char_yellowwallbotr",			solid=1},
+	["bl"]={ name="char_yellowwallbotl",			solid=1},
+	["b"]={ name="char_yellowwallbot",			solid=1},
+	["t"]={ name="char_yellowwalltop",			solid=1},
 -- items not tiles, so display tile 0 and we will add a sprite for display
 	["S "]={ name="char_empty",	start=1,	},
 	["N1"]={ name="char_empty",	npc="npc1",				sprite="npc1", },
@@ -526,8 +645,8 @@ map=[[
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||==========. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . ||||||||||||. . . . N2. . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . ||||||||||||. . . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . tlt t t t tr. . . . N2. . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . blb b b b br. . . . . . . . . ||
 ||==============. . . . ======================================================||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
