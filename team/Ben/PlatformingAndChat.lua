@@ -127,7 +127,7 @@ Y Y . . . Y . Y
 Y . . . Y . . Y 
 
 ]]},
-{0x0103,"tile_redgrid_tbborder",[[
+{0x0103,"char_floor",[[
 R R R R R R R R 
 . R . . . R . . 
 . . R . . . R . 
@@ -458,13 +458,13 @@ local default_legend={
 	["0 "]={ name="char_empty",				solid=1, dense=1, },		-- empty border
 
 	["||"]={ name="char_wall",				solid=1},				-- wall
-	["=="]={ name="tile_redgrid_tbborder",			solid=1},				-- floor
-	["BB"]={ name="tile_redgrid_trblborder",		solid=1},				-- box
-	["LL"]={ name="tile_redgrid_tlbborder",			solid=1},				-- leftside
-	["RR"]={ name="tile_redgrid_trbborder",			solid=1},				-- rightside
-	["TO"]={ name="tile_redgrid_tborder",			solid=1},				-- toponly
-	["BO"]={ name="tile_redgrid_bborder",			solid=1},				-- bottomonly
-	["NB"]={ name="tile_redgrid",				solid=1},				-- noborders
+	["=="]={ name="char_floor",				solid=1},				-- redgrid tbborder floor
+	["BB"]={ name="tile_redgrid_trblborder",		solid=1},				
+	["LL"]={ name="tile_redgrid_tlbborder",			solid=1},				
+	["RR"]={ name="tile_redgrid_trbborder",			solid=1},				
+	["TO"]={ name="tile_redgrid_tborder",			solid=1},				
+	["BO"]={ name="tile_redgrid_bborder",			solid=1},				
+	["NB"]={ name="tile_redgrid",				solid=1},				
 	--["LO"]={ name="tile_redgrid_lborder",			solid=1},			
 	--["RO"]={ name="tile_redgrid_rborder",			solid=1},	
 	--["LC"]={ name="tile_redgrid_tlborder",			solid=1},			
