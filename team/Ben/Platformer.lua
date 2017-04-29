@@ -315,16 +315,16 @@ R . R . . . . .
 R R R . . . . . 
 R . R . . . . . 
 ]]},
---{0x010g,"char_door6",[[
---. . . . . . . . 
---. . . . . . . . 
---. . . . . . . . 
---. . . . . . . . 
---. . . . . . . . 
---. . . . . . . . 
---R R R R R R R R 
---. R . R R . R .
---]]},
+{0x0110,"char_door6",[[
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+R R R R R R R R 
+. R . R R . R .
+]]},
 {0x0200,"player_f1",[[
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -553,11 +553,11 @@ local default_legend={
 	["Bb"]={ name="char_blue_box",				solid=1},				-- box
 	["E-"]={ name="char_blue_leftedge",			solid=1},				-- floor left edge
 	["-E"]={ name="char_blue_rightedge",			solid=1},				-- floor right edge
-	["D2"]={ name="char_door2",				solid=1},		
-	["D3"]={ name="char_door3",				solid=1},	
-	["D4"]={ name="char_door4",				solid=1},	
-	["D5"]={ name="char_door5",				solid=1},	
-	--["D6"]={ name="char_door6",				solid=1},	
+	["D2"]={ name="char_door2",				},		
+	["D3"]={ name="char_door3",				},	
+	["D4"]={ name="char_door4",				},	
+	["D5"]={ name="char_door5",				},	
+	["D6"]={ name="char_door6",				},	
 
 
 -- items not tiles, so display tile 0 and we will add a sprite for display
@@ -576,7 +576,7 @@ legend=combine_legends(default_legend,{
 }),
 title="",
 map=[[
-00000000000000000000000000000000000000000000000000000000000000000000000000000000
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
 00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
 00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
 00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
