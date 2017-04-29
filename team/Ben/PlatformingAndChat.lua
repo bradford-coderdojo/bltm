@@ -32,7 +32,7 @@ local chat_text=[[
 
 	I don't know, but you will need to ask the other people upstairs.
 	
-	>end
+	>exit
 
 	Thank you, that's all I need to know
 
