@@ -50,6 +50,7 @@ local chat_text=[[
 	
 	>end
 		end
+#npc2 Conversaton NPC2
 
 <welcome
 
