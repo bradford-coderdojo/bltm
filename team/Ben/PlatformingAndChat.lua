@@ -169,7 +169,36 @@ R R R R R R R R
 . . R . . . R R 
 R R R R R R R R 
 ]]},
-	
+{0x0107,"char_newfloornoborders",[[
+R . . . R . . . 
+. R . . . R . . 
+. . R . . . R . 
+. . . R . . . R 
+. . . . R . . . 
+. R . . . R . . 
+. . R . . . R . 
+. . . R . . . R 
+]]},
+{0x0108,"char_newfloortoponly",[[
+R R R R R R R R 
+. R . . . R . . 
+. . R . . . R . 
+. . . R . . . R 
+. . . . R . . . 
+. R . . . R . . 
+. . R . . . R . 
+. . . R . . . R 
+]]},
+{0x0109,"char_newfloorbottomonly",[[
+R . . . R . . . 
+. R . . . R . . 
+. . R . . . R . 
+. . . R . . . R 
+. . . . R . . . 
+. R . . . R . . 
+. . R . . . R . 
+R R R R R R R R 
+]]},
 {0x0200,"player_f1",[[
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . 4 4 4 4 . . . . . . . . . . 
@@ -393,6 +422,8 @@ local default_legend={
 	["BB"]={ name="char_newfloorbox",			solid=1},				-- box
 	["LL"]={ name="char_newfloorleft",			solid=1},				-- leftside
 	["RR"]={ name="char_newfloorright",			solid=1},				-- rightside
+	["TO"]={ name="char_newfloortoponly",			solid=1},				-- toponly
+	["BO"]={ name="char_newfloorbottomonly",		solid=1},				-- bottomonly
 
 -- items not tiles, so display tile 0 and we will add a sprite for display
 	["S "]={ name="char_empty",	start=1,	},
