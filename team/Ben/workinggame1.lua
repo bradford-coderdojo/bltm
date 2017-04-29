@@ -275,7 +275,56 @@ B B B B B B B B
 . . . . . . . . 
 . . . . . . . . 
 ]]},
-	
+{0x010c,"char_door2",[[
+. . . . . R R R 
+. . . . . R . R 
+. . . . . R R R 
+. . . . . R . R 
+. . . . . R R R 
+. . . . . R . R 
+. . . . . R R R 
+. . . . . R . R 
+]]},
+{0x010d,"char_door3",[[
+R R R . . . . . 
+R . R . . . . . 
+R R R . . . . . 
+R . R . . . . . 
+R R R . . . . . 
+R . R . . . . . 
+R R R . . . . . 
+R . R . . . . . 
+]]},
+{0x010e,"char_door4",[[
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . R R R 
+. . . . . R . R 
+]]},
+{0x010f,"char_door5",[[
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+R R R . . . . . 
+R . R . . . . . 
+]]},
+{0x010g,"char_door6",[[
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+R R R R R R R R 
+. R . R R . R .
+]]},
 {0x0200,"player_f1",[[
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -494,7 +543,7 @@ local default_legend={
 	["00"]={ name="char_black",				solid=1, dense=1, },		-- black border
 	["0 "]={ name="char_empty",				solid=1, dense=1, },		-- empty border
 
-	["D1"]={ name="char_door1",				solid=1},				-- wall
+	["D1"]={ name="char_door1",				},					-- wall
 	["=="]={ name="char_floor",				solid=1},				-- floor
 	["Rb"]={ name="char_box",				solid=1},				-- box
 	["E="]={ name="char_leftedge",				solid=1},				-- floor left edge
@@ -504,6 +553,11 @@ local default_legend={
 	["Bb"]={ name="char_blue_box",				solid=1},				-- box
 	["E-"]={ name="char_blue_leftedge",			solid=1},				-- floor left edge
 	["-E"]={ name="char_blue_rightedge",			solid=1},				-- floor right edge
+	["D2"]={ name="char_door2",				},		
+	["D3"]={ name="char_door3",				},	
+	["D4"]={ name="char_door4",				},	
+	["D5"]={ name="char_door5",				},	
+	["D6"]={ name="char_door6",				},	
 
 
 -- items not tiles, so display tile 0 and we will add a sprite for display
@@ -526,9 +580,9 @@ map=[[
 00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
 00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
 00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
-00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
-00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . D1. . . 00
-00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . D1. . . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . D4D6D5. . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . D2D1D3. . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . D2D1D3. . 00
 00. . . . . . . . Rb. . . E====E. . . . E========E. . . . E==================E00
 00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
 00. . . . . . Rb. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
