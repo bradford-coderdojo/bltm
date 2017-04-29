@@ -124,10 +124,17 @@ local chat_text=[[
 <welcome
 
 	Sorry but I am not a real boy.
-	
+    
+    >hello
+        Hello
+
 	>exit
-	
 		Bye bye.
+
+<hello
+    Hello
+    >exit
+        ...
 
 
 #npc3 Conversation NPC3
@@ -1548,4 +1555,3 @@ update=function()
 	
 end
 
-0
