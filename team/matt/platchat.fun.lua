@@ -16,106 +16,43 @@ local ls=function(t) print(require("wetgenes.string").dump(t)) end
 
 local chat_text=[[
 
-#npc1 Conversation NPC1
-
-	A rare bread of NPC who will fulfil all your conversational desires for 
-	a very good price.
-
-	=sir sir/madam
-
-	>convo
-
-		Hello?
-		
-	>exit
-	
-		...ERROR...EOF...PLEASE...RESTART...
+#npc4 Conversation NPC4
+    Jonny McGhee
 
 <welcome
+    
+    Hello, Human
 
-	Good Morning {sir},
-	
-	>morning
+    >hello
+        Hello... Jonny?
+    >how
+        How are you... Other Human?
+    >exit
+        Erm... I just remembered, I have a meeting to go to... 'yeahhh...'
 
-		Good morning to you too.
+<hello
+    Hi, will you be my friend, I've never had a friend before?
+    >yes
+        Sure, I feel sorry for you
+        >exit
+    >no
+        No, I won't be your friend, wierdo
+        >exit
 
-	>afternoon
-
-		I think you will find it is now afternoon.
-
-	>sir
-
-		How dare you call me {sir}!
-
-<sir
-
-	My apologies, I am afraid that I am but an NPC with very little 
-	brain, how might I address you?
-	
-	>welcome.1?sir!=madam
-
-		You may address me as Madam.
-
-		=sir madam
-
-	>welcome.2?sir!=God
-
-		You may address me as God.
-
-		=sir God
-
-	>welcome.3?sir!=sir
-
-		You may address me as Sir.
-
-		=sir sir
-
-<afternoon
-	
-	Then good afternoon {sir},
-	
-	>convo
-
-<morning
-	
-	and how may I help {sir} today?
-	
-	>convo
-
-
-<convo
-
-	Hello
-
-	>convo_full
-	
-		How long is the full conversation?
-
-	>convo_quick
-
-		A quick natter sounds just perfect.
-
-<convo_full
-
-	The full conversation is very full and long so much so that you 
-	will have to page through many pages before you get to make a 
-	decision
-	
-	>
-		Like this?
-	<
-	
-	Yes just like this. In fact I think you can see that we are already 
-	doing it.
-			
-	
-	>exit
-
-<convo_quick
-
-	...
-	
-	>exit
+<how
+    I am fine Human! How are you?
+    >fine
+        Fine
+        >exit
+    >OK
+        OK
+        >exit
+    >meh
+        Meh
+        >exit
+    >argh
+        AAAAAAAARRRRRGGGGGGGGGHHHH
+        >exit
 
 #npc2 Conversation NPC2
 
@@ -468,9 +405,9 @@ local default_legend={
 	["00"]={ name="char_black",				solid=1, dense=1, },		-- black border
 	["0 "]={ name="char_empty",				solid=1, dense=1, },		-- empty border
 
-	["||"]={ name="char_wall",				solid=1},				-- wall
-	["=="]={ name="char_floor",				solid=1},				-- floor
-	["//"]={ name="char_floor_space",		solid=1},				-- floor space
+	["||"]={ name="char_wall",				solid=1, dense=1},				-- wall
+	["=="]={ name="char_floor",				solid=1, dense=1},				-- floor
+	["//"]={ name="char_floor_space",		solid=1, dense=1},				-- floor space
 
 -- items not tiles, so display tile 0 and we will add a sprite for display
 	["S "]={ name="char_empty",	start=1,	},
@@ -564,36 +501,37 @@ map=[[
 levels[2]={
 legend=combine_legends(default_legend,{
 	["?0"]={ name="char_empty" },
+	["?="]={ name="char_floor", solid=1 },
 }),
 title="This is a test.",
 map=[[
 ||0000000000000000000000000000000000000000000000000000000000000000000000000000||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . ==. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . ==. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||==. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . /////////////// . . . . . . . . . . . . . . . . . . . . . ||
+||. . . . . ==. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . .?= . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||?=. . . . . . //. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . . . . . . . . /////////////// . . . . . . . . . . . . . . . . . . . N4. ||
+||. . ?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .//// ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||==. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||==. . . . . . . . . . . . . . . . . . . . . . ==. . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . .?= . . . . . . . . . . . . . . . . . . . . . . ==/////////////// . . . ||
+||?=. . . . . . . . . . . . . . . . . . . . . . . . ==. . . . . . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . . ==. . . . . . . . . . . . . ||
+||. . . ?=. . . . . . . . . . . . . . . . . . . ==. . . . . . . . . . . . . . ||
+||?=. . . . . . . . . . . . . . . . . . . . . ==. . . . . . . . . . . . . . . ||
+||. . ?=. . . . . . . . . . . . . . . . . . ==. . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . ==. . . . . . . . . . . . . . . . . ||
-||==. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||?=. . . . . . . . . . . . . . . . . . ==. . . . . . . . . . . . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . ==. . . . . . . //. . . . . . . . . . . ||
+||. . ?=. . . . . . . . . . . . . . ==. . . . . . . . . . . . . . . . . . . . ||
+||. . . . . . . . . . . . . . . . ==. . . . . . . . . . . . . . . . . . . . . ||
+||==. . . . . . . . . . . . . . ==. . . . ////. . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||==. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . .===========//////////////////. . . . . . ////////. . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . //. . . . . . . . . . . ||
-||==. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||==. . . . . . . . . . . . . . . . . . . ////. . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . .===========///////////////////// . . . . ////////. . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . .S. . . . . . . . . . . . ======. . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . . ======. . . . . . . . . . . . . . . . ||
+||S . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||====================================. . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
