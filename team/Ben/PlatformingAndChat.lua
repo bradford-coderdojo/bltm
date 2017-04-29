@@ -44,6 +44,12 @@ local chat_text=[[
 	
 	How do I avoid them?
 
+<tomato11
+
+	The mayonnaise enemies haven't been programmed into the game yet, there's nothing to say
+
+	>exit
+		Exit
 #npc2 Conversaton NPC2
 
 <welcome
