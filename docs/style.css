@@ -1,0 +1,12 @@
+body {
+  background-color: #ddd;
+}
+
+#title {
+  position: absolute;
+   top: 0px;
+   left: 0px;
+   border-radius: 60px;
+   width: 100%;
+}
+
