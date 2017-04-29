@@ -44,12 +44,6 @@ local chat_text=[[
 	
 	How do I avoid them?
 
-<tomato11
-	
-	empty
-	
-	>end
-		end
 #npc2 Conversaton NPC2
 
 <welcome
