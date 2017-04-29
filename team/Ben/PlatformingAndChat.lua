@@ -54,11 +54,17 @@ local chat_text=[[
 
 <welcome
 
-	Sorry but I am not a real boy.
+	Hello there.
 	
+	>route1
+	
+		The person downstairs told me you know the way to the KITCHEN.
+<route1
+
+	You need to make it to the top floor, then turn right.
+
 	>exit
-	
-		Bye bye.
+		Thanks that really helped,
 
 
 #npc3 Conversation NPC3
