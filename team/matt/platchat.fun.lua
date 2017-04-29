@@ -60,6 +60,18 @@ local chat_text=[[
     >exit
         OK
 
+#npc2 Conversation NPC2
+    Jonny McGhee
+
+<welcome
+        Yes, thank you very much for your assistance, I have a secret to show you, would you like to see?
+    >yes
+        Yeah, cool
+    >exit
+        No thanks
+
+<yes
+    >exit
 
 ]]
 
@@ -385,7 +397,6 @@ local default_legend={
 -- items not tiles, so display tile 0 and we will add a sprite for display
 	["S "]={ name="char_empty",	start=1,	},
 	["N1"]={ name="char_empty",	npc="npc1",				sprite="npc1", },
-	["N2"]={ name="char_empty",	npc="npc2", active=0,	sprite="npc2", },
 
     ["AA"]={ name="char_empty", loot=1},
 
@@ -488,7 +499,7 @@ map=[[
 ||. . ?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . S . . . /// ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . AA. . . . . . . . . ||
-||. . .?= . . . . . . . . . . . . . . . . . . . . . . . /////////////// . . . ||
+||. . .?= . . . . . . . . . . . . . . . . . . . . . . . /////////////////// . ||
 ||?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . ?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
@@ -760,8 +771,10 @@ function add_loot()
 
 				for i,npc in pairs(entities_items("npc")) do
 					if npc.shape.npc == 'npc1' then
-						ls(npc)
-						space:remove(npc.shape)
+						--space:remove(npc.shape)
+                        --npc.shape=space.static:shape("box", (x-1)*8,(y-1)*8, (x+2)*8,(y+2)*8,0)
+                        --npc.shape:collision_type(0x4003)
+                        npc.shape.npc="npc2"
 					end
 				end
 			end
@@ -1024,6 +1037,7 @@ function add_player(i)
 		it=add_detritus(names.body_p2.idx,16,px,py+0,0.25,16,0.1,0.5,"box",-3,-2,3,2,0) it.body:velocity(vx*2,vy*2) it.color=player.color
 		it=add_detritus(names.body_p3.idx,16,px,py+4,0.25,16,0.1,0.5,"box",-3,-2,3,2,0) it.body:velocity(vx*1,vy*1) it.color=player.color
 
+        oven.mods["wetgenes.gamecake.mods.escmenu"].show = true
 	end
 
 	player.update=function()
