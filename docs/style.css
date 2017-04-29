@@ -11,3 +11,7 @@ body {
 	text-align: center;
 }
 
+#content {
+	position: relative;	
+}
+
