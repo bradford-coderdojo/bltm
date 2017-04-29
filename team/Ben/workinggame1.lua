@@ -223,7 +223,58 @@ R R R R R R R R
 . . . . . . . . 
 . . . . . . . . 
 ]]},
-	
+{0x0107,"char_blue_wall",[[
+B . . . B . . B 
+B B . . . B . B 
+B . B . . . B B 
+B . . B . . . B 
+B . . . B . . B 
+B B . . . B . B 
+B . B . . . B B 
+B . . B . . . B 
+]]},
+{0x0108,"char_blue_floor",[[
+B B B B B B B B 
+. B . . . B . . 
+. . B . . . B . 
+. . . B . . . B 
+B B B B B B B B 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+]]},
+{0x0109,"char_blue_box",[[
+B B B B B B B B 
+B B . . . B . B 
+B . B . . . B B 
+B . . B . . . B 
+B B B B B B B B 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+]]},
+
+{0x010a,"char_blue_leftedge",[[
+B B B B B B B B 
+B B . . . B . . 
+B . B . . . B . 
+B . . B . . . B 
+B B B B B B B B 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+]]},
+{0x010b,"char_blue_rightedge",[[
+B B B B B B B B 
+. B . . . B . B 
+. . B . . . B B 
+. . . B . . . B 
+B B B B B B B B 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+]]},
 	
 {0x0200,"player_f1",[[
 . . . . . . . . . . . . . . . . . . . . . . . . 
