@@ -700,6 +700,13 @@ function add_loot()
 				loot.player.tomato=1
 				loot.active=false
 				space:remove(loot.shape)
+
+				for i,npc in pairs(entities_items("npc")) do
+					if npc.shape.npc == 'npc1' then
+						ls(npc)
+						space:remove(npc.shape)
+					end
+				end
 			end
 		end
 	end
@@ -1347,7 +1354,8 @@ function setup_level(idx)
 				item.pz=-1
 			end
 			if tile.npc then
-				local item=add_item()
+				--local item=add_item()
+				local item=entities_add{caste="npc"}
 
 				item.shape=space.static:shape("box", (x-1)*8,(y-1)*8, (x+2)*8,(y+2)*8,0)
 
