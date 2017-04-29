@@ -424,6 +424,7 @@ local default_legend={
 	["RR"]={ name="char_newfloorright",			solid=1},				-- rightside
 	["TO"]={ name="char_newfloortoponly",			solid=1},				-- toponly
 	["BO"]={ name="char_newfloorbottomonly",		solid=1},				-- bottomonly
+	["nb"]={ name="char_newfloornoborders"			solid=1},				-- noborders
 
 -- items not tiles, so display tile 0 and we will add a sprite for display
 	["S "]={ name="char_empty",	start=1,	},
@@ -455,9 +456,9 @@ map=[[
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||========RR. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . ||||||||||||. . . . N2. . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . ||||||||||||. . . . . . . . . ||
-||====RR. . . . BB. . . LL====================================================||
+||. . . . . . . . . . . . . . . . . . . . . . . TOTOTOTOTOTO. . . . N2. . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . LLNBNBNBNBRR. . . . . . . . . ||
+||====RR. . . . BB. . . LL======================BOBOBOBOBOBO==================||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . BB. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
