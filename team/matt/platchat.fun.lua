@@ -13,7 +13,6 @@ hardware,main=system.configurator({
 -- debug text dump
 local ls=function(t) print(require("wetgenes.string").dump(t)) end
 
-
 local chat_text=[[
 
 #npc1 Conversation NPC1
@@ -64,7 +63,7 @@ local chat_text=[[
     Jonny McGhee
 
 <welcome
-        Yes, thank you very much for your assistance, I have a secret to show you, would you like to see?
+        Yes, thanks very much for your help, I have a secret to show you, would you like to see?
     >yes
         Yeah, cool
     >exit
@@ -72,6 +71,7 @@ local chat_text=[[
 
 <yes
     >exit
+        Let's Go!!
 
 ]]
 
@@ -112,7 +112,17 @@ R R O O O O R R
 o o o o r r r r 
 o o o o r r r r 
 ]]},
-{0x0103,"char_floor",[[
+{0x0103,"char_nuclearwall",[[
+Y Y Y Y Y Y Y Y 
+Y . Y . . . Y Y 
+Y Y . . . Y . Y 
+Y . . . Y . . Y 
+Y . . Y . . . Y 
+Y . Y . . . Y Y 
+Y Y . . . Y . Y 
+Y Y Y Y Y Y Y Y 
+]]},
+{0x0104,"char_floor",[[
 R R R R R R R R 
 r r r r r r r r 
 r r r r r r r r 
@@ -122,38 +132,128 @@ r r r r r r r r
 . . . . . r . . 
 . . . . . . . . 
 ]]},
-{0x0104,"char_floor_space",[[
+{0x0105,"char_redfloor",[[
 R R R R R R R R 
 R R 0 0 0 0 R R 
 R 0 R 0 0 R 0 R 
 R 0 0 R R 0 0 R 
 R 0 0 R R 0 0 R 
 R 0 R 0 0 R 0 R 
-R R 0 0 0 r R R 
+R R 0 0 0 0 R R 
 R R R R R R R R 
+]]},
+{0x0106,"char_radioactive",[[
+. . . . . . . . 
+. . . Y Y Y . . 
+. . Y 0 0 0 Y . 
+. Y Y Y 0 Y Y Y 
+. Y Y Y 0 Y Y Y 
+. Y 0 0 Y 0 0 Y 
+. . Y 0 Y 0 Y . 
+. . . Y Y Y . . 
+]]},
+{0x0107,"char_barrel_bottom",[[
+4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 
+]]},
+{0x0108,"char_barrel_top",[[
+. 3 3 3 3 3 3 . 
+3 4 4 4 4 4 4 3 
+4 3 3 3 3 3 3 4 
+4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 
+]]},
+{0x0109,"char_solid_blue",[[
+c c c c c c c c 
+c c c c c c c c 
+c c c c c c c c 
+c c c c c c c c 
+c c c c c c c c 
+c c c c c c c c 
+c c c c c c c c 
+c c c c c c c c 
+]]},
+{0x010a,"char_steelgirder",[[
+5 5 5 5 5 5 5 5 
+5 5 0 0 0 0 5 5 
+5 0 5 0 0 5 0 5 
+5 0 0 5 5 0 0 5 
+5 0 0 5 5 0 0 5 
+5 0 5 0 0 5 0 5 
+5 5 0 0 0 0 5 5 
+5 5 5 5 5 5 5 5 
+]]},
+{0x010b,"char_dark_steelgirder",[[
+4 4 4 4 4 4 4 4 
+4 4 0 0 0 0 4 4 
+4 0 4 0 0 4 0 4 
+4 0 0 4 4 0 0 4 
+4 0 0 4 4 0 0 4 
+4 0 4 0 0 4 0 4 
+4 4 0 0 0 0 4 4 
+4 4 4 4 4 4 4 4 
+]]},
+{0x010c,"char_darker_steelgirder",[[
+3 3 3 3 3 3 3 3 
+3 3 0 0 0 0 3 3 
+3 0 3 0 0 3 0 3 
+3 0 0 3 3 0 0 3 
+3 0 0 3 3 0 0 3 
+3 0 3 0 0 3 0 3 
+3 3 0 0 0 0 3 3 
+3 3 3 3 3 3 3 3 
+]]},
+{0x010d,"char_padding_left",[[
+S . . . . . . . 
+S S . . . . . . 
+S S S . . . . . 
+S S . . . . . . 
+S . . . . . . . 
+S S . . . . . . 
+S S S . . . . . 
+S S . . . . . . 
+]]},
+{0x010e,"char_padding_right",[[
+. . . . . . . S 
+. . . . . . S S 
+. . . . . S S S 
+. . . . . . S S 
+. . . . . . . S 
+. . . . . . S S 
+. . . . . S S S 
+. . . . . . S S 
 ]]},
 
 {0x0200,"player_f1",[[
 . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . 4 4 4 4 . . . . . . . . . . 
-. . . . . . . . . 4 2 7 7 1 4 . . . . . . . . . 
-. . . . . . . . . 4 7 2 1 7 4 . . . . . . . . . 
-. . . . . . . . 4 7 7 1 2 7 7 4 . . . . . . . . 
-. . . . . . . 4 7 7 1 7 7 2 7 7 4 . . . . . . . 
-. . . . . . . 4 4 4 4 4 4 4 4 4 4 . . . . . . . 
-. . . . . . . . . . 7 7 0 7 . . . . . . . . . . 
-. . . . . . . . . . 7 7 7 7 7 . . . . . . . . . 
-. . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
-. . . . . . . . . . . 7 7 . . . . . . . . . . . 
-. . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
-. . . . . . . . . 7 7 7 7 7 7 . . . . . . . . . 
-. . . . . . . . . 7 7 7 7 7 7 . . . . . . . . . 
-. . . . . . . . 7 7 7 7 . 7 7 7 . . . . . . . . 
-. . . . . . . . 7 7 7 7 7 . 7 7 . . . . . . . . 
-. . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
-. . . . . . . . . 7 7 7 . 7 7 . . . . . . . . . 
-. . . . . . . . . 7 7 . 7 7 7 . . . . . . . . . 
-. . . . . . . . . 7 7 7 . 7 7 7 . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . R R R R . . . . . . . . . . 
+. . . . . . . . . . R R R R . . . . . . . . . . 
+. . . . . . . . . . s s 0 s . . . . . . . . . . 
+. . . . . . . . . . s s s s s . . . . . . . . . 
+. . . . . . . . . . s s s s . . . . . . . . . . 
+. . . . . . . . . . . s s . . . . . . . . . . . 
+. . . . . . . . . . Y Y Y Y . . . . . . . . . . 
+. . . . . . . . . Y Y Y Y Y Y . . . . . . . . . 
+. . . . . . . . . Y Y Y Y Y Y . . . . . . . . . 
+. . . . . . . . Y Y Y Y . Y Y Y . . . . . . . . 
+. . . . . . . . Y Y Y Y Y . Y Y . . . . . . . . 
+. . . . . . . . . . B B B B . . . . . . . . . . 
+. . . . . . . . . B B B . B B . . . . . . . . . 
+. . . . . . . . . B B . B B B . . . . . . . . . 
+. . . . . . . . . 0 0 0 . 0 0 0 . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -161,25 +261,25 @@ R R R R R R R R
 ]]},
 {0x0203,"player_f2",[[
 . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . 4 4 4 4 . . . . . . . . . . 
-. . . . . . . . . 4 2 7 7 1 4 . . . . . . . . . 
-. . . . . . . . . 4 7 2 1 7 4 . . . . . . . . . 
-. . . . . . . . 4 7 7 1 2 7 7 4 . . . . . . . . 
-. . . . . . . 4 7 7 1 7 7 2 7 7 4 . . . . . . . 
-. . . . . . . 4 4 4 4 4 4 4 4 4 4 . . . . . . . 
-. . . . . . . . . . 7 7 0 7 . . . . . . . . . . 
-. . . . . . . . . . 7 7 7 7 7 . . . . . . . . . 
-. . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
-. . . . . . . . . . . 7 7 . . . . . . . . . . . 
-. . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
-. . . . . . . . . 7 7 . 7 7 7 . . . . . . . . . 
-. . . . . . . . . 7 7 . 7 7 7 . . . . . . . . . 
-. . . . . . . . . 7 7 . 7 7 7 . . . . . . . . . 
-. . . . . . . . . 7 7 7 . 7 7 . . . . . . . . . 
-. . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
-. . . . . . . . . . . 7 7 . . . . . . . . . . . 
-. . . . . . . . . . . 7 7 . . . . . . . . . . . 
-. . . . . . . . . . . 7 7 7 . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . R R R R . . . . . . . . . . 
+. . . . . . . . . . R R R R . . . . . . . . . . 
+. . . . . . . . . . s s 0 s . . . . . . . . . . 
+. . . . . . . . . . s s s s s . . . . . . . . . 
+. . . . . . . . . . s s s s . . . . . . . . . . 
+. . . . . . . . . . . s s . . . . . . . . . . . 
+. . . . . . . . . . Y Y Y Y . . . . . . . . . . 
+. . . . . . . . . Y Y . Y Y Y . . . . . . . . . 
+. . . . . . . . . Y Y . Y Y Y . . . . . . . . . 
+. . . . . . . . . Y Y . Y Y Y . . . . . . . . . 
+. . . . . . . . . Y Y . . Y Y . . . . . . . . . 
+. . . . . . . . . . B B B B . . . . . . . . . . 
+. . . . . . . . . . . B B . . . . . . . . . . . 
+. . . . . . . . . . . B B . . . . . . . . . . . 
+. . . . . . . . . . . 0 0 0 . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -187,25 +287,25 @@ R R R R R R R R
 ]]},
 {0x0206,"player_f3",[[
 . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . 4 4 4 4 . . . . . . . . . . 
-. . . . . . . . . 4 2 7 7 1 4 . . . . . . . . . 
-. . . . . . . . . 4 7 2 1 7 4 . . . . . . . . . 
-. . . . . . . . 4 7 7 1 2 7 7 4 . . . . . . . . 
-. . . . . . . 4 7 7 1 7 7 2 7 7 4 . . . . . . . 
-. . . . . . . 4 4 4 4 4 4 4 4 4 4 . . . . . . . 
-. . . . . . . . . . 7 7 0 7 . . . . . . . . . . 
-. . . . . . . . . . 7 7 7 7 7 . . . . . . . . . 
-. . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
-. . . . . . . . . . . 7 7 . . . . . . . . . . . 
-. . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
-. . . . . . . . . 7 7 7 7 7 7 . . . . . . . . . 
-. . . . . . . . 7 7 7 7 7 7 7 7 . . . . . . . . 
-. . . . . . . 7 7 7 7 7 7 7 7 7 7 . . . . . . . 
-. . . . . . . 7 7 . 7 7 7 7 . 7 7 . . . . . . . 
-. . . . . . . . . . 7 7 7 7 7 . . . . . . . . . 
-. . . . . . . . . 7 7 7 . 7 7 . 7 . . . . . . . 
-. . . . . . . . 7 7 . . . . 7 7 7 . . . . . . . 
-. . . . . . . . 7 7 7 . . . 7 7 . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . R R R R . . . . . . . . . . 
+. . . . . . . . . . R R R R . . . . . . . . . . 
+. . . . . . . . . . s s 0 s . . . . . . . . . . 
+. . . . . . . . . . s s s s s . . . . . . . . . 
+. . . . . . . . . . s s s s . . . . . . . . . . 
+. . . . . . . . . . . s s . . . . . . . . . . . 
+. . . . . . . . . . Y Y Y Y . . . . . . . . . . 
+. . . . . . . . . Y Y Y Y Y Y . . . . . . . . . 
+. . . . . . . . Y Y Y Y Y Y Y Y . . . . . . . . 
+. . . . . . . Y Y Y Y Y Y Y Y Y Y . . . . . . . 
+. . . . . . . Y Y . Y Y Y Y . Y Y . . . . . . . 
+. . . . . . . . . . B B B B B . . . . . . . . . 
+. . . . . . . . . B B B . B B . . . . . . . . . 
+. . . . . . . . B B . . . . B B 0 . . . . . . . 
+. . . . . . . . 0 0 0 . . . 0 0 . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -303,7 +403,7 @@ Y Y 0 Y Y 0 Y Y
 . Y Y 0 0 Y Y . 
 . . Y Y Y Y . . 
 ]]},
-{0x0501,"apple",[[
+{0x0501,"tomato",[[
 . . G . . G . . 
 . . R G G R . . 
 . R R r r R R . 
@@ -386,16 +486,28 @@ local default_legend={
 	[0]={ name="char_empty",	},
 
 	[". "]={ name="char_empty",				},
+	["M "]={ name="char_empty",	monster=1,	},
     ["xx"]={ name="char_empty", deadly=1,   },
 	["00"]={ name="char_black",				solid=1, dense=1, },		-- black border
 	["0 "]={ name="char_empty",				solid=1, dense=1, },		-- empty border
 
 	["||"]={ name="char_wall",				solid=1, dense=1},				-- wall
 	["=="]={ name="char_floor",				solid=1, dense=1},				-- floor
-	["//"]={ name="char_floor_space",		solid=1, dense=1},	-- floor space
+-- custom made
+    ["__"]={ name="char_barrel_bottom",     solid=1, dense=1},  --barrel bottom
+    ["--"]={ name="char_barrel_top",        solid=1, dense=1},  --barrel top
+    ["xo"]={ name="char_radioactive"}               ,           --radioactive symbol
+	["//"]={ name="char_redfloor",  		solid=1, dense=1},	-- floor red
+	["s/"]={ name="char_steelgirder",  		solid=1, dense=1},	-- floor red
+	["d/"]={ name="char_dark_steelgirder",	solid=1, dense=1},	-- floor red
+	["D/"]={ name="char_darker_steelgirder",	solid=1, dense=1},	-- floor red
+	["Y|"]={ name="char_nuclearwall",		solid=1, dense=1},	-- nuclear wall
+	["bb"]={ name="char_solid_blue"},                       	-- solid blue colour
+	["pl"]={ name="char_padding_left", solid=1, dense=1},      	-- space padding left
+	["pr"]={ name="char_padding_right", solid=1, dense=1},     	-- space padding right
 
 -- items not tiles, so display tile 0 and we will add a sprite for display
-	["S "]={ name="char_empty",	start=1,	},
+	["S "]={ name="char_empty",	start=1	},
 	["N1"]={ name="char_empty",	npc="npc1",				sprite="npc1", },
 
     ["AA"]={ name="char_empty", loot=1},
@@ -439,7 +551,7 @@ map=[[
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ||
+||xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx||
 ]],
 }
 
@@ -485,43 +597,87 @@ map=[[
 levels[2]={
 legend=combine_legends(default_legend,{
 	["?0"]={ name="char_empty" },
-	["?="]={ name="char_floor", solid=1 },
+	["?/"]={ name="char_redfloor", solid=1 },
+	["?s"]={ name="char_steelgirder", solid=1 },
+	["?d"]={ name="char_dark_steelgirder", solid=1 },
+	["?s"]={ name="char_darker_steelgirder", solid=1 },
 }),
-title="This is a test.",
+title="LEVEL 1 : SPACE",
 map=[[
-||0000000000000000000000000000000000000000000000000000000000000000000000000000||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . .?= . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||?=. . . . . . //. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . /////////////// . . . . . . . . . . . . . . . . . . N1. . ||
-||. . ?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . S . . . /// ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . AA. . . . . . . . . ||
-||. . .?= . . . . . . . . . . . . . . . . . . . . . . . /////////////////// . ||
-||?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . ?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . ?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . //. . . . . . . . . . . ||
-||. . ?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||==. . . . . . . . . . . . . . . . . . . ////. . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . .===========//////////////////. . . . . . ////////. . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . ======. . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||====================================. . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx||
+pl0000000000000000000000000000000000000000000000000000000000000000000000000000pr
+pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
+pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
+pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
+pl. . .?s . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
+pl?D. . . . . . s/. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
+pl. . . . . . . . . d/s/s/D/d/s/s/s/s/D/s/d/s/s/. . . . . . . . . . . . N1. . pr
+pl. . ?s. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
+pl?d. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . D/d/pr
+pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . AA. . . . . . . . . pr
+pl. . .?s . . . . . . . . . . . . . . . . . . . . . . . d/s/s/d/s/D/s/s/d/  . pr
+pl?s. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
+pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
+pl. . . ?s. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
+pl?s. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
+pl. . ?d. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
+pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
+pl?s. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
+pl. . . . . . . . . . . . . . . . . . . . . . . . . . s/. . . . . . . . . . . pr
+pl. . ?s. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
+pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
+pl?d. . . . . . . . . . . . . . . . . . . s/d/. . . . . . . . . . . . . . . . pr
+pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
+pl. . D/s/d/s/d/s/s/d/s/D/s/s/d/s/s . . . . . . D/s/s/d/. . . . . . . . . . . pr
+pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
+pl. . . . . . . . . . . . . . . . . . . s/d/s/. . . . . . . . . . . . . . . . pr
+pl. S . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
+pls/d/s/s/s/d/s/s/s/D/s/d/s/s/s/d/s/D/. . . . . . . . . . . . . . . . . . . . pr
+pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
+plxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxpr
 ]],
 }
 
+levels[3]={
+legend=combine_legends(default_legend,{
+	["?0"]={ name="char_empty" },
+	["?="]={ name="char_floor", solid=1 },
+	["YX"]={ name="char_nuclearwall", solid=1, deadly=1 },
+	["/X"]={ name="char_redfloor", solid=1, deadly=1 },
+}),
+title="LEVEL 2 : NUCLEAR WASTELAND",
+map=[[
+Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|
+Y|. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . x0. . . . . . Y|
+Y|. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Y|
+Y|. x0. . . . . . . . . . . . . xo. . . . . . . . . . . . . . . . . . S . . . Y|
+Y|. . . . . //////////. . . . . . . . . . . . . . . . . . . //////////////////Y|
+Y|. . . . //. . . . . //. . . . . . . . . . . . . . . . . //. . . . . . . . . Y|
+Y|--. . . . . . . . . . //. . . . . . . . . . . . . . . //. . . . . . . . . . Y|
+Y|__. . . . . . . . . . . //////////////. . . xo. . . //. . . . . . . . . . . Y|
+Y|////. . . . . . . . . . . . . . . . . //. . . . . . . . . . . . . . . . . . Y|
+Y|. . //. . . . . . . . . . . . . . . . . //. . . . . . . . . . xo. . . . . . Y|
+Y|. . . //. . . . . . . . . . . . . . . . . //////. . . . . . . . . . . . . . Y|
+Y|. . . . //. . . . . . . . . . . . . . . . . . . //. . . . . . . . . . . . . Y|
+Y|. . . . . //. . . . . . . . . . . . . . . . . . . //. . . . . . . . . . . . Y|
+Y|. . . . . . //. . . . . . . . . . . . . . . . . . . //. . . . . . . . . . . Y|
+Y|. . . . . . . //. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Y|
+Y|. . . . . . . . //. . . . . . . . . . . . . . . . . . . . . . . . . . . . . Y|
+Y|. . . . . . . . . ////////////////. . . . //////bbbbbbbbbb//  . . . . xo. . Y|
+Y|. . . . . . . . . . . . . . . . . . . . //. . //bb__bb__bb////. . . . . . . Y|
+Y|. . . . . . . . . . . . . . . . . . . //. . . //bb__bb__bb//. //. . . . . . Y|
+Y|. . . . . . . . . . . . . . . . . . //. . . . //bb__bb__bb//. . //. . . . . Y|
+Y|. . . . . . . . . . . . . . . . . //. . . . . //bb__bb__bb//. . . //////////Y|
+Y|. . . . . . . . . . . . . . . . //. . . . . . //bb__bb__bb//. . . . . . . . Y|
+Y|. . . . . . . . . . . . . . . //. . . . . . . //bb__bb__bb//. . . . . . . . Y|
+Y|. . . . . . . . . . . . . . //. . . . . . . . //bb__bb__bb//. . . . . . . . Y|
+Y|////////////////////////////. . . . . . . . . //bb__bb__bb//. . . . . . . . Y|
+Y|. . . . . . . . . . . . . . . . . . . . . . . //bb__bb__bb//. . . . . . . . Y|
+Y|. . . . . . . . . . . . . . . . . . . . . . . /X/X/X/X/X/X/X. . . . . . . . Y|
+Y|. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Y|
+Y|. . . . . . . . . YXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYX. . . . . . . . . . Y|
+Y|YXYXYXYXYXYXYXYXYXYXxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxYXYXYXYXYXYXYXYXYXYXYXY|
+]],
+}
 
 -- handle tables of entities that need to be updated and drawn.
 
@@ -961,6 +1117,78 @@ function char_controls(it,fast)
 end
 
 
+function add_monster(opts)
+
+	local space=entities_get("space")
+
+	local monster=entities_add{caste="monster"}
+
+	monster.color=opts.color or {r=0,g=0,b=0,a=1}
+	monster.dir=1		
+	monster.frame=0
+	monster.frames={0x0200,0x0203,0x0200,0x0206}
+
+	monster.active=true
+	monster.body=space:body(1,math.huge)
+	monster.body:position(opts.px,opts.py)
+	monster.body:velocity(opts.vx,opts.vy)
+	monster.body.headroom={}
+	
+	monster.body:velocity_func(function(body)
+--				body.gravity_x=-body.gravity_x
+--				body.gravity_y=-body.gravity_y
+		return true
+	end)
+				
+	monster.floor_time=0 -- last time we had some floor
+
+	monster.shape=monster.body:shape("segment",0,-4,0,4,4)
+	monster.shape:friction(1)
+	monster.shape:elasticity(0)
+	monster.shape:collision_type(0x2001) -- walker
+	monster.shape.monster=monster
+	monster.shape.triggered=monster
+	
+	monster.body.floor_time=0
+
+
+	monster.move="left"
+
+	monster.last_cx=0
+	monster.last_cx_count=0
+
+	monster.update=function()
+		if monster.active then
+		
+			if monster.triggered then
+				if     monster.triggered.trigger==-1 then
+					monster.move="left"
+				elseif monster.triggered.trigger== 1 then
+					monster.move="right"
+				end
+			end
+			
+			local px,py=monster.body:position()
+			local cx=math.floor((px+1)/2) -- if this number changes then we are moving
+			
+			if monster.last_cx == cx then -- not moving
+				monster.last_cx_count=monster.last_cx_count+1
+				if monster.last_cx_count > 30 then
+					monster.triggered=nil
+					monster.last_cx_count=0
+					if monster.move=="left" then monster.move="right" else monster.move="left" end -- change dir
+				end
+			else -- moved
+				monster.last_cx=cx
+				monster.last_cx_count=0
+			end
+		
+		
+			char_controls(monster,0.5)
+		end
+	end
+end
+
 function add_player(i)
 	local players_colors={30,14,18,7,3,22}
 
@@ -1120,6 +1348,7 @@ end
 function change_level(idx)
 
 	setup_level(idx)
+    local lvlnum=idx
 	
 end
 
@@ -1653,7 +1882,8 @@ update=function()
 
 		setup_score()
 		
-		setup_level(2) -- load map
+        local lvlnum = 2
+		setup_level(lvlnum) -- load map
 		
 		add_player(1) -- add a player
 
