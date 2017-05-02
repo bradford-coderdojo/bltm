@@ -11,7 +11,7 @@ hardware,main=system.configurator({
 })
 hardware[1].bloom=nil
 hardware[1].filter=nil
-hardware[1].shadow=nil
+hardware[1].shadow=1
 -- debug text dump
 local ls=function(t) print(require("wetgenes.string").dump(t)) end
 
