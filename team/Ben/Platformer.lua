@@ -3,7 +3,7 @@ local chatdown=require("wetgenes.gamecake.fun.chatdown")
 local bitdown=require("wetgenes.gamecake.fun.bitdown")
 local chipmunk=require("wetgenes.chipmunk")
 
-screen={hx=320,hy=480,ss=3,fps=25}
+screen={hx=480,hy=480,ss=3,fps=25}
 
 hardware,main=system.configurator({
 	mode="fun64", -- select the standard 320x240 screen using the swanky32 palette.
