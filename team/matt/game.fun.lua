@@ -3,7 +3,7 @@ local chatdown=require("wetgenes.gamecake.fun.chatdown")
 local bitdown=require("wetgenes.gamecake.fun.bitdown")
 local chipmunk=require("wetgenes.chipmunk")
 
-local lvlnum = 3
+local lvlnum = 2
 
 hardware,main=system.configurator({
     mode="fun64", -- select the standard 320x240 screen using the swanky32 palette.
@@ -876,7 +876,9 @@ function setup_space()
     local arbiter_loot={} -- loot things (pickups)
         arbiter_loot.presolve=function(it)
             if it.shape_a.loot and it.shape_b.player then -- trigger collect
-                it.shape_a.loot.player=it.shape_b.player
+		if it.shape.a.loot.active then
+		    it.shape_a.loot.player=it.shape_b.player
+		end
             end
             return false
         end
