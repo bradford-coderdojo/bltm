@@ -876,7 +876,7 @@ function setup_space()
     local arbiter_loot={} -- loot things (pickups)
         arbiter_loot.presolve=function(it)
             if it.shape_a.loot and it.shape_b.player then -- trigger collect
-		if it.shape.a.loot.active then
+		if it.shape_a.loot.active then
 		    it.shape_a.loot.player=it.shape_b.player
 		end
             end
