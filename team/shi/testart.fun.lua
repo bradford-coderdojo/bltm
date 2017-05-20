@@ -9,6 +9,9 @@ hardware,main=system.configurator({
 	graphics=function() return graphics end,
 	update=function() update() end, -- called repeatedly to update+draw
 })
+hardware[1].bloom=nil
+hardware[1].filter=nil
+hardware[1].shadow=nil
 
 -- debug text dump
 local ls=function(t) print(require("wetgenes.string").dump(t)) end
@@ -1627,10 +1630,10 @@ update=function()
 
 		local it=system.components.copper
 		it.shader_name="fun_copper_back_y5"
-		it.shader_uniforms.cy0={ 0.55 , 0.00 , 0.00 , 1   }
-		it.shader_uniforms.cy1={ 0.00 , 0.00 , 0.40 , 1   }
-		it.shader_uniforms.cy2={ 0.05 , 0.15 , 0.40 , 1   }
-		it.shader_uniforms.cy3={ 0.00 , 0.00 , 0.40 , 1   }
+		it.shader_uniforms.cy0={ 0.25 , 0.25 , 0.25 , 1   }
+		it.shader_uniforms.cy1={ 0.25 , 0.25 , 0.25 , 1   }
+		it.shader_uniforms.cy2={ 0.25 , 0.25 , 0.25 , 1   }
+		it.shader_uniforms.cy3={ 0.25 , 0.25 , 0.25 , 1   }
 		it.shader_uniforms.cy4={ 0.05 , 0.05 , 0.05 , 1   }
 
 		entities_reset()
