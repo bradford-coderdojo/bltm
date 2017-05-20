@@ -9,9 +9,9 @@ hardware,main=system.configurator({
 	graphics=function() return graphics end,
 	update=function() update() end, -- called repeatedly to update+draw
 })
-hardware[1].bloom=nil
-hardware[1].filter=nil
-hardware[1].shadow=nil
+hardware[1].bloom=0.5
+-- hardware[1].filter=nil
+-- hardware[1].shadow=nil
 
 -- debug text dump
 local ls=function(t) print(require("wetgenes.string").dump(t)) end
