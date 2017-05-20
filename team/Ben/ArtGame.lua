@@ -938,7 +938,7 @@ function char_controls(it,fast)
 
 	local time=entities_get("time")
 
-	local jump=fast*300 -- up velocity we want when jumping
+	local jump=fast*200 -- up velocity we want when jumping
 	local speed=fast*60 -- required x velocity
 	local airforce=speed*2 -- replaces surface velocity
 	local groundforce=speed/2 -- helps surface velocity
