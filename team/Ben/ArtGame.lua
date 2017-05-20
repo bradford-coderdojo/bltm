@@ -251,6 +251,8 @@ FF1 F F F O F F O O O O O O O O
 ]]},
 	
 {nil,"talltree",[[
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
 FFFFFFFFFFFF1 1 1 1 FFFFFFFFFFFF
 FFFFFFFF1 1 G G G G 1 1 FFFFFFFF
 FFFFFF1 G D D D D D G G 1 FFFFFF
