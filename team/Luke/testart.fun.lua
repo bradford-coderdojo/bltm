@@ -173,14 +173,14 @@ graphics={
 0 0 0 0 0 0 0 0 
 ]]},
 {nil,"char_wall",[[
-O O R R R R O O 
-O O R R R R O O 
-r r r r o o o o 
-r r r r o o o o 
-R R O O O O R R 
-R R O O O O R R 
-o o o o r r r r 
-o o o o r r r r 
+F Y 7 7 7 7 Y F 
+F Y 7 7 7 7 Y F 
+F Y 7 7 7 7 Y F 
+F Y 7 7 7 7 Y F 
+F Y 7 7 7 7 Y F 
+F Y 7 7 7 7 Y F 
+F Y 7 7 7 7 Y F 
+F Y 7 7 7 7 Y F  
 ]]},
 {nil,"char_floor",[[
 j j j j j j j j j j j j j j j j j f f f f f f f f j j j j j j j j j j j j j j j 
