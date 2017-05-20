@@ -421,30 +421,22 @@ g G G . G . g . g . G . . . . g . . . g g . g . . G . . g . . g
 ]]},
 
 {nil,"char_stump",[[
-. . F F F F . . 
-f F f f f f F f 
-j f F F F F f j 
-j j f f f j f j 
-j f f f j j f j 
-j f F f f j f j 
-j f F f f j f j 
-j f F f f j f j 
-j f F f f j f j 
-j f F f f j f j 
-j f F f f j f j 
-j f F f f j f j 
-j f F f f j f j 
-j f F f f j f j 
-j f F f f j f j 
-j f F f f j f j 
-j f F f f j f j 
-j f F f f j f j 
-j f F f f j f j 
-j f F f f j f j 
-j f F f f j f j 
-j f F f f j f j 
-j f F f f j f j 
-j f F f f j f j 
+. R R R R R R . 
+R R R R R R R R 
+R 7 7 7 7 7 7 R 
+R R R R R R R R 
+R 7 7 7 7 7 7 R 
+R 7 7 7 7 7 7 R 
+R R R R R R R R 
+R 7 7 7 7 7 7 R 
+R 7 7 7 7 7 7 R 
+R R R R R R R R 
+R 7 7 7 7 7 7 R 
+R 7 7 7 7 7 7 R 
+R R R R R R R R 
+R 7 7 7 7 7 7 R 
+R 7 7 7 7 7 7 R 
+R R R R R R R R 
 ]]},
 
 {nil,"char_sidewood",[[
