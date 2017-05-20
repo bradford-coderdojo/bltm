@@ -250,6 +250,90 @@ FF1 F F F O F F O O O O O O O O
 
 ]]},
 	
+{nil,"talltree",[[
+FFFFFFFFFFFF1 1 1 1 FFFFFFFFFFFF
+FFFFFFFF1 1 G G G G 1 1 FFFFFFFF
+FFFFFF1 G D D D D D G G 1 FFFFFF
+FFFF1 G D D D D D D D G G 1 FFFF
+FF1 G G D D C C D D D G G G 1 FF
+FF1 G D D C C C C D D D G G 1 FF
+1 G G D D C C C C D D D G G G 1 
+1 G G D D C C C C D D D G G G 1 
+1 G G D D C C C C D D D G G G 1 
+1 G G D D C C C C D D D G G G 1 
+1 G G D D C C C C D D D G G G 1 
+1 G G D D C C C C D D D G G G 1 
+1 G G D D C C C C D D D G G G 1 
+1 G G D D C C C C D D D G G G 1 
+1 G G D D C C C C D D D G G G 1 
+1 G G D D C C C C D D D G G G 1 
+1 G G D D C C C C D D D G G G 1 
+1 G G D D C C C C D D D G G G 1 
+1 G G D D C C C C D D D G G G 1 
+1 G G D D C C C C D D D G G G 1 
+1 G G D D C C C C D D D G G G 1 
+1 G G D D C C C C D D D G G G 1 
+FF1 G D D C C C C D D D G G 1 FF
+FF1 G G D D C C D D D G G G 1 FF
+FF1 G G D D D D D D D G G G 1 FF
+FFFF1 G G D D D D D G G G 1 FFFF
+FFFF1 G G G G G G G G G G 1 FFFF
+FFFFFF1 G G G G G G G G 1 FFFFFF
+FFFFFFFF1 G G G G G G 1 FFFFFFFF
+FFFFFFFFFF1 1 1 1 1 1 FFFFFFFFFF
+FFFFFFFF0 F F F F f f 0 FFFFFFFF
+FFFFFFFF0 O O F F F f 0 FFFFFFFF
+FFFFFFFF0 S O F F f f 0 FFFFFFFF
+FFFFFFFF0 S O O F F f 0 FFFFFFFF
+FFFFFFFF0 S O F F f f 0 FFFFFFFF
+FFFFFFFF0 O O F F F 0 0 FFFFFFFF
+FFFFFFFFFF0 O 0 0 f 0 FFFFFFFFFF
+FFFFFFFF0 F 0 F F 0 F 0 FFFFFFFF
+FFFFFFFF0 F F F F f f 0 FFFFFFFF
+FFFFFFFF0 O O F F F f 0 FFFFFFFF
+FFFFFFFF0 S O F F f f 0 FFFFFFFF
+FFFFFFFF0 S O O F F f 0 FFFFFFFF
+FFFFFFFF0 S O F F f f 0 FFFFFFFF
+FFFFFFFF0 O O F F F 0 0 FFFFFFFF
+FFFFFFFFFF0 O 0 0 f 0 FFFFFFFFFF
+FFFFFFFF0 F 0 F F 0 F 0 FFFFFFFF
+
+]]},
+{nil,"smalltree",[[
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFF1 1 1 1 FFFFFFFFFFFF
+FFFFFFFF1 1 G G G G 1 1 FFFFFFFF
+FFFFFF1 G D D D D D G G 1 FFFFFF
+FFFF1 G D D D D D D D G G 1 FFFF
+FF1 G G D D C C D D D G G G 1 FF
+FF1 G D D C C C C D D D G G 1 FF
+FF1 G D D C C C C D D D G G 1 FF
+FF1 G G D D C C D D D G G G 1 FF
+FF1 G G D D D D D D D G G G 1 FF
+FFFF1 G G D D D D D G G G 1 FFFF
+FFFF1 G G G G G G G G G G 1 FFFF
+FFFFFF1 G G G G G G G G 1 FFFFFF
+FFFFFFFF1 G G G G G G 1 FFFFFFFF
+FFFFFFFFFF1 1 1 1 1 1 FFFFFFFFFF
+FFFFFFFF0 F F F F f f 0 FFFFFFFF
+FFFFFFFF0 O O F F F f 0 FFFFFFFF
+FFFFFFFF0 S O F F f f 0 FFFFFFFF
+FFFFFFFF0 S O O F F f 0 FFFFFFFF
+FFFFFFFF0 S O F F f f 0 FFFFFFFF
+FFFFFFFF0 O O F F F 0 0 FFFFFFFF
+FFFFFFFFFF0 O 0 0 f 0 FFFFFFFFFF
+FFFFFFFF0 F 0 F F 0 F 0 FFFFFFFF
+FFFFFFFF0 F F F F f f 0 FFFFFFFF
+FFFFFFFF0 O O F F F f 0 FFFFFFFF
+FFFFFFFF0 S O F F f f 0 FFFFFFFF
+FFFFFFFF0 S O O F F f 0 FFFFFFFF
+FFFFFFFF0 S O F F f f 0 FFFFFFFF
+FFFFFFFF0 O O F F F 0 0 FFFFFFFF
+FFFFFFFFFF0 O 0 0 f 0 FFFFFFFFFF
+FFFFFFFF0 F 0 F F 0 F 0 FFFFFFFF
+
+]]},
 {nil,"pipe",[[
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 1 G G C C 7 7 7 7 7 7 C C C C C C C C C C C C C C G G G G G G 1 
@@ -662,6 +746,8 @@ local default_legend={
 	["=E"]={ name="edgeleft", solid=1, },
 	["E="]={ name="edgeright", solid=1, },
 	["s."]={ name="char_sign", },
+	["TT"]={ name="talltree", },
+	["tt"]={ name="smalltree", },
 
 }
 	
@@ -695,12 +781,12 @@ map=[[
 00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
 00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
 00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
-00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
-00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
-00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
-00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . S . 00
-00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
-00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . . . . . . . TTTT. . . . . . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . . . . . . . TTTT. . . . . . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . TTTT. . . . TTTT. . . . . . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . TTTT. . . . TTTT. . . . . . . . . . . . . . S . 00
+00. . . . . . . . . . . . . . TTTT. . . . TTTT. . . . . . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . TTTT. . . . TTTT. . . . . . . . . . . . . . . . 00
 00===============================================E=E. . . . E=E===============00
 00===============================================E=E. . . . E=E===============00
 ]],
