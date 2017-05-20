@@ -702,7 +702,7 @@ function setup_space()
 
 	local space=entities_set("space", chipmunk.space() )
 	
-	space:gravity(0,700)
+	space:gravity(0,500)
 	space:damping(0.5)
 	space:sleep_time_threshold(1)
 	space:idle_speed_threshold(10)
@@ -937,8 +937,8 @@ function char_controls(it,fast)
 
 	local time=entities_get("time")
 
-	local jump=fast*400 -- up velocity we want when jumping
-	local speed=fast*30 -- required x velocity
+	local jump=fast*300 -- up velocity we want when jumping
+	local speed=fast*60 -- required x velocity
 	local airforce=speed*2 -- replaces surface velocity
 	local groundforce=speed/2 -- helps surface velocity
 	
