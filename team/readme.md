@@ -10,7 +10,8 @@
 2. [How to add a link](#adding-a-link)
 3. [How to test your game](#test-your-game)
 4. [How to get RAW link](#how-to-get-raw-link)
-5. [It's not working, help!](#something-is-wrong)
+5. [Making Pixel Art with Swanky Paint](#pixel-art)
+6. [It's not working, help!](#something-is-wrong)
 
 # Team directory
 
@@ -74,7 +75,26 @@ There are **2 ways** to test your code online https://xriss.github.io/fun64/run/
 2. On the top right, click on the **Raw** button (next to Blame and History)
 3. Copy the URL of this link (it should start with ```https://raw.githubusercontent.com/```)
 
-    
+
+----------
+
+# Pixel art
+
+## Importing your code art
+
+1. Open Swanky Paint
+2. Copy your graphics from your _fun.lua_ code
+3. Go into Swanky Paint and click on **Brush > Bitdown... > Clipboard to Brush**
+4. Press **Shift** & **b** on your keyboard
+5. Click to paste your artwork
+
+## Exporting your code art
+
+1. Once you've finished editing your art, press **b** and select it
+2. Click on **Brush > Bitdown... > Brush to Clipboard**
+3. Go into your _fun.lua_ code
+4. Paste (**Ctrl**_+_**V**) into your code by replacing the old graphics or creating a new item
+
 ----------
 
 # Something is wrong
