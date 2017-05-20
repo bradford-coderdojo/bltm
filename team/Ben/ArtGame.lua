@@ -183,14 +183,24 @@ o o o o r r r r
 o o o o r r r r 
 ]]},
 {nil,"char_floor",[[
-j j j j j j j j j j j j j j j j j f f f f f f f f j j j j j j j j j j j j j j j 
-f f f F F F F f f f f f f f f f f F F F F F F F F f f f f f f j j j j j f f f f 
-F F F f f f f F F F F F F F F F F f f f f f f f f F F F F F F f f f f f F F F F 
-f f f f f f f f f f F F F F f f f f f f f f f f f f f f f f f F F F F F f f f f 
-f f f j j j j f f f f f f f f f f j j j j j j j j f f f f f f f f f f f f f f f 
-j j j f f f f j j j f f f f j j j f f f f f f f f j j j j j j f f f f f j j j j 
-f f f j j j j f f f j j j j f f f j j j j j j j j f f f f f f j j j j j f f f f 
-j j j j j j j j j j j j j j j j j j j j j j j j j j j j j j j j j j j j j j j j 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+D D G G G D D D D D G G G G D D 
+G G D D D G G G G G D D D D G G 
+G G G G G G G G G G G G G G G G 
+G G G G G G G G G G G G 1 G G G 
+1 G G G 1 G G G 1 G G G 1 G G G 
+1 G 1 G 1 G 1 G 1 G 1 G 1 G 1 G 
+1 G 1 G 1 D 1 G 1 G 1 D 1 G 1 D 
+1 D 1 G 1 1 1 D 1 G 1 1 1 D 1 1 
+F 1 1 D 1 F F 1 1 G 1 F F 1 1 F 
+F F 1 1 F F F F 1 D 1 F F F F F 
+O F O F F O O O F 1 F F O F F O 
+O O O O O O O O O F F O O O O O 
+O O O O O O O O O F F O O O O O 
+O O O O O O O O O O O O O O O O 
+O O O O O O O O O O O F F O O O 
+
+
 ]]},
 
 {nil,"player_f1",[[
@@ -580,7 +590,7 @@ map=[[
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||============================================================================||
-||0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ||
+||============================================================================||
 ]],
 }
 
