@@ -391,22 +391,22 @@ Y Y 0 Y Y 0 Y Y
 ]]},
 
 {nil,"char_bigwall",[[
-j j j j r r r r i i i i f f f f r r r r i i i i i i i i f f f f r r r r f f f f 
-j j j j r r r r i i i i f f f f r r r r i i i i i i i i f f f f r r r r f f f f 
-O O R R R R j j j j O O O O r r r r O O O O f f f f F F F F O O O O f f f f O O 
-O O R R R R j j j j O O O O r Y Y r O O O O f Y f f F F F F O O O O f f f f O O 
-j j j j R R R R r r r r R R Y Y Y j j j R R R Y i i i i R R R R O O O O R R R R 
-j j j j R R R R r r r r R Y Y Y Y Y Y Y Y Y Y Y Y i i i R R R R O O O O R R R R 
-r r O O O O j j j j R R Y Y j Y Y Y Y Y Y R j Y Y Y R R R R j j j j R R R R r r 
-r r O O O O j j j j R R Y R j Y Y Y Y R R R j Y Y Y Y Y R R j j j j R R R R r r 
-i i i i f f f f r r r r f f f Y Y j j j r r r r i Y Y Y f f f f r r r r i i i i 
-i i i i f f f f r r r r f f f Y j j j j r r r r i Y Y Y Y f f f r r r r i i i i 
-f f F F F F O O O O f f f f O Y O O R R R R j j j j Y Y Y O r r r r O O O O f f 
-f f F F F F O O O O f f f f O Y O O R R R R j j j j O O O O r r r r O O O O f f 
-i i i i R R R R O O O O R R R R j j j j R R R R r r r r R R R R j j j j R R R R 
-i i i i R R R R O O O O R R R R j j j j R R R R r r r r R R R R j j j j R R R R 
-j j R R R R j j j j R R R R r r r r O O O O j j j j R R R R j j j j R R R R j j 
-j j R R R R j j j j R R R R r r r r O O O O j j j j R R R R j j j j R R R R j j 
+. . i . . . . . . B . . . . . . . . b . . B b I I . . B b I I . . . I I b B B B 
+i . . i i i . . . . b I . . . . I b . . B . . . . I . j j j j j . I f f f f f . 
+. i . . . . i . . . . 2 2 2 6 . I . . . . . . . . . j 3 4 4 4 4 j f 3 3 3 3 3 f 
+. . i . . . i i . . 2 2 5 6 4 6 . . . . f f f f f . 3 3 6 6 5 4 4 3 3 6 6 1 3 3 
+. . B . . . . i I b f 2 2 4 4 4 6 . . f 3 3 3 3 3 f 3 6 1 1 5 5 4 3 6 1 1 1 1 3 
+. B . b . . . i b . j f 2 2 4 4 4 2 . 3 3 6 6 5 3 3 3 6 5 1 1 5 4 3 6 5 5 1 1 3 
+. . . . I . . b . . 5 j j 2 2 2 2 2 . 3 6 1 1 5 5 3 2 2 5 5 1 2 2 2 2 5 1 1 2 2 
+. . . . I . I . . . 5 . j j j j j . . 3 6 5 5 5 5 3 . 2 2 2 2 2 . . 2 2 2 2 2 . 
+. . . 6 2 2 2 . . . 5 . 5 . . 5 . . . 3 3 5 5 5 3 3 . . f f f f f f f . . . . . 
+. . 6 4 6 5 2 2 . . 4 . f f f f f . . . 3 3 3 3 3 . . f 3 3 3 3 3 3 3 f . . . . 
+. 6 4 4 4 2 2 f . 4 . f 3 3 3 3 3 f . j 2 2 2 2 2 j . 3 3 6 6 5 5 5 3 3 . . . . 
+2 4 4 4 2 2 f j . . . 3 3 6 6 5 3 3 . 2 2 6 6 5 2 2 . 3 6 1 1 1 5 1 5 2 I . . . 
+2 2 2 2 2 j j 5 . . I 3 6 1 1 5 5 3 . 2 6 1 1 5 5 2 . 3 6 5 5 5 5 5 5 2 I b . . 
+. j j j j j . 5 . . I 3 6 5 5 5 5 3 . 2 6 5 5 5 5 2 . 3 6 1 1 5 1 5 5 2 . . B . 
+. . 5 . . 5 . 5 . I . 2 2 5 5 5 2 2 I 2 2 5 5 5 2 2 I 2 2 5 5 5 5 5 2 2 I . . B 
+. . 5 . . 5 . . 5 . . . 2 2 2 2 2 . . I 2 2 2 2 2 . I . 2 2 2 2 2 2 2 . I b . . 
 ]]},
 
 {nil,"char_grass",[[
