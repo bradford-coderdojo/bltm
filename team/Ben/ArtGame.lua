@@ -230,6 +230,26 @@ O O O O O O O O O O O F F F 1 FF
 O O O O O O O O F F O F F F 1 FF
 ]]},
 	
+{nil,"fence",[[
+FFFFFFFFFFFFg g g g FFFFFFFFFFFF
+FFFFFFFFFFg y y y g g FFFFFFFFFF
+g g g g g y y y g y y g g g g g 
+y y y y 1 y y y y y y 1 y y y y 
+g g g g 1 y y y y y 1 1 g g g g 
+1 1 1 1 1 y y y y 1 g 1 1 1 1 1 
+FFFFFFFF1 g y y y g g 1 FFFFFFFF
+FFFFFF1 y y y y y y g 1 FFFFFFFF
+FFFFFF1 y y y y y y g 1 FFFFFFFF
+FFFFFFFF1 y y y y g g 1 FFFFFFFF
+g g g g 1 y y y y y g 1 g g g g 
+y y y y 1 y y y g y y 1 y y y y 
+g g g g 1 y g y y y y y 1 g g g 
+1 1 1 1 1 y y y y 1 y y 1 1 1 1 
+FFFFFFFF1 y y y y g 1 1 FFFFFFFF
+FFFFFFFF1 g g g g g g 1 FFFFFFFF
+
+]]},
+	
 {nil,"edgeright",[[
 FFFF1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 FF1 D D D G G G G D D D D D G G 
@@ -749,7 +769,7 @@ local default_legend={
 	["E="]={ name="edgeright", solid=1, },
 	["s."]={ name="char_sign", },
 	["TT"]={ name="talltree", },
-	["tt"]={ name="smalltree", },
+	["++"]={ name="fence", },
 
 }
 	
@@ -787,8 +807,8 @@ map=[[
 00. . . . . . . . . . . . . . . . . . . . TTTT. . . . . . . . . . . . . . . . 00
 00. . . . . . . . . . . . . . tttt. . . . TTTT. . . . . . . . . . . . . . . . 00
 00. . . . . . . . . . . . . . tttt. . . . TTTT. . . . . . . . . . . . . . S . 00
-00. . . . . . . . . . . . . . tttt. . . . TTTT. . . . . . . . . . . . . . . . 00
-00. . . . . . . . . . . . . . tttt. . . . TTTT. . . . . . . . . . . . . . . . 00
+00. . . . . ++++++++++. . . . tttt. . . . TTTT. . . . . . . . . . . . . . . . 00
+00. . . . . ++++++++++. . . . tttt. . . . TTTT. . . . . . . . . . . . . . . . 00
 00===============================================E=E. . . . E=E===============00
 00===============================================E=E. . . . E=E===============00
 ]],
