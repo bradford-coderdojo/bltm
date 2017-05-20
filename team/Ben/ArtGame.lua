@@ -580,7 +580,7 @@ local default_legend={
 	["N2"]={ name="char_empty",	npc="npc2",				sprite="npc2", },
 	["N3"]={ name="char_empty",	npc="npc3",				sprite="npc3", },
 	["WW"]={ name="char_bigwall", solid=1, },
-	["pp"]={ name="pipe", solid=1, },
+	["PP"]={ name="pipe", solid=1, },
 	[",,"]={ name="char_grass", },
 	["t."]={ name="char_tree", },
 	["S="]={ name="char_stump", solid=1, },
