@@ -211,6 +211,45 @@ O O O O O O O O O F F O O O O O
 O O O O O O O O O O O O O O O O 
 O O O O O O O O O O O F F O O O 
 ]]},
+{nil,"edgeleft",[[
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 FFFF
+G G D D D D D G G G G D D D 1 FF
+D D G G G G G D D D D G G G G 1 
+G G G G G G G G G G G G G G G 1 
+G G G G G G G G G 1 G G G G G 1 
+G 1 G G G 1 G G G 1 G G G 1 G 1 
+G 1 G 1 G 1 G 1 G 1 G 1 G 1 G 1 
+G 1 D 1 G 1 G 1 D 1 G 1 D 1 G 1 
+G 1 1 1 D 1 G 1 1 1 D 1 1 1 D 1 
+D 1 F F 1 1 G 1 F F 1 1 F F 1 1 
+1 F F F F 1 D 1 F F F F F F 1 1 
+F F O O O F 1 F F O F F F F 1 FF
+O O O O O O F F O O O F F F 1 FF
+O O O O O O F F O O O F F F 1 FF
+O O O O O O O O O O O F F F 1 FF
+O O O O O O O O F F O F F F 1 FF
+]]},
+	
+{nil,"edgeright",[[
+FFFF1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+FF1 D D D G G G G D D D D D G G 
+1 G G G G D D D D G G G G G D D 
+1 G G G G G G G G G G G G G G G 
+1 G G G G G 1 G G G G G G G G G 
+1 G 1 G G G 1 G G G 1 G G G 1 G 
+1 G 1 G 1 G 1 G 1 G 1 G 1 G 1 G 
+1 G 1 D 1 G 1 D 1 G 1 G 1 D 1 G 
+1 D 1 1 1 D 1 1 1 G 1 D 1 1 1 G 
+1 1 F F 1 1 F F 1 G 1 1 F F 1 D 
+1 1 F F F F F F 1 D 1 F F F F 1 
+FF1 F F F F O F F 1 F O O O F F 
+FF1 F F F O O O F F O O O O O O 
+FF1 F F F O O O F F O O O O O O 
+FF1 F F F O O O O O O O O O O O 
+FF1 F F F O F F O O O O O O O O 
+
+]]},
+	
 {nil,"pipe",[[
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 1 G G C C 7 7 7 7 7 7 C C C C C C C C C C C C C C G G G G G G 1 
@@ -620,6 +659,8 @@ local default_legend={
 	[",,"]={ name="char_grass", },
 	["t."]={ name="char_tree", },
 	["S="]={ name="char_stump", solid=1, },
+	["=E"]={ name="edgeleft", solid=1, },
+	["E="]={ name="edgeright", solid=1, },
 	["s."]={ name="char_sign", },
 
 }
@@ -660,8 +701,8 @@ map=[[
 00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . S . 00
 00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
 00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
-00============================================================================00
-00============================================================================00
+00===============================================E=E. . . . E=E===============00
+00===============================================E=E. . . . E=E===============00
 ]],
 }
 
