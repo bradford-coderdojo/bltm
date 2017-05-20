@@ -280,68 +280,75 @@ FFFF1 1 1 1 1 1 1 FFFFFFFFFF
 FFFF1 F F O O Y 1 FFFFFFFFFF
 FFFF1 F F F O O Y 1 FFFFFFFF
 FFFF1 1 1 1 1 1 1 1 FFFFFFFF
-. . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . 
+
 
 
 ]]},
 {nil,"player_f2",[[
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . 4 4 4 4 . . . . . . . . . . 
-. . . . . . . . . 4 2 7 7 1 4 . . . . . . . . . 
-. . . . . . . . . 4 7 2 1 7 4 . . . . . . . . . 
-. . . . . . . . 4 7 7 1 2 7 7 4 . . . . . . . . 
-. . . . . . . 4 7 7 1 7 7 2 7 7 4 . . . . . . . 
-. . . . . . . 4 4 4 4 4 4 4 4 4 4 . . . . . . . 
-. . . . . . . . . . 7 7 0 7 . . . . . . . . . . 
-. . . . . . . . . . 7 7 7 7 7 . . . . . . . . . 
-. . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
-. . . . . . . . . . . 7 7 . . . . . . . . . . . 
-. . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
-. . . . . . . . . 7 7 . 7 7 7 . . . . . . . . . 
-. . . . . . . . . 7 7 . 7 7 7 . . . . . . . . . 
-. . . . . . . . . 7 7 . 7 7 7 . . . . . . . . . 
-. . . . . . . . . 7 7 7 . 7 7 . . . . . . . . . 
-. . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
-. . . . . . . . . . . 7 7 . . . . . . . . . . . 
-. . . . . . . . . . . 7 7 . . . . . . . . . . . 
-. . . . . . . . . . . 7 7 7 . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
+FFFFFFFFFFFF1 1 1 1 FFFFFFFFFFFF
+FFFFFFFFFF1 D D D D 1 FFFFFFFFFF
+FFFFFFFF1 G D O Y Y 1 FFFFFFFFFF
+FFFFFF1 G D D 1 1 1 1 1 FFFFFFFF
+FFFF1 G G 1 1 1 1 1 1 1 1 FFFFFF
+FFFF1 G 1 1 7 7 m 7 m 1 1 FFFFFF
+FF1 1 1 1 m 7 1 S 1 S 1 FFFFFFFF
+FF1 S 1 1 m 7 1 S 1 1 1 1 FFFFFF
+1 S S 1 1 m S S S S S S S 1 FFFF
+1 m S 1 1 1 S 1 m m S S m 1 FFFF
+FF1 m m 1 m 1 1 1 1 m m 1 1 1 FF
+FFFF1 m m S S S 1 1 1 1 1 FFFFFF
+FFFF1 m m m S S S S m 1 FFFFFFFF
+FFFFFF1 m m m S S m 1 FFFFFFFFFF
+FFFFFF1 1 1 m m m 1 FFFFFFFFFFFF
+FFFF1 B 1 G 1 1 1 1 FF1 1 FFFFFF
+FF1 b B 5 1 D 1 b 5 1 Y 7 1 FFFF
+1 b B 5 1 1 1 D 1 b 5 1 Y 7 1 FF
+1 b b 1 7 7 7 1 D 1 b B 1 Y 1 FF
+1 b 1 Y 7 7 7 7 1 D 1 1 1 1 FFFF
+FF1 1 Y Y 7 7 7 1 7 7 D 1 FFFFFF
+FFFF1 1 Y Y Y 1 D 7 7 D 1 1 1 FF
+FFFF1 G 1 1 1 D D D D D 1 Y O 1 
+FFFF1 G G D D D D D D 1 Y O F 1 
+FF1 1 G G D D D G G G 1 O F F 1 
+1 F 1 G 1 G G G 1 1 1 1 O F F 1 
+1 F O 1 G 1 1 1 FFFFFF1 O F 1 1 
+1 F O 1 1 FFFFFFFFFFFFFF1 1 1 FF
+1 F O O 1 FFFFFFFFFFFFFFFFFFFFFF
+FF1 1 1 FFFFFFFFFFFFFFFFFFFFFFFF
+
 ]]},
 {nil,"player_f3",[[
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . 4 4 4 4 . . . . . . . . . . 
-. . . . . . . . . 4 2 7 7 1 4 . . . . . . . . . 
-. . . . . . . . . 4 7 2 1 7 4 . . . . . . . . . 
-. . . . . . . . 4 7 7 1 2 7 7 4 . . . . . . . . 
-. . . . . . . 4 7 7 1 7 7 2 7 7 4 . . . . . . . 
-. . . . . . . 4 4 4 4 4 4 4 4 4 4 . . . . . . . 
-. . . . . . . . . . 7 7 0 7 . . . . . . . . . . 
-. . . . . . . . . . 7 7 7 7 7 . . . . . . . . . 
-. . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
-. . . . . . . . . . . 7 7 . . . . . . . . . . . 
-. . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
-. . . . . . . . . 7 7 7 7 7 7 . . . . . . . . . 
-. . . . . . . . 7 7 7 7 7 7 7 7 . . . . . . . . 
-. . . . . . . 7 7 7 7 7 7 7 7 7 7 . . . . . . . 
-. . . . . . . 7 7 . 7 7 7 7 . 7 7 . . . . . . . 
-. . . . . . . . . . 7 7 7 7 7 . . . . . . . . . 
-. . . . . . . . . 7 7 7 . 7 7 . 7 . . . . . . . 
-. . . . . . . . 7 7 . . . . 7 7 7 . . . . . . . 
-. . . . . . . . 7 7 7 . . . 7 7 . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
+FFFFFFFFFFFF1 1 1 1 FFFFFFFFFFFF
+FFFFFFFFFF1 D D D D 1 FFFFFFFFFF
+FFFFFFFF1 G D D o o 1 FFFFFFFFFF
+FFFFFF1 G D D O 1 1 1 1 1 FFFFFF
+FFFF1 G G G 1 1 1 1 1 1 1 1 FFFF
+FFFF1 G G 1 1 7 7 m 7 1 1 FFFFFF
+FF1 1 1 1 1 m 7 1 S 1 1 FFFFFFFF
+FF1 S S 1 1 m 7 1 S 1 1 1 1 FFFF
+FF1 m S 1 1 m S S S S S S S 1 FF
+FF1 m S 1 1 1 S 1 m m S S m 1 FF
+FFFF1 m m 1 m 1 1 1 1 m m 1 1 1 
+FFFF1 1 m m S S S 1 1 1 1 1 FFFF
+FFFF1 1 m m S S S S m 1 FFFFFFFF
+FFFFFFFF1 m m S S m 1 FFFFFFFFFF
+FFFF1 1 1 1 m m m 1 FFFFFFFFFFFF
+FF1 b B 1 D 1 1 1 1 1 FFFFFFFFFF
+FF1 b B 5 1 1 1 B 5 1 1 1 FFFFFF
+1 b B 5 1 7 7 7 1 B 5 1 o 1 FFFF
+1 b B 1 o 7 7 7 7 1 5 5 1 o 1 FF
+1 b b 1 o o 7 7 7 1 1 1 1 o 1 FF
+FF1 b b 1 o o o 1 7 G 7 1 1 FFFF
+FFFF1 1 G 1 1 1 7 7 D 7 1 FFFFFF
+FFFF1 G G G D D D D D D 1 FFFFFF
+FFFF1 G G D D D D D D D D 1 FFFF
+FFFF1 G G D D D G G D D D 1 1 FF
+FFFF1 G G D D G 1 G G D 1 o O 1 
+FF1 F 1 G D G 1 FF1 G 1 o O F 1 
+FF1 F 1 G G G 1 FFFF1 O O F 1 FF
+FF1 F O 1 1 1 FFFFFF1 F F 1 FFFF
+FFFF1 F O O F 1 FFFFFF1 1 FFFFFF
+
 ]]},
 {nil,"cannon_ball",[[
 . . . . . . . . . . . . . . . . . . . . . . . . 
