@@ -449,14 +449,14 @@ R R R R R R R R
 ]]},
 
 {nil,"char_sidewood",[[
-F Y 7 7 7 7 Y F 
-F Y 7 7 7 7 Y F 
-F Y 7 7 7 7 Y F 
-F Y 7 7 7 7 Y F 
-F Y 7 7 7 7 Y F 
-F Y 7 7 7 7 Y F 
-F Y 7 7 7 7 Y F 
-F Y 7 7 7 7 Y F 
+F F Y Y 7 Y F F 
+F F Y 7 Y Y F F 
+F F Y Y 7 Y F F 
+F F Y 7 Y Y F F 
+F F Y Y 7 Y F F 
+F F Y 7 Y Y F F 
+F F Y Y 7 Y F F 
+F F Y 7 Y Y F F 
 ]]},
 
 
