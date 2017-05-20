@@ -183,10 +183,10 @@ o o o o r r r r
 o o o o r r r r 
 ]]},
 {nil,"char_floor",[[
-j j j j j j j j j j j j j j j j j f f f f f f f f j j j j j j j j j j j j j j j 
-f f f F F F F f f f f f f f f f f F F F F F F F F f f f f f f j j j j j f f f f 
-F F F f f f f F F F F F F F F F F f f f f f f f f F F F F F F f f f f f F F F F 
-f f f f f f f f f f F F F F f f f f f f f f f f f f f f f f f F F F F F f f f f 
+j g j j j G j g j G j j j g G j j G g f f f f f d j j j j g j G j j j g G j j j 
+f g f F F G F G m g f f f g f G f g F G F F F F G f f f G f m g j j j g f G f d 
+F F G g d f G F F F g g G F F d g f f f g f f d f g G d F F F f g g G f F d g F 
+f f f f f f f f f f F F F F f f f f f f f f g f f f f f f f f F F F F F f f f f 
 f f f j j j j f f f f f f f f f f j j j j j j j j f f f f f f f f f f f f f f f 
 j j j f f f f j j j f f f f j j j f f f f f f f f j j j j j j f f f f f j j j j 
 f f f j j j j f f f j j j j f f f j j j j j j j j f f f f f f j j j j j f f f f 
