@@ -199,8 +199,42 @@ O O O O O O O O O F F O O O O O
 O O O O O O O O O F F O O O O O 
 O O O O O O O O O O O O O O O O 
 O O O O O O O O O O O F F O O O 
+]]},
+{nil,"pipe",[[
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 G G C C 7 7 7 7 7 7 C C C C C C C C C C C C C C G G G G G G 1 
+1 g g g G D C 7 C D G G g g g g g g g g g g g g g g g g g g 1 1 
+1 g G G D D C 7 C C D D G G G G G G G G G G G G G g g g g g 1 1 
+1 g G G D D C 7 C C D D G G G G G G G G G G G G G g g g g g 1 1 
+1 g G G D D C 7 C C D D G G G G G G G G G G G G G g g g g g 1 1 
+1 g G G D D C 7 C C D D G G G G G G G G G G G G G g g g g g 1 1 
+1 g G G D D C 7 C C D D G G G G G G G G G G G G G g g g g g 1 1 
+1 g G G D D C 7 C C D D G G G G G G G G G G G G G g g g g g 1 1 
+1 g G G D D C 7 C C D D G G G G G G G G G G G G G g g g g g 1 1 
+1 g G G D D C 7 C C D D G G G G G G G G G G G G G g g g g g 1 1 
+1 g G G D D C 7 C C D D G G G G G G G G G G G G G g g g g g 1 1 
+1 g G G D D C 7 C C D D G G G G G G G G G G G G G g g g g g 1 1 
+1 g G G D D C 7 C C D D G G G G G G G G G G G G G g g g g g 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+FFFF1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 FFFF
+FFFF1 g G G G G C 7 C D D G G G G G G G G G G g g g g g 1 1 FFFF
+FFFF1 g G G G G C 7 C D D G G G G G G G G G G g g g g g 1 1 FFFF
+FFFF1 g G G G G C 7 C D D G G G G G G G G G G g g g g g 1 1 FFFF
+FFFF1 g G G G G C 7 C D D G G G G G G G G G G g g g g g 1 1 FFFF
+FFFF1 g G G G G C 7 C D D G G G G G G G G G G g g g g g 1 1 FFFF
+FFFF1 g G G G G C 7 C D D G G G G G G G G G G g g g g g 1 1 FFFF
+FFFF1 g G G G G C 7 C D D G G G G G G G G G G g g g g g 1 1 FFFF
+FFFF1 g G G G G C 7 C D D G G G G G G G G G G g g g g g 1 1 FFFF
+FFFF1 g G G G G C 7 C D D G G G G G G G G G G g g g g g 1 1 FFFF
+FFFF1 g G G G G C 7 C D D G G G G G G G G G G g g g g g 1 1 FFFF
+FFFF1 g G G G G C 7 C D D G G G G G G G G G G g g g g g 1 1 FFFF
+FFFF1 g G G G G C 7 C D D G G G G G G G G G G g g g g g 1 1 FFFF
+FFFF1 g G G G G C 7 C D D G G G G G G G G G G g g g g g 1 1 FFFF
+FFFF1 g G G G G C 7 C D D G G G G G G G G G G g g g g g 1 1 FFFF
+FFFF1 g G G G G C 7 C D D G G G G G G G G G G g g g g g 1 1 FFFF
+FFFF1 g G G G G C 7 C D D G G G G G G G G G G g g g g g 1 1 FFFF
 
-
+		
 ]]},
 
 {nil,"player_f1",[[
@@ -546,6 +580,7 @@ local default_legend={
 	["N2"]={ name="char_empty",	npc="npc2",				sprite="npc2", },
 	["N3"]={ name="char_empty",	npc="npc3",				sprite="npc3", },
 	["WW"]={ name="char_bigwall", solid=1, },
+	["pp"]={ name="pipe", solid=1, },
 	[",,"]={ name="char_grass", },
 	["t."]={ name="char_tree", },
 	["S="]={ name="char_stump", solid=1, },
@@ -564,10 +599,10 @@ map=[[
 ||0000000000000000000000000000000000000000000000000000000000000000000000000000||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . t.t.. . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . t.t.. . . . . . . s.s.. . . . . . . . . . . . . N3. . . . ||
-||,,,,,,,,,,,,,,,,,,t.t.,,,,,,,,,,,,,,s.s.,,,,,,,,. . . . ,,,,,,,,,,,,,,,,,,,,||
+||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . PPPPPPPP||
+||. . . . . . . . . t.t.. . . . . . . . . . . . . . . . . . . . . . . PPPPPPPP||
+||. . . . . . . . . t.t.. . . . . . . s.s.. . . . . . . . . . . . . . PPPPPPPP||
+||,,,,,,,,,,,,,,,,,,t.t.,,,,,,,,,,,,,,s.s.,,,,,,,,. . . . . . . . . . PPPPPPPP||
 ||================================================. . . . ====================||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||,,,,,,. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
