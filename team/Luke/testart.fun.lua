@@ -489,22 +489,14 @@ F F Y 7 Y Y F F
 
 
 {nil,"char_sign",[[
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . f . . . 
-. . . . . . . . . . . . F f . . 
-. . f f f 5 f f f 5 f f f F f . 
-. . f F 4 F F F 4 F 4 F F f F f 
-. . f j 3 j 3 j 3 j 3 j j f F f 
-. . f j j 2 2 j j 2 j j f F f . 
-. . . . . . j j j . . . F f . . 
-. . . . . . F j j . . . f . . . 
-. . . . . . F f j . . . . . . . 
-. . . . . . F f j . . . . . . . 
-. . . . . . F f j . . . . . . . 
-. . . . . . F f j . . . . . . . 
+. . . . . . . . . . F . . . 
+. . . . . . . . . . F F . . 
+F F F F F F F F F F F F F . 
+F F F F F F F F F F F F F F 
+F F F F F F F F F F F F F F 
+F F F F F F F F F F F F F . 
+. . . . . . . . . . F F . . 
+. . . . . . . . . . F . . .  
 ]]},
 
 }
