@@ -592,7 +592,7 @@ local default_legend={
 	["N3"]={ name="char_empty",	npc="npc3",				sprite="npc3", },
 	["WW"]={ name="char_bigwall", solid=1, },
 	["PP"]={ name="pipe", solid=1, },
-	["BB"]={ name="CHAR_WALL", solid=1, },
+	["BB"]={ name="char_wall", solid=1, },
 	[",,"]={ name="char_grass", },
 	["t."]={ name="char_tree", },
 	["S="]={ name="char_stump", solid=1, },
@@ -937,8 +937,8 @@ function char_controls(it,fast)
 
 	local time=entities_get("time")
 
-	local jump=fast*200 -- up velocity we want when jumping
-	local speed=fast*60 -- required x velocity
+	local jump=fast*400 -- up velocity we want when jumping
+	local speed=fast*30 -- required x velocity
 	local airforce=speed*2 -- replaces surface velocity
 	local groundforce=speed/2 -- helps surface velocity
 	
