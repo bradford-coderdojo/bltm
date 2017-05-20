@@ -421,6 +421,14 @@ g G G . G . g . g . G . . . . g . . . g g . g . . G . . g . . g
 ]]},
 
 {nil,"phonebox",[[
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
 . R R R R R R . 
 R R R R R R R R 
 R 7 7 7 7 7 7 R 
@@ -437,6 +445,7 @@ R R R R R R R R
 R 7 7 7 7 7 7 R 
 R 7 7 7 7 7 7 R 
 R R R R R R R R 
+
 ]]},
 
 {nil,"char_sidewood",[[
