@@ -1279,38 +1279,23 @@ load=function() graphics.loads{
 
 -- 1 x 24x24
 {nil,"donut_1",[[
-FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFo O o o FFFFFFFFFFFFFFFFFFFFFFFF
-FFFFFFFFFFFFFFFFFFo o o o o s o o o o o Y o o FFFFFFFFFFFFFFFFFF
-FFFFFFFFFFFFFFO o o o o o o o o o O O o o o o o FFFFFFFFFFFFFFFF
-FFFFFFFFFFFFo o o o O O O o o Y o Y o o o o S Y o FFFFFFFFFFFFFF
-FFFFFFFFFFO o O O O O O O o o o O O o O o o o o o o FFFFFFFFFFFF
-FFFFFFFFO o o o O O r O O O o s f F f F O O O O o S S FFFFFFFFFF
-FFFFFFO O o o O O O o O O O o y y S F F o o o O o o o o FFFFFFFF
-FFFFO O O O o o F j O o o O O O F F F O o o S Y F o S O FFFFFFFF
-FFFFO O o O o O o 3 O O o o O O o o o O O O O O O s S o o FFFFFF
-FFFFO O O O o O O S O O o o Y o o o o O r O O O O s S o o O FFFF
-FFO O O O o O o O o O O o o s O o y s f f F F O o o o S O O FFFF
-FFFFO O o o O o o o O O O o s o O f s F s O O O r O o o F F O FF
-FFO O O o O O O o O O O O O s S y F O f s o O r O O O o 3 3 O FF
-FFO O O O O O O O O o O O O O O O O O F O Y S o F r O O y F o FF
-FFs s O O O O O r O o O F F O o O O o o o o o o O O F O o O O FF
-1 f F O O O o o O O O s j f F O O o o o o o o F j s O O o o O o 
-f F f r y F o F O O O O 1 j F o o o o o o Y o f 1 F O O o o O o 
-FFo o o O j f s o O O F j f O O O O O O O o o s F O o o O o o O 
-F O O O O s y O O O o o o O O r O O O r O O o o O o y F y F O O 
-FFO O r O o o O O O O o O o O F y F O O O O o o o O F 1 1 j O FF
-FFr O O r O O r O O o o O o f 0 1 F o O O o o o O o O F F O O FF
-FFr r O O O O O O O O O O o F 0 j F O O O o o S O O O O O O FFFF
-FFr r r O O O o O O O O O O r F F O o O O o O F O O O O O O FFFF
-FFFFr r O O O o O 1 j O O O O r O O O O O O y j O o O O O FFFFFF
-FFFFFFr r O O O s j 1 j O O r O O F F O O F F O O O O O O FFFFFF
-FFFFFFF r O r r O f f O r O O F O j j F O O F O O O O r FFFFFFFF
-FFFFFFFFF r r F r O o r O r r O O O F F O O r O O O r FFFFFFFFFF
-FFFFFFFFFFF r O O O O O r O r F O O O O O O O O O FFFFFFFFFFFFFF
-FFFFFFFFFFFFF O O O O O O O O O r O O O O O r O FFFFFFFFFFFFFFFF
-FFFFFFFFFFFFFFF r O O O O F O O O O O O O r FFFFFFFFFFFFFFFFFFFF
-FFFFFFFFFFFFFFFFFFFFFFr O O r r O O r F FFFFFFFFFFFFFFFFFFFFFFFF
-FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFo o s o o o FFFFFFFFFF
+FFFFFFo o o o o o o o Y o FFFFFF
+FFFFo o O O O o F O O o o o FFFF
+FFO O o F o O O s F o o s o FFFF
+FFO O O s O o o o o O O s o o FF
+FFO o o o O o s O y y O o o s FF
+O O O O O O O o F F o o r O y O 
+F O O O O O F O O o o o y O o O 
+y O y s O O j O O O o s F o o O 
+O O O O O o O O O O O o o F F O 
+r O O O O O O f f O O o O O O FF
+FFr O O F O O r O O O F O O O FF
+FFF O O y f O r y F O O O O FFFF
+FFFFF r O O O r O O O O O FFFFFF
+FFFFFFr O O O O O O O FFFFFFFFFF
+FFFFFFFFFFFFO r O FFFFFFFFFFFFFF
+
 
 
 ]]},
