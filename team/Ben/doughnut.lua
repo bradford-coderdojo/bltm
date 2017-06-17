@@ -1729,17 +1729,15 @@ setup=function(items)
 
 <welcome
 
-	Good Day Kind Sir,
-	
-	If you fetch me all the donuts I will let you out.
+	I'll let you through if you get me some cookies
 	
 	>exit?donuts<10
 
-		Fine I'll go look.
+		Right I will get some then
 
 	>donut?donuts>9
 
-		Here you go, 10 donuts that have barely touched the ground.
+		10 cookies, happy now?
 
 	>out
 
