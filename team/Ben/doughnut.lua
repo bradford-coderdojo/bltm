@@ -2278,7 +2278,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord ) {
 //	f=f*f;
 
 	vec3 color=vec3(
-		0.25, 0.0, 0.25	);
+		0.5, 0.0, 0.5	);
 	fragColor = vec4( color*f , 1.0 );
 }
 
