@@ -1980,6 +1980,8 @@ update=function()
 	if not setup_done then
 		entities.systems.level.setup(1) -- load map
 		setup_done=true
+		local it=system.components.copper
+		it.shader_name="fun_copper_noise"
 	end
 
 	local menu=entities.get("menu")
