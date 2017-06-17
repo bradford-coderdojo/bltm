@@ -1490,7 +1490,7 @@ legend=combine_legends(default_legend,{
 }),
 title="Welcome!",
 map=[[
-||0000000000000000000000000000000000000000000000000000000000000000000000000000||
+00000000000000000000000000000000000000000000000000000000000000000000000000000000
 ||. . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
 ||. . . S . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
 ||. . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
@@ -1529,7 +1529,7 @@ legend=combine_legends(default_legend,{
 }),
 title="This is a test.",
 map=[[
-||0000000000000000000000000000000000000000000000000000000000000000000000000000||
+00000000000000000000000000000000000000000000000000000000000000000000000000000000
 ||. . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
 ||. . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
 ||. . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
@@ -2272,13 +2272,13 @@ vec2 cellular(vec3 P) {
 // main
 void mainImage( out vec4 fragColor, in vec2 fragCoord ) {
 
-	float fa=cellular( vec3(fragCoord,iGlobalTime*3.0)/8.0 ).x;
-	float fb=cellular( vec3(fragCoord,127.0+iGlobalTime*7.0)/8.0 ).x;
+	float fa=cellular( vec3(fragCoord*2.0f,iGlobalTime*3.0)/8.0 ).x;
+	float fb=cellular( vec3(fragCoord*2.0f,127.0+iGlobalTime*7.0)/8.0 ).x;
 	float f=fa*fb;	
 //	f=f*f;
 
 	vec3 color=vec3(
-		1.0, 0.0, 1.0	);
+		0.25, 0.0, 0.25	);
 	fragColor = vec4( color*f , 1.0 );
 }
 
