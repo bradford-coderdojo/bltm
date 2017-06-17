@@ -1505,9 +1505,9 @@ map=[[
 ||. . . . . . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . ||
 ||. . . . . . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . ||
 ||. . . . . . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . ||
-||. . . . . . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . ||
-||. . . . . . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . ||
-||. . . . . . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . ||
+||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
