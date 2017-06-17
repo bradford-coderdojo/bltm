@@ -2272,8 +2272,8 @@ vec2 cellular(vec3 P) {
 // main
 void mainImage( out vec4 fragColor, in vec2 fragCoord ) {
 
-	float fa=cellular( vec3(fragCoord*2.0f,iGlobalTime*3.0)/8.0 ).x;
-	float fb=cellular( vec3(fragCoord*2.0f,127.0+iGlobalTime*7.0)/8.0 ).x;
+	float fa=cellular( vec3(fragCoord,iGlobalTime*3.0)/8.0 ).x;
+	float fb=cellular( vec3(fragCoord,127.0+iGlobalTime*7.0)/8.0 ).x;
 	float f=fa*fb;	
 //	f=f*f;
 
