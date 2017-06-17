@@ -74,6 +74,43 @@ local chat_text=[[
     >exit
         Let's Go!!
 
+#npc3 Conversation NPC3
+    Mr. Space
+
+<welcome
+    WARNING: THIS REACTOR IS IN CRITICAL STATUS, POWER STATION IN LOCKDOWN
+    >hi
+        You know what I've always wondered?
+    >exit
+        AAAARRRGGGHHHHHH...............
+
+<hi
+    No?
+    >excretion
+        How do you go to the toilet in those suits?
+    >exit
+        Actually it doesn't matter... Bye...
+    >how
+        Actuall never mind, how are you?
+
+<excretion
+    Generally you try not to, but if you have to, you just gotta go all over yourself inside the suit (and it stinks)
+    >exit
+        EWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+<how
+    Not great, how are you?
+    >exit
+        good
+    >OK
+        OK
+    >terrible
+        Terrible
+
+<OK
+    >exit
+<terible
+    >exit
+
 ]]
 
 
@@ -640,7 +677,7 @@ pl. . .?s . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
 pl?D. . . . . . s/. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
 pl. . . . . . . . . d/s/s/D/d/s/s/s/s/D/s/d/s/s/. . . . . . . . . . . . N1. . pr
 pl. . ?s. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
-pl?d. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . D/d/pr
+pl?d. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . S . . . D/d/pr
 pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
 pl. . .?s . . . . . . . . . . . . . . . . . . . . . . . d/s/s/d/s/D/s/s/d/  . pr
 pl?s. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
@@ -658,7 +695,7 @@ pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
 pl. . D/s/d/s/d/s/s/d/s/D/s/s/d/s/s . . . . . . D/s/s/d/. . . . . . . . . . . pr
 pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
 pl. . . . . . . . . . . . . . . . . . . s/d/s/. . . . . . . . . . . . . . . . pr
-pl. S . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
+pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
 pls/d/s/s/s/d/s/s/s/D/s/d/s/s/s/d/s/D/. . . . . . . . . . . . . . . . . . . . pr
 pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
 plxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxpr
