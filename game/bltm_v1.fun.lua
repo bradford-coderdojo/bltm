@@ -1397,13 +1397,16 @@ add=function(opts)
 	
 	bird.draw=function()
 		if bird.active then
+			local vx,vy=bird.body:velocity()
 			local px,py=bird.body:position()
 			local rz=bird.body:angle()
 			local t=bird.frames[1]
 			if bird.flap_cooldown > 0 then
 				t=bird.frames[2]
 			end
-			system.components.sprites.list_add({t=t,h=8,px=px,py=py,rz=180*rz/math.pi})			
+			local sx=1
+			if vx<0 then sx=-1 end
+			system.components.sprites.list_add({t=t,h=8,px=px,py=py,rz=180*rz/math.pi,sx=sx})			
 		end
 	end
 	bird.active=true
