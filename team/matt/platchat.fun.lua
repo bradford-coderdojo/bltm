@@ -60,6 +60,18 @@ local chat_text=[[
     >exit
         OK
 
+#npc2 Conversation NPC2
+    Jonny McGhee
+
+<welcome
+        Yes, thank you very much for your assistance, I have a secret to show you, would you like to see?
+    >yes
+        Yeah, cool
+    >exit
+        No thanks
+
+<yes
+    >exit
 
 ]]
 
@@ -384,8 +396,7 @@ local default_legend={
 
 -- items not tiles, so display tile 0 and we will add a sprite for display
 	["S "]={ name="char_empty",	start=1,	},
-	["N1"]={ name="char_empty",	npc="npc1",			  },
-	["N2"]={ name="char_empty",	npc="npc2", active=0, },
+	["N1"]={ name="char_empty",	npc="npc1",				sprite="npc1", },
 
     ["AA"]={ name="char_empty", loot=1},
 
@@ -488,7 +499,7 @@ map=[[
 ||. . ?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . S . . . /// ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . AA. . . . . . . . . ||
-||. . .?= . . . . . . . . . . . . . . . . . . . . . . . /////////////// . . . ||
+||. . .?= . . . . . . . . . . . . . . . . . . . . . . . /////////////////// . ||
 ||?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . ?=. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
@@ -760,9 +771,10 @@ function add_loot()
 
 				for i,npc in pairs(entities_items("npc")) do
 					if npc.shape.npc == 'npc1' then
---						ls(npc)
-						space:remove(npc.shape)
-						npc.active=false
+						--space:remove(npc.shape)
+                        --npc.shape=space.static:shape("box", (x-1)*8,(y-1)*8, (x+2)*8,(y+2)*8,0)
+                        --npc.shape:collision_type(0x4003)
+                        npc.shape.npc="npc2"
 					end
 				end
 			end
@@ -777,24 +789,6 @@ function add_loot()
 	end
 	return loot
 end
-
--- items, can be used for general things, EG physics shapes with no special actions
-function add_npc()
-	local npc=entities_add{caste="npc"}
-	npc.draw=function()
-		if npc.active then
-			local px,py,rz=npc.px,npc.py,npc.rz
-			if npc.body then -- from fizix
-				px,py=npc.body:position()
-				rz=npc.body:angle()
-			end
-			rz=npc.draw_rz or rz -- always face up?
-			system.components.sprites.list_add({t=npc.sprite,h=npc.h,hx=npc.hx,hy=npc.hy,s=npc.s,sx=npc.sx,sy=npc.sy,px=px,py=py,rz=180*rz/math.pi,color=npc.color,pz=npc.pz})
-		end
-	end
-	return npc
-end
-
 
 function setup_score()
 
@@ -1043,6 +1037,7 @@ function add_player(i)
 		it=add_detritus(names.body_p2.idx,16,px,py+0,0.25,16,0.1,0.5,"box",-3,-2,3,2,0) it.body:velocity(vx*2,vy*2) it.color=player.color
 		it=add_detritus(names.body_p3.idx,16,px,py+4,0.25,16,0.1,0.5,"box",-3,-2,3,2,0) it.body:velocity(vx*1,vy*1) it.color=player.color
 
+        oven.mods["wetgenes.gamecake.mods.escmenu"].show = true
 	end
 
 	player.update=function()
@@ -1449,15 +1444,8 @@ function setup_level(idx)
 				item.pz=-1
 			end
 			if tile.npc then
-				local item=add_npc()
-				item.active=true
-				item.px=tile.x*8+4
-				item.py=tile.y*8+4
-				item.sprite = names[tile.npc].idx
-				item.h=24
-				item.s=1
-				item.draw_rz=0
-				item.pz=-1
+				--local item=add_item()
+				local item=entities_add{caste="npc"}
 
 				item.shape=space.static:shape("box", (x-1)*8,(y-1)*8, (x+2)*8,(y+2)*8,0)
 
