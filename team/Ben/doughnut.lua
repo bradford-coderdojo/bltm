@@ -1542,10 +1542,10 @@ map=[[
 ||======. . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
 ||. . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
 ||,,,,,,,,,,. . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
-||==========. . . . . . . . . . t.MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
-||. . . . . . . . . . . . . . . t.t.MMMMMMMMMMMMWWWWWWWWWWWWMMMMMM. . . . . . ||
-||,,,,,,,,,,,,,,. . . . ,,,,,,,,t.t.,,MMMMMMMMMMWWWWWWWWWWWWMMMM,,,,,,,,,,,,,,||
-||==============. . . . ======================================================||
+||==========. . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
+||. . . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . . ||
+||. . . . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMM. . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMM. . . . . . . . . . ||
 ||. . . . . . . . . . . ,,. . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . ==. ,,. . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . ==. . . ,,. . . . . . . . . . . . . . . . . . . . ||
