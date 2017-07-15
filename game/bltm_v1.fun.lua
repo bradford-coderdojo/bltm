@@ -1375,22 +1375,22 @@ add=function(opts)
 		else
 
 			for i,player in pairs(entities.caste("player")) do
-				
-				local ppx,ppy=player.body:position()
-				local bpx,bpy=bird.body:position()
-				
-				local dx=bpx-ppx
-				local dy=bpy-ppy
-				
-				if dx*dx + dy*dy < 32*32 then
-				
-					bird.flap_cooldown=30
-				
-					bird.body:force( dx*100,-3000)
-					bird.body:angle(0)
-				
+				if player.body then
+					local ppx,ppy=player.body:position()
+					local bpx,bpy=bird.body:position()
+					
+					local dx=bpx-ppx
+					local dy=bpy-ppy
+					
+					if dx*dx + dy*dy < 32*32 then
+					
+						bird.flap_cooldown=30
+					
+						bird.body:force( dx*100,-3000)
+						bird.body:angle(0)
+					
+					end
 				end
-				
 			end
 		end
 	end
