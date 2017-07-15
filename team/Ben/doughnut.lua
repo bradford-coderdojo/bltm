@@ -1615,21 +1615,21 @@ legend=combine_legends(default_legend,{
 title="This is the world's hardest platformer",
 map=[[
 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-||. . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
-||. . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
-||. . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
-||. . . . . . . . . t.t.. . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
-||. . . . . . . . . t.t.. . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ,,,,,,. . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ,,,,,,. . . . . ||
-||. . . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . ||
-||,,,,,,. . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . ||
-||======. . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . . ||
-||. . . . . . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . . . ||
-||. . . . ,,. . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMM,,. . . . . . . . ||
-||. . . . ==. . . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMM,,. . . . . . . . . ||
-||,,. . . . . . . . . . . . . . . . . . . ,,MMMMMMMMMMMM,,. . . . . . . . . . ||
-||==. . . . . . . . . . . . . . . . . . . . ,,MMMMMMMM,,. . . . . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . . . . . . . . t.t.. . . . . . ,,MMMMMMMMMMMMMMMMMMMMMM,,. . . . . . . . ||
+||. . . . . . . . . t.t.. . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . . . ||
+||. . . . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . . ||
+||. . . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . ||
+||. . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . ||
+||,,,,,,. . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . ||
+||======. . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . . ||
+||. . . . . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . . . ||
+||. . . . ,,. . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMM,,. . . . . . . . ||
+||. . . . ==. . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMM,,. . . . . . . . . ||
+||,,. . . . . . . . . . . . . . . . . . ,,MMMMMMMMMMMMMM,,. . . . . . . . . . ||
+||==. . . . . . . . . . . . . . . . . . . ,,MMMMMMMMMM,,. . . . . . . . . . . ||
 ||. . . ,,. . . ,,. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . ==. . . ==. . . ,,. . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . ==. ,,. . . . . . . . . . . . . . . . . . . . . . . . ||
