@@ -1438,7 +1438,7 @@ add=function(opts)
 			local px,py=bird.body:position()
 			local rz=bird.body:angle()
 			local t=bird.frames[1]
-			system.components.sprites.list_add({t=t,h=8,px=px,py=py,rz=180*rz/math.pi})			
+			system.components.sprites.list_add({t=t,h=16,px=px,py=py,rz=180*rz/math.pi})			
 		end
 	end
 	bird.active=true
@@ -1622,14 +1622,14 @@ map=[[
 ||. . . . . . . . . t.t.. . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . . . ||
 ||. . . . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . . ||
 ||. . . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . ||
-||. . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . ||
-||,,,,,,. . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . ||
-||======. . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . . ||
-||. . . . . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . . . ||
+||. . . . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . ||
+||,,,,. . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . ||
+||====. ,,. . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . . ||
+||. . . ==. . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . . . ||
 ||. . . . ,,. . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMM,,. . . . . . . . ||
 ||. . . . ==. . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMM,,. . . . . . . . . ||
 ||,,. . . . . . . . . . . . . . . . . . ,,MMMMMMMMMMMMMM,,. . . . . . . . . . ||
-||==. . . . . . . . . . . . . . . . . . . ,,MMMMMMMMMM,,. . . . . . . . . . . ||
+||==. . . . . . . . . . . . . . . . . . . . ,,MMMMMM,,. . . . . . . . . . . . ||
 ||. . . ,,. . . ,,. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . ==. . . ==. . . ,,. . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . ==. ,,. . . . . . . . . . . . . . . . . . . . . . . . ||
@@ -1639,8 +1639,8 @@ map=[[
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ==. . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ,,. . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ==. . ||
-||. . . S . . . . s.s.. . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . . S . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ==. . ||
+||. . . . . . . . s.s.. . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||,,,,,,,,,,,,,,,,s.s.,,,,. ,,. . ,,,,. . . ,,. . . ,,,,. . . . ,,,,,,,,,,,,,,||
 ||========================. ==. . ====. . . ==. . . ====. . . . ==============||
 ||0 0 0 0 0 0 0 0 0 0 0 0 . 0 . . 0 0 . . . 0 . . . 0 0 . . . . 0 0 0 0 0 0 0 ||
