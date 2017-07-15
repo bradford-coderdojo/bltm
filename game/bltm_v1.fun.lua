@@ -1331,6 +1331,17 @@ load=function() graphics.loads{
 . . . . . . . . 
 ]]},
 
+{nil,"bird_2",[[
+. . . . . . . . 
+. . 7 7 7 . . . 
+. 7 7 7 7 . 7 . 
+7 7 7 7 7 7 7 7 
+. . 7 7 7 . . . 
+. . 7 7 7 . . . 
+. . 7 . 7 . . . 
+. . . . . . . . 
+]]},
+
 }end,
 
 space=function()
@@ -1349,7 +1360,7 @@ add=function(opts)
 	local bird=entities.add{caste="bird"}
 
 	bird.frame=0
-	bird.frames={ names.bird_1.idx+0 }
+	bird.frames={ names.bird_1.idx+0 , names.bird_2.idx+0 }
 		
 	bird.flap_cooldown=0
 	
@@ -1389,6 +1400,9 @@ add=function(opts)
 			local px,py=bird.body:position()
 			local rz=bird.body:angle()
 			local t=bird.frames[1]
+			if bird.flap_cooldown > 0 then
+				t=bird.frames[2]
+			end
 			system.components.sprites.list_add({t=t,h=8,px=px,py=py,rz=180*rz/math.pi})			
 		end
 	end
@@ -1398,8 +1412,7 @@ add=function(opts)
 	bird.body:position(opts.px,opts.py)
 --	bird.body:velocity(opts.vx,opts.vy)
 	bird.body:mass(0.1)
-
---	bird.body:moment(0)
+	bird.body:moment(1000)
 	
 
 	bird.shape=bird.body:shape("circle",4,0,0)
