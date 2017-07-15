@@ -1306,6 +1306,79 @@ add=function(opts)
 end,
 }
 
+-----------------------------------------------------------------------------
+--[[#entities.systems.donut
+
+	donut = entities.systems.donut.add(opts)
+
+Add an donut.
+
+]]
+-----------------------------------------------------------------------------
+entities.systems.bird={
+
+load=function() graphics.loads{
+
+-- 1 x 24x24
+{nil,"bird_1",[[
+. . . . . . . . 
+. . . . . . 7 . 
+. . . . . 7 7 7 
+. 7 7 7 7 . . . 
+. . 7 7 7 . . . 
+. . 7 7 7 . . . 
+. . 7 . 7 . . . 
+. . . . . . . . 
+]]},
+
+}end,
+
+space=function()
+
+end,
+
+spawn=function(count)
+	
+end,
+
+add=function(opts)
+
+	local names=system.components.tiles.names
+	local space=entities.get("space")
+
+	local bird=entities.add{caste="bird"}
+
+	bird.frame=0
+	bird.frames={ names.bird_1.idx+0 }
+		
+	bird.update=function()
+	end
+	
+	bird.draw=function()
+		if bird.active then
+			local px,py=bird.body:position()
+			local rz=bird.body:angle()
+			local t=bird.frames[1]
+			system.components.sprites.list_add({t=t,h=8,px=px,py=py,rz=180*rz/math.pi})			
+		end
+	end
+	bird.active=true
+	
+	bird.body=space:body(1,1)
+	bird.body:position(opts.px,opts.py)
+--	bird.body:velocity(opts.vx,opts.vy)
+	
+
+	bird.shape=bird.body:shape("circle",4,0,0)
+	bird.shape:friction(1)
+	bird.shape:elasticity(0)
+	bird.shape:collision_type(space:type("bird"))
+--	bird.shape.loot=bird
+
+	return bird
+end,
+}
+
 ----------------------------------------------------------------------------
 --[[#entities.tiles.start
 
@@ -1348,10 +1421,20 @@ Display a npc
 -----------------------------------------------------------------------------
 entities.tiles.npc=function(tile)
 
-	local names=system.components.tiles.names
-	local space=entities.get("space")
-
 	local item=entities.systems.npc.add({px=tile.x*8,py=tile.y*8})
+
+end
+
+-----------------------------------------------------------------------------
+--[[#entities.tiles.bird
+
+Display a bird
+
+]]
+-----------------------------------------------------------------------------
+entities.tiles.bird=function(tile)
+
+	local item=entities.systems.bird.add({px=tile.x*8,py=tile.y*8})
 
 end
 
@@ -1399,6 +1482,7 @@ local default_legend={
 
 -- items not tiles, so display tile 0 and we will add a sprite for display
 	["N1"]={ 	npc="npc1",  },
+	["b "]={ 	bird="bird",  },
 
 }
 	
@@ -1421,17 +1505,17 @@ map=[[
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . . . . . . b . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . b . . . . . . . . . . . . . . . . . . . ||
+||. . . . . . . . . . . . . b . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . . . b . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||,,. . . . . . ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,. . . . . ||
