@@ -1389,7 +1389,7 @@ entities.systems.bird={
 
 load=function() graphics.loads{
 
--- 1 x 24x24
+-- 1 x 48x48
 {nil,"bird_1",[[
 FFFFFFFFFFFF4 4 3 4 FFFFFFFFFFFF
 FFFFFFFF7 6 4 3 3 2 5 7 FFFFFFFF
@@ -1466,7 +1466,7 @@ The player start point, just save the x,y
 ]]
 -----------------------------------------------------------------------------
 entities.tiles.start=function(tile)
-	entities.set("players_start",{tile.x*8+4,tile.y*8+4}) --  remember start point
+	entities.set("players_start",{tile.x*16+8,tile.y*16+8}) --  remember start point
 end
 
 -----------------------------------------------------------------------------
