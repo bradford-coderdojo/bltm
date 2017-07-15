@@ -1535,17 +1535,17 @@ map=[[
 ||. . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
 ||. . . . . . . . . t.t.. . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
 ||. . . . . . . . . t.t.. . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . MM,,. . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . MM,,. . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . MM,,. . . . . ||
-||,,,,,,. . . . . . . . . . . . . . . . . . . . . . . . . . . . MM,,. . . . . ||
-||======. . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . ||
-||. . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . ||
-||. . . . ,,. . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . ||
-||. . . . ==. . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . . ||
-||,,. . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . . ||
-||==. . . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMM. . . . . . . . ||
-||. . . ,,. . . ,,. . . . . . . . . . . . MMMMMMMMMMMMMMMM. . . . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ,,,,,,. . . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ,,,,,,. . . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ,,,,,,. . . . . ||
+||,,,,,,. . . . . . . . . . . . . . . . . . . . . . . . . . . ,,,,,,. . . . . ||
+||======. . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMM,,,,,,. . . . . ||
+||. . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMM,,,,,,. . . . . ||
+||. . . . ,,. . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMM,,,,,,. . . . . ||
+||. . . . ==. . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMM,,,,. . . . . . ||
+||,,. . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMM,,,,. . . . . . ||
+||==. . . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMM,,,,. . . . . . ||
+||. . . ,,. . . ,,. . . . . . . . . . . . MMMMMMMMMMMMMMMM,,,,. . . . . . . . ||
 ||. . . ==. . . ==. . . ,,. . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . ==. ,,. . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . ==. . . ,,. . . . . . . . . . . . . . . . . . . . ||
