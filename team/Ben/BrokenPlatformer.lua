@@ -13,65 +13,79 @@ hardware,main=system.configurator({
 -- debug text dump
 local ls=function(t) print(require("wetgenes.string").dump(t)) end
 
+
 local chat_text=[[
 
 #npc1 Conversation NPC1
-    Jonny McGhee
 
 <welcome
-    
-    Hello, Human
 
-    >hello
-        Hello... Jonny?
-    >how
-        How are you... Other Human?
-    >exit
-        Erm... I just remembered, I have a meeting to go to... 'yeahhh...'
+	Good Morning
+	
+	>kitchen1
 
-<hello
-    Hi, will you be my friend, I've never had a friend before?
-    >friend
-        Sure, I feel sorry for you
-    >exit
-        No, I won't be your friend, wierdo
+		Do you know the way to the KITCHEN?
+	>tomato1
 
-<how
-    I am fine Human! How are you?
-    >fine
-        Fine
-    >OK
-        OK
-    >meh
-        Meh
-    >argh
-        AAAAAAAARRRRRGGGGGGGGGHHHH
+		I am a lost TOMATO, can you help me?
+<kitchen1
 
-<friend
-    YAY THIS IS SOOOOO COOLLLLL, can you do something for me?
-    >yes
-        Yes, of course, anything for a friend
-    >exit
-        No, I'm far to busy to do anything for the likes of a new friend
+	I don't know, but the person on the next floor knows how to get to about anywhere.
+	
+	>exit
 
-<yes
-    YAY, can you go and get that apple for me please?
-    >exit
-        OK
+	Thank you, that's all I need to know
 
+<tomato1
+	
+	I need to warn you that there's MAYONNAISE about, they will splat and kill you.
+
+	>tomato11
+	
+	How do I avoid them?
+
+<tomato11
+
+	The mayonnaise enemies haven't been programmed into the game yet, there's nothing to say
+
+	>exit
+		Exit
 #npc2 Conversation NPC2
-    Jonny McGhee
 
 <welcome
-        Yes, thanks very much for your help, I have a secret to show you, would you like to see?
-    >yes
-        Yeah, cool
-    >exit
-        No thanks
 
-<yes
-    >exit
-        Let's Go!!
+	Hello there.
+	
+	>route1
+	
+		The person downstairs told me you know the way to the KITCHEN.
+<route1
+
+	You need to make it to the top floor, then turn right.
+
+	>exit
+		Thanks that really helped,
+
+	>route11
+		So what what are you doing here?
+<route11
+	I know everything about these parts, and I'm here to help those.
+
+	>exit
+		Interesting.
+
+
+#npc3 Conversation NPC3
+
+	Not a real girl.
+
+<welcome
+
+	Sorry but I am not a real girl.
+	
+	>exit
+	
+		Bye bye.
 
 ]]
 
@@ -103,157 +117,149 @@ graphics={
 0 0 0 0 0 0 0 0 
 ]]},
 {0x0102,"char_wall",[[
-O O R R R R O O 
-O O R R R R O O 
-r r r r o o o o 
-r r r r o o o o 
-R R O O O O R R 
-R R O O O O R R 
-o o o o r r r r 
-o o o o r r r r 
-]]},
-{0x0103,"char_nuclearwall",[[
-Y Y Y Y Y Y Y Y 
+Y . . Y . . . Y 
 Y . Y . . . Y Y 
 Y Y . . . Y . Y 
 Y . . . Y . . Y 
 Y . . Y . . . Y 
 Y . Y . . . Y Y 
 Y Y . . . Y . Y 
-Y Y Y Y Y Y Y Y 
+Y . . . Y . . Y 
+
 ]]},
-{0x0104,"char_floor",[[
+{0x0103,"char_floor",[[
 R R R R R R R R 
-r r r r r r r r 
-r r r r r r r r 
-. r r r r r r . 
-. . r . r r . . 
-. . . . r r . . 
-. . . . . r . . 
-. . . . . . . . 
-]]},
-{0x0105,"char_redfloor",[[
-R R R R R R R R 
-R R 0 0 0 0 R R 
-R 0 R 0 0 R 0 R 
-R 0 0 R R 0 0 R 
-R 0 0 R R 0 0 R 
-R 0 R 0 0 R 0 R 
-R R 0 0 0 0 R R 
+. R . . . R . . 
+. . R . . . R . 
+. . . R . . . R 
+R . . . R . . . 
+. R . . . R . . 
+. . R . . . R . 
 R R R R R R R R 
 ]]},
-{0x0106,"char_radioactive",[[
-. . . . . . . . 
-. . . Y Y Y . . 
-. . Y 0 0 0 Y . 
-. Y Y Y 0 Y Y Y 
-. Y Y Y 0 Y Y Y 
-. Y 0 0 Y 0 0 Y 
-. . Y 0 Y 0 Y . 
-. . . Y Y Y . . 
-]]},
-{0x0107,"char_barrel_bottom",[[
-4 4 4 4 4 4 4 4 
-4 4 4 4 4 4 4 4 
-4 4 4 4 4 4 4 4 
-4 4 4 4 4 4 4 4 
-4 4 4 4 4 4 4 4 
-4 4 4 4 4 4 4 4 
-4 4 4 4 4 4 4 4 
-4 4 4 4 4 4 4 4 
-]]},
-{0x0108,"char_barrel_top",[[
-. 3 3 3 3 3 3 . 
-3 4 4 4 4 4 4 3 
-4 3 3 3 3 3 3 4 
-4 4 4 4 4 4 4 4 
-4 4 4 4 4 4 4 4 
-4 4 4 4 4 4 4 4 
-4 4 4 4 4 4 4 4 
-4 4 4 4 4 4 4 4 
-]]},
-{0x0109,"char_solid_blue",[[
-c c c c c c c c 
-c c c c c c c c 
-c c c c c c c c 
-c c c c c c c c 
-c c c c c c c c 
-c c c c c c c c 
-c c c c c c c c 
-c c c c c c c c 
-]]},
-{0x010a,"char_steelgirder",[[
-5 5 5 5 5 5 5 5 
-5 5 0 0 0 0 5 5 
-5 0 5 0 0 5 0 5 
-5 0 0 5 5 0 0 5 
-5 0 0 5 5 0 0 5 
-5 0 5 0 0 5 0 5 
-5 5 0 0 0 0 5 5 
-5 5 5 5 5 5 5 5 
-]]},
-{0x010b,"char_dark_steelgirder",[[
-4 4 4 4 4 4 4 4 
-4 4 0 0 0 0 4 4 
-4 0 4 0 0 4 0 4 
-4 0 0 4 4 0 0 4 
-4 0 0 4 4 0 0 4 
-4 0 4 0 0 4 0 4 
-4 4 0 0 0 0 4 4 
-4 4 4 4 4 4 4 4 
-]]},
-{0x010c,"char_darker_steelgirder",[[
-3 3 3 3 3 3 3 3 
-3 3 0 0 0 0 3 3 
-3 0 3 0 0 3 0 3 
-3 0 0 3 3 0 0 3 
-3 0 0 3 3 0 0 3 
-3 0 3 0 0 3 0 3 
-3 3 0 0 0 0 3 3 
-3 3 3 3 3 3 3 3 
-]]},
-{0x010d,"char_padding_left",[[
-S . . . . . . . 
-S S . . . . . . 
-S S S . . . . . 
-S S . . . . . . 
-S . . . . . . . 
-S S . . . . . . 
-S S S . . . . . 
-S S . . . . . . 
-]]},
-{0x010e,"char_padding_right",[[
-. . . . . . . S 
-. . . . . . S S 
-. . . . . S S S 
-. . . . . . S S 
-. . . . . . . S 
-. . . . . . S S 
-. . . . . S S S 
-. . . . . . S S 
+{0x0104,"tile_redgrid_trblborder",[[
+R R R R R R R R 
+R R . . . R . R 
+R . R . . . R R 
+R . . R . . . R 
+R . . . R . . R 
+R R . . . R . R 
+R . R . . . R R 
+R R R R R R R R 
 ]]},
 
+{0x0105,"tile_redgrid_tlbborders",[[
+R R R R R R R R 
+R R . . . R . . 
+R . R . . . R . 
+R . . R . . . R 
+R . . . R . . . 
+R R . . . R . . 
+R . R . . . R . 
+R R R R R R R R 
+]]},
+	
+{0x0106,"tile_redgrid_trbborders",[[
+R R R R R R R R 
+. R . . . R . R 
+. . R . . . R R 
+. . . R . . . R 
+R . . . R . . R 
+. R . . . R . R 
+. . R . . . R R 
+R R R R R R R R 
+]]},
+{0x0107,"tile_redgrid",[[
+R . . . R . . . 
+. R . . . R . . 
+. . R . . . R . 
+. . . R . . . R 
+R . . . R . . . 
+. R . . . R . . 
+. . R . . . R . 
+. . . R . . . R 
+]]},
+{0x0108,"tile_redgrid_tborder",[[
+R R R R R R R R 
+. R . . . R . . 
+. . R . . . R . 
+. . . R . . . R 
+R . . . R . . . 
+. R . . . R . . 
+. . R . . . R . 
+. . . R . . . R 
+]]},
+{0x0109,"tile_redgrid_bborder",[[
+R . . . R . . . 
+. R . . . R . . 
+. . R . . . R . 
+. . . R . . . R 
+R . . . R . . . 
+. R . . . R . . 
+. . R . . . R . 
+R R R R R R R R 
+]]},
+--{0x0300,"tile_redgrid_tlborder",[[
+--R R R R R R R R 
+--R R . . . R . . 
+--R . R . . . R . 
+--R . . R . . . R 
+--R . . . R . . . 
+--R R . . . R . . 
+--R . R . . . R . 
+--R . . R . . . R 
+--]]},
+--{0x0301,"tile_redgrid_trborder",[[
+--R R R R R R R R 
+--. R . . . R . R 
+--. . R . . . R R 
+--. . . R . . . R 
+--R . . . R . . R 
+--. R . . . R . R 
+--. . R . . . R R 
+--. . . R . . . R 
+--]]},
+--{0x0302,"tile_redgrid_lborder",[[
+--R . . . R . . . 
+--R R . . . R . . 
+--R . R . . . R . 
+--R . . R . . . R 
+--R . . . R . . . 
+--R R . . . R . . 
+--R . R . . . R . 
+--R . . R . . . R 
+--]]},
+--{0x0303,"tile_redgrid_rborder",[[
+--R . . . R . . R 
+--. R . . . R . R 
+--. . R . . . R R 
+--. . . R . . . R 
+--R . . . R . . R 
+--. R . . . R . R 
+--. . R . . . R R 
+--. . . R . . . R 
+--]]},
 {0x0200,"player_f1",[[
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . R R R R . . . . . . . . . . 
-. . . . . . . . . . R R R R . . . . . . . . . . 
-. . . . . . . . . . s s 0 s . . . . . . . . . . 
-. . . . . . . . . . s s s s s . . . . . . . . . 
-. . . . . . . . . . s s s s . . . . . . . . . . 
-. . . . . . . . . . . s s . . . . . . . . . . . 
-. . . . . . . . . . Y Y Y Y . . . . . . . . . . 
-. . . . . . . . . Y Y Y Y Y Y . . . . . . . . . 
-. . . . . . . . . Y Y Y Y Y Y . . . . . . . . . 
-. . . . . . . . Y Y Y Y . Y Y Y . . . . . . . . 
-. . . . . . . . Y Y Y Y Y . Y Y . . . . . . . . 
-. . . . . . . . . . B B B B . . . . . . . . . . 
-. . . . . . . . . B B B . B B . . . . . . . . . 
-. . . . . . . . . B B . B B B . . . . . . . . . 
-. . . . . . . . . 0 0 0 . 0 0 0 . . . . . . . . 
+. . . . . . . . . . . 1 2 . . . . . . . . . . . 
+. . . . . . . . . . 1 7 7 2 . . . . . . . . . . 
+. . . . . . . . . 4 4 4 4 4 4 4 . . . . . . . . 
+. . . . . . . . . . 7 7 0 7 . . . . . . . . . . 
+. . . . . . . . . . 7 7 7 7 7 . . . . . . . . . 
+. . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
+. . . . . . . . . . . 7 7 . . . . . . . . . . . 
+. . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
+. . . . . . . . . 7 7 7 7 7 7 . . . . . . . . . 
+. . . . . . . . . 7 7 7 7 7 7 . . . . . . . . . 
+. . . . . . . . 7 7 7 7 . 7 7 7 . . . . . . . . 
+. . . . . . . . 7 7 7 7 7 . 7 7 . . . . . . . . 
+. . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
+. . . . . . . . . 7 7 7 . 7 7 . . . . . . . . . 
+. . . . . . . . . 7 7 . 7 7 7 . . . . . . . . . 
+. . . . . . . . . 7 7 7 . 7 7 7 . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -261,25 +267,25 @@ S S . . . . . .
 ]]},
 {0x0203,"player_f2",[[
 . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . R R R R . . . . . . . . . . 
-. . . . . . . . . . R R R R . . . . . . . . . . 
-. . . . . . . . . . s s 0 s . . . . . . . . . . 
-. . . . . . . . . . s s s s s . . . . . . . . . 
-. . . . . . . . . . s s s s . . . . . . . . . . 
-. . . . . . . . . . . s s . . . . . . . . . . . 
-. . . . . . . . . . Y Y Y Y . . . . . . . . . . 
-. . . . . . . . . Y Y . Y Y Y . . . . . . . . . 
-. . . . . . . . . Y Y . Y Y Y . . . . . . . . . 
-. . . . . . . . . Y Y . Y Y Y . . . . . . . . . 
-. . . . . . . . . Y Y . . Y Y . . . . . . . . . 
-. . . . . . . . . . B B B B . . . . . . . . . . 
-. . . . . . . . . . . B B . . . . . . . . . . . 
-. . . . . . . . . . . B B . . . . . . . . . . . 
-. . . . . . . . . . . 0 0 0 . . . . . . . . . . 
+. . . . . . . . . . 4 4 4 4 . . . . . . . . . . 
+. . . . . . . . . 4 2 7 7 1 4 . . . . . . . . . 
+. . . . . . . . . 4 7 2 1 7 4 . . . . . . . . . 
+. . . . . . . . 4 7 7 1 2 7 7 4 . . . . . . . . 
+. . . . . . . 4 7 7 1 7 7 2 7 7 4 . . . . . . . 
+. . . . . . . 4 4 4 4 4 4 4 4 4 4 . . . . . . . 
+. . . . . . . . . . 7 7 0 7 . . . . . . . . . . 
+. . . . . . . . . . 7 7 7 7 7 . . . . . . . . . 
+. . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
+. . . . . . . . . . . 7 7 . . . . . . . . . . . 
+. . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
+. . . . . . . . . 7 7 . 7 7 7 . . . . . . . . . 
+. . . . . . . . . 7 7 . 7 7 7 . . . . . . . . . 
+. . . . . . . . . 7 7 . 7 7 7 . . . . . . . . . 
+. . . . . . . . . 7 7 7 . 7 7 . . . . . . . . . 
+. . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
+. . . . . . . . . . . 7 7 . . . . . . . . . . . 
+. . . . . . . . . . . 7 7 . . . . . . . . . . . 
+. . . . . . . . . . . 7 7 7 . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -287,85 +293,29 @@ S S . . . . . .
 ]]},
 {0x0206,"player_f3",[[
 . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . 4 4 4 4 . . . . . . . . . . 
+. . . . . . . . . 4 2 7 7 1 4 . . . . . . . . . 
+. . . . . . . . . 4 7 2 1 7 4 . . . . . . . . . 
+. . . . . . . . 4 7 7 1 2 7 7 4 . . . . . . . . 
+. . . . . . . 4 7 7 1 7 7 2 7 7 4 . . . . . . . 
+. . . . . . . 4 4 4 4 4 4 4 4 4 4 . . . . . . . 
+. . . . . . . . . . 7 7 0 7 . . . . . . . . . . 
+. . . . . . . . . . 7 7 7 7 7 . . . . . . . . . 
+. . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
+. . . . . . . . . . . 7 7 . . . . . . . . . . . 
+. . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
+. . . . . . . . . 7 7 7 7 7 7 . . . . . . . . . 
+. . . . . . . . 7 7 7 7 7 7 7 7 . . . . . . . . 
+. . . . . . . 7 7 7 7 7 7 7 7 7 7 . . . . . . . 
+. . . . . . . 7 7 . 7 7 7 7 . 7 7 . . . . . . . 
+. . . . . . . . . . 7 7 7 7 7 . . . . . . . . . 
+. . . . . . . . . 7 7 7 . 7 7 . 7 . . . . . . . 
+. . . . . . . . 7 7 . . . . 7 7 7 . . . . . . . 
+. . . . . . . . 7 7 7 . . . 7 7 . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . R R R R . . . . . . . . . . 
-. . . . . . . . . . R R R R . . . . . . . . . . 
-. . . . . . . . . . s s 0 s . . . . . . . . . . 
-. . . . . . . . . . s s s s s . . . . . . . . . 
-. . . . . . . . . . s s s s . . . . . . . . . . 
-. . . . . . . . . . . s s . . . . . . . . . . . 
-. . . . . . . . . . Y Y Y Y . . . . . . . . . . 
-. . . . . . . . . Y Y Y Y Y Y . . . . . . . . . 
-. . . . . . . . Y Y Y Y Y Y Y Y . . . . . . . . 
-. . . . . . . Y Y Y Y Y Y Y Y Y Y . . . . . . . 
-. . . . . . . Y Y . Y Y Y Y . Y Y . . . . . . . 
-. . . . . . . . . . B B B B B . . . . . . . . . 
-. . . . . . . . . B B B . B B . . . . . . . . . 
-. . . . . . . . B B . . . . B B 0 . . . . . . . 
-. . . . . . . . 0 0 0 . . . 0 0 . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-]]},
-{0x0600,"body_p1",[[
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . 4 4 4 4 . . . . . . 
-. . . . . 4 2 7 7 1 4 . . . . . 
-. . . . . 4 7 2 1 7 4 . . . . . 
-. . . . 4 7 7 1 2 7 7 4 . . . . 
-. . . 4 7 7 1 7 7 2 7 7 4 . . . 
-. . . 4 4 4 4 4 4 4 4 4 4 . . . 
-. . . . . . 7 7 0 7 . . . . . . 
-. . . . . . 7 7 7 7 7 . . . . . 
-. . . . . . 7 7 7 7 . . . . . . 
-. . . . . . . 7 7 . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-]]},
-
-{0x0602,"body_p2",[[
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . 7 7 . . . . . . . 
-. . . . . . 7 7 7 7 . . . . . . 
-. . . . . 7 7 7 7 7 7 . . . . . 
-. . . . 7 7 7 7 7 7 7 7 . . . . 
-. . . 7 7 7 7 7 7 7 7 7 7 . . . 
-. . . 7 7 . 7 7 7 7 . 7 7 . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-]]},
-
-{0x0604,"body_p3",[[
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . 7 7 7 7 . . . . . . 
-. . . . . . 7 7 7 7 7 . . . . . 
-. . . . . 7 7 7 . 7 7 . 7 . . . 
-. . . . 7 7 . . . . 7 7 7 . . . 
-. . . . 7 7 7 . . . 7 7 . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
 ]]},
 {0x0209,"cannon_ball",[[
 . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -403,69 +353,87 @@ Y Y 0 Y Y 0 Y Y
 . Y Y 0 0 Y Y . 
 . . Y Y Y Y . . 
 ]]},
-{0x0501,"tomato",[[
-. . G . . G . . 
-. . R G G R . . 
-. R R r r R R . 
-R R r R R r R R 
-R R R r r R R R 
-R R r R R r R R 
-. R R R R R R . 
-. . R R R R . . 
-]]},
 
 
 {0x0800,"npc1",[[
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . d d d . . . . . . . . . . 
-. . . . . . . . . . d d d d d . . . . . . . . . 
-. . . . . . . . . d d d d d d d . . . . . . . . 
-. . . . . . . . . d d d d d d d . . . . . . . . 
-. . . . . . . . . d d d d d d d . . . . . . . . 
-. . . . . . . . . . s 0 s j d d . . . . . . . . 
-. . . . . . . . . M s F F s d . . . . . . . . . 
-. . . . . . . . . . s s s s . . . . . . . . . . 
-. . . . . . . . . . . s s . . . . . . . . . . . 
-. . . . . . . . . . R R R R . . . . . . . . . . 
-. . . . . . . . . R R R R R R . . . . . . . . . 
-. . . . . . . . . R R R R R R . . . . . . . . . 
-. . . . . . . . s s R . R R s s . . . . . . . . 
-. . . . . . . . s s . R R R s s . . . . . . . . 
-. . . . . . . . . . R R R R . . . . . . . . . . 
-. . . . . . . . . 7 7 . 7 7 F . . . . . . . . . 
-. . . . . . . . . 5 5 F . 5 F . . . . . . . . . 
-. . . . . . . . F F F . F F F . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . R R R R R . . . . . . . . . 
+. . . . . . . . . . R R R R R R R . . . . . . . . 
+. . . . . . . . . . R R R R R R R . . . . . . . . 
+. . . . . . . . . . . Y 0 Y Y R R . . . . . . . . 
+. . . . . . . . . . M Y m m Y R R . . . . . . . . 
+. . . . . . . . . . . Y Y Y Y . R . R . . . . . . 
+. . . . . . . . . . . . Y Y . . . R . . . . . . . 
+. . . . . . . . . . . Y b b Y . . . . . . . . . . 
+. . . . . . . . . . Y b b b b Y . . . . . . . . . 
+. . . . . . . . . . Y b b b b Y . . . . . . . . . 
+. . . . . . . . . Y Y b . b b Y Y . . . . . . . . 
+. . . . . . . . . Y Y . b b b Y Y . . . . . . . . 
+. . . . . . . . . . . b b b b . . . . . . . . . . 
+. . . . . . . . . . Y I . Y Y I . . . . . . . . . 
+. . . . . . . . . . Y I I . Y I . . . . . . . . . 
+. . . . . . . . . I I I . I I I . . . . . . . . . 
 ]]},
-{0x0801,"npc2",[[
+
+{0x0803,"npc2",[[
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . d d d d . . . . . . . . . . 
-. . . . . . . . . d d d d d d . . . . . . . . . 
-. . . . . . . . . d d d d d d . . . . . . . . . 
-. . . . . . . . . . s 0 s j d . . . . . . . . . 
-. . . . . . . . . M s F F s d . . . . . . . . . 
+. . . . . . . . . . . I I I . . . . . . . . . . 
+. . . . . . . . . . I I I I I . . . . . . . . . 
+. . . . . . . . . I I I I I I I . . . . . . . . 
+. . . . . . . b b b b b b b b b . . . . . . . . 
+. . . . . . . . . j j j j j j j . . . . . . . . 
+. . . . . . . . . . s 0 s j j j . . . . . . . . 
+. . . . . . . . . M s F F s j . . . . . . . . . 
 . . . . . . . . . . s s s s . . . . . . . . . . 
 . . . . . . . . . . . s s . . . . . . . . . . . 
-. . . . . . . . . . R R R R . . . . . . . . . . 
-. . . . . . . . . R R R R R R . . . . . . . . . 
-. . . . . . . . . R R R R R R . . . . . . . . . 
-. . . . . . . . s s R . R R s s . . . . . . . . 
-. . . . . . . . s s . R R R s s . . . . . . . . 
-. . . . . . . . . . R R R R . . . . . . . . . . 
-. . . . . . . . . 7 7 . 7 7 F . . . . . . . . . 
-. . . . . . . . . 5 5 F . 5 F . . . . . . . . . 
-. . . . . . . . F F F . F F F . . . . . . . . . 
+. . . . . . . . . . 4 G G 4 . . . . . . . . . . 
+. . . . . . . . . 4 G G G G 4 . . . . . . . . . 
+. . . . . . . . . 4 G G G G 4 . . . . . . . . . 
+. . . . . . . . s s G . G 2 s s . . . . . . . . 
+. . . . . . . . s s . 2 2 2 s s . . . . . . . . 
+. . . . . . . . . . 2 2 2 2 . . . . . . . . . . 
+. . . . . . . . . 7 7 . 7 7 B . . . . . . . . . 
+. . . . . . . . . 5 5 B . 5 B . . . . . . . . . 
+. . . . . . . . B B B . B B B . . . . . . . . . 
+]]},
+
+{0x0806,"npc3",[[
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . o o . . . . . . . . . . 
+. . . . . . . . . . o o o o o . . . . . . . . . 
+. . . . . . . . o o o o o o o o . . . . . . . . 
+. . . . . . . . . o o 4 4 o o o . . . . . . . . 
+. . . . . . . . . . 4 0 4 4 o o . . . . . . . . 
+. . . . . . . . . 5 4 m m 4 4 o . . . . . . . . 
+. . . . . . . . . . 4 4 4 4 o o . . . . . . . . 
+. . . . . . . . . . . 4 4 . o o . . . . . . . . 
+. . . . . . . . . . j 5 5 j . . . . . . . . . . 
+. . . . . . . . . 5 f j j f 5 . . . . . . . . . 
+. . . . . . . . . 5 j j j j 5 . . . . . . . . . 
+. . . . . . . . 4 4 j . j j 4 4 . . . . . . . . 
+. . . . . . . . 4 4 . j j j 4 4 . . . . . . . . 
+. . . . . . . . . . g g g g . . . . . . . . . . 
+. . . . . . . . . g g . g g d . . . . . . . . . 
+. . . . . . . . . g g d . g d . . . . . . . . . 
+. . . . . . . . d d d . d d d . . . . . . . . . 
 ]]},
 
 }
@@ -486,198 +454,71 @@ local default_legend={
 	[0]={ name="char_empty",	},
 
 	[". "]={ name="char_empty",				},
-	["M "]={ name="char_empty",	monster=1,	},
-    ["xx"]={ name="char_empty", deadly=1,   },
 	["00"]={ name="char_black",				solid=1, dense=1, },		-- black border
 	["0 "]={ name="char_empty",				solid=1, dense=1, },		-- empty border
 
-	["||"]={ name="char_wall",				solid=1, dense=1},				-- wall
-	["=="]={ name="char_floor",				solid=1, dense=1},				-- floor
--- custom made
-    ["__"]={ name="char_barrel_bottom",     solid=1, dense=1},  --barrel bottom
-    ["--"]={ name="char_barrel_top",        solid=1, dense=1},  --barrel top
-    ["xo"]={ name="char_radioactive"}               ,           --radioactive symbol
-	["//"]={ name="char_redfloor",  		solid=1, dense=1},	-- floor red
-	["s/"]={ name="char_steelgirder",  		solid=1, dense=1},	-- floor red
-	["d/"]={ name="char_dark_steelgirder",	solid=1, dense=1},	-- floor red
-	["D/"]={ name="char_darker_steelgirder",	solid=1, dense=1},	-- floor red
-	["Y|"]={ name="char_nuclearwall",		solid=1, dense=1},	-- nuclear wall
-	["bb"]={ name="char_solid_blue"},                       	-- solid blue colour
-	["pl"]={ name="char_padding_left", solid=1, dense=1},      	-- space padding left
-	["pr"]={ name="char_padding_right", solid=1, dense=1},     	-- space padding right
-
+	["||"]={ name="char_wall",				solid=1},				-- wall
+	["=="]={ name="char_floor",				solid=1},				-- redgrid tbborder floor
+	["BB"]={ name="tile_redgrid_trblborder",		solid=1},				
+	["LL"]={ name="tile_redgrid_tlbborder",			solid=1},				
+	["RR"]={ name="tile_redgrid_trbborder",			solid=1},				
+	["TO"]={ name="tile_redgrid_tborder",			solid=1},				
+	["BO"]={ name="tile_redgrid_bborder",			solid=1},				
+	["NB"]={ name="tile_redgrid",				solid=1},				
+	--["LO"]={ name="tile_redgrid_lborder",			solid=1},			
+	--["RO"]={ name="tile_redgrid_rborder",			solid=1},	
+	--["LC"]={ name="tile_redgrid_tlborder",			solid=1},			
+	--["RC"]={ name="tile_redgrid_trborder",			solid=1},
+	
 -- items not tiles, so display tile 0 and we will add a sprite for display
-	["S "]={ name="char_empty",	start=1	},
+	["S "]={ name="char_empty",	start=1,	},
 	["N1"]={ name="char_empty",	npc="npc1",				sprite="npc1", },
-
-    ["AA"]={ name="char_empty", loot=1},
+	["N2"]={ name="char_empty",	npc="npc2",				sprite="npc2", },
+	["N3"]={ name="char_empty",	npc="npc3",				sprite="npc3", },
 
 }
 	
 levels={}
 
-levels[0]={
-legend=combine_legends(default_legend,{
-	["?0"]={ name="char_empty" },
-}),
-title="This is a blank map.",
-map=[[
-||0000000000000000000000000000000000000000000000000000000000000000000000000000||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx||
-]],
-}
-
 levels[1]={
 legend=combine_legends(default_legend,{
 	["?0"]={ name="char_empty" },
 }),
-title="Base Level by Xriss",
+title="",
 map=[[
 ||0000000000000000000000000000000000000000000000000000000000000000000000000000||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . N3. . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||================================================. . . . ====================||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||======. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||==============================================RR. . . . LL==================||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||==========. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . ||||||||||||. . . . N2. . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . ||||||||||||. . . . . . . . . ||
-||==============. . . . ======================================================||
+||====RR. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||==. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . S . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . N1. . ||
-||==. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ==============||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||==. . . . . . ====================================================  . . . . ||
+||========RR. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . TOTOTOTOTOTO. . . . N2. . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . NBNBNBNBNBNB. . . . . . . . . ||
+||====RR. . . . BB. . . LL======================BOBOBOBOBOBO==================||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||============================================================================||
-||0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ||
+||. . . . BB. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . N1. . . ||
+||. . BB. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . LL============||
+||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . BB. . . . . . . ||
+||BB. . . . . . . . . . . . . . . . . . . . . . . . . . . . BB. . . . . . . . ||
+||. . . . . . . . . . . . . . . S . . . . . . . . . . . . BB. . . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . . . . . BB. . . . . . . . . . ||
+||======RR. . . . LL==========================================================||
+||0 0 0 0 . . . . 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ||
 ]],
 }
 
-levels[2]={
-legend=combine_legends(default_legend,{
-	["?0"]={ name="char_empty" },
-	["?/"]={ name="char_redfloor", solid=1 },
-	["?s"]={ name="char_steelgirder", solid=1 },
-	["?d"]={ name="char_dark_steelgirder", solid=1 },
-	["?s"]={ name="char_darker_steelgirder", solid=1 },
-}),
-title="LEVEL 1 : SPACE",
-map=[[
-pl0000000000000000000000000000000000000000000000000000000000000000000000000000pr
-pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
-pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
-pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
-pl. . .?s . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
-pl?D. . . . . . s/. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
-pl. . . . . . . . . d/s/s/D/d/s/s/s/s/D/s/d/s/s/. . . . . . . . . . . . N1. . pr
-pl. . ?s. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
-pl?d. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . D/d/pr
-pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . AA. . . . . . . . . pr
-pl. . .?s . . . . . . . . . . . . . . . . . . . . . . . d/s/s/d/s/D/s/s/d/  . pr
-pl?s. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
-pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
-pl. . . ?s. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
-pl?s. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
-pl. . ?d. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
-pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
-pl?s. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
-pl. . . . . . . . . . . . . . . . . . . . . . . . . . s/. . . . . . . . . . . pr
-pl. . ?s. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
-pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
-pl?d. . . . . . . . . . . . . . . . . . . s/d/. . . . . . . . . . . . . . . . pr
-pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
-pl. . D/s/d/s/d/s/s/d/s/D/s/s/d/s/s . . . . . . D/s/s/d/. . . . . . . . . . . pr
-pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
-pl. . . . . . . . . . . . . . . . . . . s/d/s/. . . . . . . . . . . . . . . . pr
-pl. S . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
-pls/d/s/s/s/d/s/s/s/D/s/d/s/s/s/d/s/D/. . . . . . . . . . . . . . . . . . . . pr
-pl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . pr
-plxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxpr
-]],
-}
-
-levels[3]={
-legend=combine_legends(default_legend,{
-	["?0"]={ name="char_empty" },
-	["?="]={ name="char_floor", solid=1 },
-	["YX"]={ name="char_nuclearwall", solid=1, deadly=1 },
-	["/X"]={ name="char_redfloor", solid=1, deadly=1 },
-}),
-title="LEVEL 2 : NUCLEAR WASTELAND",
-map=[[
-Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|
-Y|. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . x0. . . . . . Y|
-Y|. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Y|
-Y|. x0. . . . . . . . . . . . . xo. . . . . . . . . . . . . . . . . . S . . . Y|
-Y|. . . . . //////////. . . . . . . . . . . . . . . . . . . //////////////////Y|
-Y|. . . . //. . . . . //. . . . . . . . . . . . . . . . . //. . . . . . . . . Y|
-Y|--. . . . . . . . . . //. . . . . . . . . . . . . . . //. . . . . . . . . . Y|
-Y|__. . . . . . . . . . . //////////////. . . xo. . . //. . . . . . . . . . . Y|
-Y|////. . . . . . . . . . . . . . . . . //. . . . . . . . . . . . . . . . . . Y|
-Y|. . //. . . . . . . . . . . . . . . . . //. . . . . . . . . . xo. . . . . . Y|
-Y|. . . //. . . . . . . . . . . . . . . . . //////. . . . . . . . . . . . . . Y|
-Y|. . . . //. . . . . . . . . . . . . . . . . . . //. . . . . . . . . . . . . Y|
-Y|. . . . . //. . . . . . . . . . . . . . . . . . . //. . . . . . . . . . . . Y|
-Y|. . . . . . //. . . . . . . . . . . . . . . . . . . //. . . . . . . . . . . Y|
-Y|. . . . . . . //. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Y|
-Y|. . . . . . . . //. . . . . . . . . . . . . . . . . . . . . . . . . . . . . Y|
-Y|. . . . . . . . . ////////////////. . . . //////bbbbbbbbbb//  . . . . xo. . Y|
-Y|. . . . . . . . . . . . . . . . . . . . //. . //bb__bb__bb////. . . . . . . Y|
-Y|. . . . . . . . . . . . . . . . . . . //. . . //bb__bb__bb//. //. . . . . . Y|
-Y|. . . . . . . . . . . . . . . . . . //. . . . //bb__bb__bb//. . //. . . . . Y|
-Y|. . . . . . . . . . . . . . . . . //. . . . . //bb__bb__bb//. . . //////////Y|
-Y|. . . . . . . . . . . . . . . . //. . . . . . //bb__bb__bb//. . . . . . . . Y|
-Y|. . . . . . . . . . . . . . . //. . . . . . . //bb__bb__bb//. . . . . . . . Y|
-Y|. . . . . . . . . . . . . . //. . . . . . . . //bb__bb__bb//. . . . . . . . Y|
-Y|////////////////////////////. . . . . . . . . //bb__bb__bb//. . . . . . . . Y|
-Y|. . . . . . . . . . . . . . . . . . . . . . . //bb__bb__bb//. . . . . . . . Y|
-Y|. . . . . . . . . . . . . . . . . . . . . . . /X/X/X/X/X/X/X. . . . . . . . Y|
-Y|. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Y|
-Y|. . . . . . . . . YXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYX. . . . . . . . . . Y|
-Y|YXYXYXYXYXYXYXYXYXYXxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxYXYXYXYXYXYXYXYXYXYXYXY|
-]],
-}
 
 -- handle tables of entities that need to be updated and drawn.
 
@@ -739,7 +580,7 @@ function setup_space()
 
 	local space=entities_set("space", chipmunk.space() )
 	
-	space:gravity(0,700)
+	space:gravity(0,350)
 	space:damping(0.5)
 	space:sleep_time_threshold(1)
 	space:idle_speed_threshold(10)
@@ -914,37 +755,6 @@ function add_item()
 	return item
 end
 
-function add_loot()
-	local space=entities_get("space")
-	local loot=entities_add{caste="loot"}
-	loot.update=function()
-		if loot.active then				
-			if loot.player then
-				loot.player.score=loot.player.score+1
-				loot.player.tomato=1
-				loot.active=false
-				space:remove(loot.shape)
-
-				for i,npc in pairs(entities_items("npc")) do
-					if npc.shape.npc == 'npc1' then
-						--space:remove(npc.shape)
-                        --npc.shape=space.static:shape("box", (x-1)*8,(y-1)*8, (x+2)*8,(y+2)*8,0)
-                        --npc.shape:collision_type(0x4003)
-                        npc.shape.npc="npc2"
-					end
-				end
-			end
-		end
-	end
-	loot.draw=function()
-		if loot.active then
-			local time=entities_get("time")
-			local b=math.sin( (time.game*8 + (loot.px+loot.py)/16 ) )*2
-			system.components.sprites.list_add({t=0x0501,h=8,px=loot.px,py=loot.py+b})				
-		end
-	end
-	return loot
-end
 
 function setup_score()
 
@@ -1007,7 +817,7 @@ function char_controls(it,fast)
 
 	local jump=fast*200 -- up velocity we want when jumping
 	local speed=fast*60 -- required x velocity
-	local airforce=speed*2 -- replaces surface velocity
+	local airforce= speed*2 -- replaces surface velocity
 	local groundforce=speed/2 -- helps surface velocity
 	
 	if ( time.game-it.body.floor_time < 0.125 ) or ( it.floor_time-time.game > 10 ) then -- floor available recently or not for a very long time (stuck)
@@ -1117,78 +927,6 @@ function char_controls(it,fast)
 end
 
 
-function add_monster(opts)
-
-	local space=entities_get("space")
-
-	local monster=entities_add{caste="monster"}
-
-	monster.color=opts.color or {r=0,g=0,b=0,a=1}
-	monster.dir=1		
-	monster.frame=0
-	monster.frames={0x0200,0x0203,0x0200,0x0206}
-
-	monster.active=true
-	monster.body=space:body(1,math.huge)
-	monster.body:position(opts.px,opts.py)
-	monster.body:velocity(opts.vx,opts.vy)
-	monster.body.headroom={}
-	
-	monster.body:velocity_func(function(body)
---				body.gravity_x=-body.gravity_x
---				body.gravity_y=-body.gravity_y
-		return true
-	end)
-				
-	monster.floor_time=0 -- last time we had some floor
-
-	monster.shape=monster.body:shape("segment",0,-4,0,4,4)
-	monster.shape:friction(1)
-	monster.shape:elasticity(0)
-	monster.shape:collision_type(0x2001) -- walker
-	monster.shape.monster=monster
-	monster.shape.triggered=monster
-	
-	monster.body.floor_time=0
-
-
-	monster.move="left"
-
-	monster.last_cx=0
-	monster.last_cx_count=0
-
-	monster.update=function()
-		if monster.active then
-		
-			if monster.triggered then
-				if     monster.triggered.trigger==-1 then
-					monster.move="left"
-				elseif monster.triggered.trigger== 1 then
-					monster.move="right"
-				end
-			end
-			
-			local px,py=monster.body:position()
-			local cx=math.floor((px+1)/2) -- if this number changes then we are moving
-			
-			if monster.last_cx == cx then -- not moving
-				monster.last_cx_count=monster.last_cx_count+1
-				if monster.last_cx_count > 30 then
-					monster.triggered=nil
-					monster.last_cx_count=0
-					if monster.move=="left" then monster.move="right" else monster.move="left" end -- change dir
-				end
-			else -- moved
-				monster.last_cx=cx
-				monster.last_cx_count=0
-			end
-		
-		
-			char_controls(monster,0.5)
-		end
-	end
-end
-
 function add_player(i)
 	local players_colors={30,14,18,7,3,22}
 
@@ -1199,7 +937,6 @@ function add_player(i)
 
 	player.idx=i
 	player.score=0
-    player.tomato=0
 	
 	local t=bitdown.cmap[ players_colors[i] ]
 	player.color={}
@@ -1248,26 +985,6 @@ function add_player(i)
 		end
 	end
 	
-	player.die=function()
-		if not player.active then return end -- not alive
-		
-		local px,py=player.body:position()
-		local vx,vy=player.body:velocity()
-
-		player.active=false -- die
---			player.dead=true
-
-		space:remove(player.shape) -- auto?
-		space:remove(player.body)
-		
-		local it
-		it=add_detritus(names.body_p1.idx,16,px,py-4,0.25,16,0.1,0.5,"box",-4,-3,4,3,0) it.body:velocity(vx*3,vy*3) it.color=player.color
-		it=add_detritus(names.body_p2.idx,16,px,py+0,0.25,16,0.1,0.5,"box",-3,-2,3,2,0) it.body:velocity(vx*2,vy*2) it.color=player.color
-		it=add_detritus(names.body_p3.idx,16,px,py+4,0.25,16,0.1,0.5,"box",-3,-2,3,2,0) it.body:velocity(vx*1,vy*1) it.color=player.color
-
-        oven.mods["wetgenes.gamecake.mods.escmenu"].show = true
-	end
-
 	player.update=function()
 		local up=ups(player.idx) -- the controls for this player
 		
@@ -1348,7 +1065,6 @@ end
 function change_level(idx)
 
 	setup_level(idx)
-    local lvlnum=idx
 	
 end
 
@@ -1673,8 +1389,7 @@ function setup_level(idx)
 				item.pz=-1
 			end
 			if tile.npc then
-				--local item=add_item()
-				local item=entities_add{caste="npc"}
+				local item=add_item()
 
 				item.shape=space.static:shape("box", (x-1)*8,(y-1)*8, (x+2)*8,(y+2)*8,0)
 
@@ -1688,23 +1403,6 @@ function setup_level(idx)
 	
 end
 
-function add_detritus(sprite,h,px,py,bm,bi,bf,be,...)
-	local space=entities_get("space")
-	local item=add_item()
-
-	item.sprite=sprite
-	item.h=h
-
-	item.active=true
-	item.body=space:body(bm,bi)
-	item.body:position(px,py)
-
-	item.shape=item.body:shape(...)
-	item.shape:friction(bf)
-	item.shape:elasticity(be)
-	
-	return item
-end
 -----------------------------------------------------------------------------
 --[[#setup_menu
 
@@ -1882,8 +1580,7 @@ update=function()
 
 		setup_score()
 		
-        local lvlnum = 2
-		setup_level(lvlnum) -- load map
+		setup_level(1) -- load map
 		
 		add_player(1) -- add a player
 
@@ -1907,4 +1604,3 @@ update=function()
 	entities_call("draw") -- because we are going to add them all in again here
 	
 end
-

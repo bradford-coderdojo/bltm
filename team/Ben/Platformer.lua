@@ -3,13 +3,16 @@ local chatdown=require("wetgenes.gamecake.fun.chatdown")
 local bitdown=require("wetgenes.gamecake.fun.bitdown")
 local chipmunk=require("wetgenes.chipmunk")
 
+screen={hx=480,hy=480,ss=3,fps=25}
 
 hardware,main=system.configurator({
 	mode="fun64", -- select the standard 320x240 screen using the swanky32 palette.
 	graphics=function() return graphics end,
 	update=function() update() end, -- called repeatedly to update+draw
 })
-
+hardware[1].bloom=nil
+hardware[1].filter=nil
+hardware[1].shadow=1
 -- debug text dump
 local ls=function(t) print(require("wetgenes.string").dump(t)) end
 
@@ -18,61 +21,116 @@ local chat_text=[[
 
 #npc1 Conversation NPC1
 
+	A rare bread of NPC who will fulfil all your conversational desires for 
+	a very good price.
+
+	=sir sir/madam
+
+	>convo
+
+		Is this the right room for a conversation?
+		
+	>exit
+	
+		...ERROR...EOF...PLEASE...RESTART...
+
 <welcome
 
-	Good Morning
+	Good Morning {sir},
 	
-	>kitchen1
+	>morning
 
-		Do you know the way to the KITCHEN?
-	>tomato1
+		Good morning to you too.
 
-		I am a lost TOMATO, can you help me?
-<kitchen1
+	>afternoon
 
-	I don't know, but the person on the next floor knows how to get to about anywhere.
+		I think you will find it is now afternoon.
+
+	>sir
+
+		How dare you call me {sir}!
+
+<sir
+
+	My apologies, I am afraid that I am but an NPC with very little 
+	brain, how might I address you?
+	
+	>welcome.1?sir!=madam
+
+		You may address me as Madam.
+
+		=sir madam
+
+	>welcome.2?sir!=God
+
+		You may address me as God.
+
+		=sir God
+
+	>welcome.3?sir!=sir
+
+		You may address me as Sir.
+
+		=sir sir
+
+<afternoon
+	
+	Then good afternoon {sir},
+	
+	>convo
+
+<morning
+	
+	and how may I help {sir} today?
+	
+	>convo
+
+
+<convo
+
+	Indeed it is, would you like the full conversation or just the quick natter?
+
+	>convo_full
+	
+		How long is the full conversation?
+
+	>convo_quick
+
+		A quick natter sounds just perfect.
+
+<convo_full
+
+	The full conversation is very full and long so much so that you 
+	will have to page through many pages before you get to make a 
+	decision
+	
+	>
+		Like this?
+	<
+	
+	Yes just like this. In fact I think you can see that we are already 
+	doing it.
+			
 	
 	>exit
 
-	Thank you, that's all I need to know
+<convo_quick
 
-<tomato1
+	...
 	
-	I need to warn you that there's MAYONNAISE about, they will splat and kill you.
-
-	>tomato11
-	
-	How do I avoid them?
-
-<tomato11
-
-	The mayonnaise enemies haven't been programmed into the game yet, there's nothing to say
-
 	>exit
-		Exit
+
 #npc2 Conversation NPC2
 
+	Not a real boy.
+
 <welcome
 
-	Hello there.
+	Sorry but I am not a real boy.
 	
-	>route1
+	>exit
 	
-		The person downstairs told me you know the way to the KITCHEN.
-<route1
-
-	You need to make it to the top floor, then turn right.
-
-	>exit
-		Thanks that really helped,
-
-	>route11
-		So what what are you doing here?
-<route11
-	I know everything about these parts, and I'm here to help those.
-
-	>exit
-		Interesting.
+		Bye bye.
 
 
 #npc3 Conversation NPC3
@@ -116,137 +174,168 @@ graphics={
 0 0 0 0 0 0 0 0 
 0 0 0 0 0 0 0 0 
 ]]},
-{0x0102,"char_wall",[[
-Y . . Y . . . Y 
-Y . Y . . . Y Y 
-Y Y . . . Y . Y 
-Y . . . Y . . Y 
-Y . . Y . . . Y 
-Y . Y . . . Y Y 
-Y Y . . . Y . Y 
-Y . . . Y . . Y 
-
+{0x0102,"char_door1",[[
+F F F F F F F F 
+F F F F F F F F 
+F F F F F F F F 
+F F F F F F F F 
+F F F F F F F F 
+F F F F F F F F 
+F F F F F F F F 
+F F F F F F F F 
 ]]},
 {0x0103,"char_floor",[[
 R R R R R R R R 
 . R . . . R . . 
 . . R . . . R . 
 . . . R . . . R 
-R . . . R . . . 
-. R . . . R . . 
-. . R . . . R . 
 R R R R R R R R 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
 ]]},
-{0x0104,"tile_redgrid_trblborder",[[
+{0x0104,"char_box",[[
 R R R R R R R R 
 R R . . . R . R 
 R . R . . . R R 
 R . . R . . . R 
-R . . . R . . R 
-R R . . . R . R 
-R . R . . . R R 
 R R R R R R R R 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
 ]]},
 
-{0x0105,"tile_redgrid_tlbborders",[[
+{0x0105,"char_leftedge",[[
 R R R R R R R R 
 R R . . . R . . 
 R . R . . . R . 
 R . . R . . . R 
-R . . . R . . . 
-R R . . . R . . 
-R . R . . . R . 
 R R R R R R R R 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
 ]]},
-	
-{0x0106,"tile_redgrid_trbborders",[[
+{0x0106,"char_rightedge",[[
 R R R R R R R R 
 . R . . . R . R 
 . . R . . . R R 
 . . . R . . . R 
-R . . . R . . R 
-. R . . . R . R 
-. . R . . . R R 
 R R R R R R R R 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
 ]]},
-{0x0107,"tile_redgrid",[[
-R . . . R . . . 
-. R . . . R . . 
-. . R . . . R . 
-. . . R . . . R 
-R . . . R . . . 
-. R . . . R . . 
-. . R . . . R . 
-. . . R . . . R 
+{0x0107,"char_blue_wall",[[
+B . . . B . . B 
+B B . . . B . B 
+B . B . . . B B 
+B . . B . . . B 
+B . . . B . . B 
+B B . . . B . B 
+B . B . . . B B 
+B . . B . . . B 
 ]]},
-{0x0108,"tile_redgrid_tborder",[[
+{0x0108,"char_blue_floor",[[
+B B B B B B B B 
+. B . . . B . . 
+. . B . . . B . 
+. . . B . . . B 
+B B B B B B B B 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+]]},
+{0x0109,"char_blue_box",[[
+B B B B B B B B 
+B B . . . B . B 
+B . B . . . B B 
+B . . B . . . B 
+B B B B B B B B 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+]]},
+
+{0x010a,"char_blue_leftedge",[[
+B B B B B B B B 
+B B . . . B . . 
+B . B . . . B . 
+B . . B . . . B 
+B B B B B B B B 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+]]},
+{0x010b,"char_blue_rightedge",[[
+B B B B B B B B 
+. B . . . B . B 
+. . B . . . B B 
+. . . B . . . B 
+B B B B B B B B 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+]]},
+{0x010c,"char_door2",[[
+. . . . . R R R 
+. . . . . R . R 
+. . . . . R R R 
+. . . . . R . R 
+. . . . . R R R 
+. . . . . R . R 
+. . . . . R R R 
+. . . . . R . R 
+]]},
+{0x010d,"char_door3",[[
+R R R . . . . . 
+R . R . . . . . 
+R R R . . . . . 
+R . R . . . . . 
+R R R . . . . . 
+R . R . . . . . 
+R R R . . . . . 
+R . R . . . . . 
+]]},
+{0x010e,"char_door4",[[
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . R R R 
+. . . . . R . R 
+]]},
+{0x010f,"char_door5",[[
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+R R R . . . . . 
+R . R . . . . . 
+]]},
+{0x0110,"char_door6",[[
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
 R R R R R R R R 
-. R . . . R . . 
-. . R . . . R . 
-. . . R . . . R 
-R . . . R . . . 
-. R . . . R . . 
-. . R . . . R . 
-. . . R . . . R 
+. R . R R . R .
 ]]},
-{0x0109,"tile_redgrid_bborder",[[
-R . . . R . . . 
-. R . . . R . . 
-. . R . . . R . 
-. . . R . . . R 
-R . . . R . . . 
-. R . . . R . . 
-. . R . . . R . 
-R R R R R R R R 
-]]},
---{0x0300,"tile_redgrid_tlborder",[[
---R R R R R R R R 
---R R . . . R . . 
---R . R . . . R . 
---R . . R . . . R 
---R . . . R . . . 
---R R . . . R . . 
---R . R . . . R . 
---R . . R . . . R 
---]]},
---{0x0301,"tile_redgrid_trborder",[[
---R R R R R R R R 
---. R . . . R . R 
---. . R . . . R R 
---. . . R . . . R 
---R . . . R . . R 
---. R . . . R . R 
---. . R . . . R R 
---. . . R . . . R 
---]]},
---{0x0302,"tile_redgrid_lborder",[[
---R . . . R . . . 
---R R . . . R . . 
---R . R . . . R . 
---R . . R . . . R 
---R . . . R . . . 
---R R . . . R . . 
---R . R . . . R . 
---R . . R . . . R 
---]]},
---{0x0303,"tile_redgrid_rborder",[[
---R . . . R . . R 
---. R . . . R . R 
---. . R . . . R R 
---. . . R . . . R 
---R . . . R . . R 
---. R . . . R . R 
---. . R . . . R R 
---. . . R . . . R 
---]]},
 {0x0200,"player_f1",[[
 . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . 4 4 4 4 . . . . . . . . . . 
-. . . . . . . . . 4 2 7 7 1 4 . . . . . . . . . 
-. . . . . . . . . 4 7 2 1 7 4 . . . . . . . . . 
-. . . . . . . . 4 7 7 1 2 7 7 4 . . . . . . . . 
-. . . . . . . 4 7 7 1 7 7 2 7 7 4 . . . . . . . 
-. . . . . . . 4 4 4 4 4 4 4 4 4 4 . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . 5 6 . . . . . . . . . . . 
+. . . . . . . . . . 5 7 7 6 . . . . . . . . . . 
+. . . . . . . . . 5 5 5 5 5 5 5 . . . . . . . . 
 . . . . . . . . . . 7 7 0 7 . . . . . . . . . . 
 . . . . . . . . . . 7 7 7 7 7 . . . . . . . . . 
 . . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
@@ -267,12 +356,12 @@ R R R R R R R R
 ]]},
 {0x0203,"player_f2",[[
 . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . 4 4 4 4 . . . . . . . . . . 
-. . . . . . . . . 4 2 7 7 1 4 . . . . . . . . . 
-. . . . . . . . . 4 7 2 1 7 4 . . . . . . . . . 
-. . . . . . . . 4 7 7 1 2 7 7 4 . . . . . . . . 
-. . . . . . . 4 7 7 1 7 7 2 7 7 4 . . . . . . . 
-. . . . . . . 4 4 4 4 4 4 4 4 4 4 . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . 5 6 . . . . . . . . . . . 
+. . . . . . . . . . 5 7 7 6 . . . . . . . . . . 
+. . . . . . . . . 5 5 5 5 5 5 5 . . . . . . . . 
 . . . . . . . . . . 7 7 0 7 . . . . . . . . . . 
 . . . . . . . . . . 7 7 7 7 7 . . . . . . . . . 
 . . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
@@ -293,12 +382,12 @@ R R R R R R R R
 ]]},
 {0x0206,"player_f3",[[
 . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . 4 4 4 4 . . . . . . . . . . 
-. . . . . . . . . 4 2 7 7 1 4 . . . . . . . . . 
-. . . . . . . . . 4 7 2 1 7 4 . . . . . . . . . 
-. . . . . . . . 4 7 7 1 2 7 7 4 . . . . . . . . 
-. . . . . . . 4 7 7 1 7 7 2 7 7 4 . . . . . . . 
-. . . . . . . 4 4 4 4 4 4 4 4 4 4 . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . 5 6 . . . . . . . . . . . 
+. . . . . . . . . . 5 7 7 6 . . . . . . . . . . 
+. . . . . . . . . 5 5 5 5 5 5 5 . . . . . . . . 
 . . . . . . . . . . 7 7 0 7 . . . . . . . . . . 
 . . . . . . . . . . 7 7 7 7 7 . . . . . . . . . 
 . . . . . . . . . . 7 7 7 7 . . . . . . . . . . 
@@ -457,19 +546,23 @@ local default_legend={
 	["00"]={ name="char_black",				solid=1, dense=1, },		-- black border
 	["0 "]={ name="char_empty",				solid=1, dense=1, },		-- empty border
 
-	["||"]={ name="char_wall",				solid=1},				-- wall
-	["=="]={ name="char_floor",				solid=1},				-- redgrid tbborder floor
-	["BB"]={ name="tile_redgrid_trblborder",		solid=1},				
-	["LL"]={ name="tile_redgrid_tlbborder",			solid=1},				
-	["RR"]={ name="tile_redgrid_trbborder",			solid=1},				
-	["TO"]={ name="tile_redgrid_tborder",			solid=1},				
-	["BO"]={ name="tile_redgrid_bborder",			solid=1},				
-	["NB"]={ name="tile_redgrid",				solid=1},				
-	--["LO"]={ name="tile_redgrid_lborder",			solid=1},			
-	--["RO"]={ name="tile_redgrid_rborder",			solid=1},	
-	--["LC"]={ name="tile_redgrid_tlborder",			solid=1},			
-	--["RC"]={ name="tile_redgrid_trborder",			solid=1},
-	
+	["D1"]={ name="char_door1",				},					-- wall
+	["=="]={ name="char_floor",				solid=1},				-- floor
+	["Rb"]={ name="char_box",				solid=1},				-- box
+	["E="]={ name="char_leftedge",				solid=1},				-- floor left edge
+	["=E"]={ name="char_rightedge",				solid=1},				-- floor right edge
+	["D7"]={ name="char_blue_wall",				solid=1},				-- wall
+	["--"]={ name="char_blue_floor",			solid=1},				-- floor
+	["Bb"]={ name="char_blue_box",				solid=1},				-- box
+	["E-"]={ name="char_blue_leftedge",			solid=1},				-- floor left edge
+	["-E"]={ name="char_blue_rightedge",			solid=1},				-- floor right edge
+	["D2"]={ name="char_door2",				},		
+	["D3"]={ name="char_door3",				},	
+	["D4"]={ name="char_door4",				},	
+	["D5"]={ name="char_door5",				},	
+	["D6"]={ name="char_door6",				},	
+
+
 -- items not tiles, so display tile 0 and we will add a sprite for display
 	["S "]={ name="char_empty",	start=1,	},
 	["N1"]={ name="char_empty",	npc="npc1",				sprite="npc1", },
@@ -486,36 +579,36 @@ legend=combine_legends(default_legend,{
 }),
 title="",
 map=[[
-||0000000000000000000000000000000000000000000000000000000000000000000000000000||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||==============================================RR. . . . LL==================||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||====RR. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||========RR. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . TOTOTOTOTOTO. . . . N2. . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . NBNBNBNBNBNB. . . . . . . . . ||
-||====RR. . . . BB. . . LL======================BOBOBOBOBOBO==================||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . BB. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . N1. . . ||
-||. . BB. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . LL============||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . BB. . . . . . . ||
-||BB. . . . . . . . . . . . . . . . . . . . . . . . . . . . BB. . . . . . . . ||
-||. . . . . . . . . . . . . . . S . . . . . . . . . . . . BB. . . . . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . BB. . . . . . . . . . ||
-||======RR. . . . LL==========================================================||
-||0 0 0 0 . . . . 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ||
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . D4D6D5. . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . D2D1D3. . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . D2D1D3. . 00
+00. . . . . . . . Rb. . . E====E. . . . E========E. . . . E==================E00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00. . . . . . Rb. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00. . . E==E. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . E==============E00
+00E========E. . . E================E. . . E==========E. . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00. . . . . Rb. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00. . . Rb. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00Rb. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 00
+00. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . S . 00
+00E================E. . . Rb. . . Rb. . . . Rb. . . Rb. . . E==E. . . E======E00
+000 0 0 0 0 0 0 0 0 . . . 0 . . . 0 . . . . 0 . . . 0 . . . 0 0 . . . 0 0 0 0 00
 ]],
 }
 
@@ -580,7 +673,7 @@ function setup_space()
 
 	local space=entities_set("space", chipmunk.space() )
 	
-	space:gravity(0,350)
+	space:gravity(0,450)
 	space:damping(0.5)
 	space:sleep_time_threshold(1)
 	space:idle_speed_threshold(10)
@@ -817,7 +910,7 @@ function char_controls(it,fast)
 
 	local jump=fast*200 -- up velocity we want when jumping
 	local speed=fast*60 -- required x velocity
-	local airforce= speed*2 -- replaces surface velocity
+	local airforce=speed*2 -- replaces surface velocity
 	local groundforce=speed/2 -- helps surface velocity
 	
 	if ( time.game-it.body.floor_time < 0.125 ) or ( it.floor_time-time.game > 10 ) then -- floor available recently or not for a very long time (stuck)

@@ -14,12 +14,22 @@ body {
 
 #content {
 	position: absolute;
-	top: 35%;
+	top: 230px;
 	left: 20px;
 	background-color: #bbb;
 	width: 64%;
 	border-radius: 40px;
 
+}
+
+div#menu {
+    position: absolute;
+    top: 220px;
+    left: 10%;
+    border-top-left: 60px;
+    border-bottom-right: 60px;
+    text-align: center;
+    display: inline-block;
 }
 
 #footerimg {
@@ -28,3 +38,49 @@ body {
 	bottom: 0px;
 	width: 100%;
 }
+
+.myButton {
+    text-align: center;
+    font-size: 170%;
+    color: #000;
+    margin: 20px 20px 20px 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration:none;
+}
+
+.myButton:hover {
+    background-color: #bbb !important;
+}
+
+.myButton:active {
+    background-color: #bbb !important;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.drop-content {
+    display: none;
+    position: absolute;
+    background-color: #b7b7b7;
+    z-index: 1;
+}
+
+.drop-content a {
+    color: black;
+    background-color: #b7b7b7;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .drop-content {
+    display: block;
+}
+
+.dropdown:hover .drop-btn {
+    background-color: #ddd !important;
+}
+
