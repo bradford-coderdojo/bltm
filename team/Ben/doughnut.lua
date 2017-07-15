@@ -1438,7 +1438,7 @@ add=function(opts)
 			local px,py=bird.body:position()
 			local rz=bird.body:angle()
 			local t=bird.frames[1]
-			system.components.sprites.list_add({t=t,h=8,px=px,py=py,rz=180*rz/math.pi})			
+			system.components.sprites.list_add({t=t,h=16,px=px,py=py,rz=180*rz/math.pi})			
 		end
 	end
 	bird.active=true
@@ -1615,21 +1615,21 @@ legend=combine_legends(default_legend,{
 title="This is the world's hardest platformer",
 map=[[
 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-||. . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
-||. . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
-||. . . . . . . . . . . . . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
-||. . . . . . . . . t.t.. . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
-||. . . . . . . . . t.t.. . . . . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM. . . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ,,,,,,. . . . . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ,,,,,,. . . . . ||
-||. . . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . ||
-||,,,,,,. . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . ||
-||======. . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . . ||
-||. . . . . . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . . . ||
-||. . . . ,,. . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMM,,. . . . . . . . ||
-||. . . . ==. . . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMM,,. . . . . . . . . ||
-||,,. . . . . . . . . . . . . . . . . . . ,,MMMMMMMMMMMM,,. . . . . . . . . . ||
-||==. . . . . . . . . . . . . . . . . . . . ,,MMMMMMMM,,. . . . . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . . . . . . . . t.t.. . . . . . ,,MMMMMMMMMMMMMMMMMMMMMM,,. . . . . . . . ||
+||. . . . . . . . . t.t.. . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . . . ||
+||. . . . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . . ||
+||. . . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . ||
+||. . . . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . ||
+||,,,,. . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . ||
+||====. ,,. . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . . ||
+||. . . ==. . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMMMMMM,,. . . . . . . ||
+||. . . . ,,. . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMMMMMM,,. . . . . . . . ||
+||. . . . ==. . . . . . . . . . . . . ,,MMMMMMMMMMMMMMMMMM,,. . . . . . . . . ||
+||,,. . . . . . . . . . . . . . . . . . ,,MMMMMMMMMMMMMM,,. . . . . . . . . . ||
+||==. . . . . . . . . . . . . . . . . . . . ,,MMMMMM,,. . . . . . . . . . . . ||
 ||. . . ,,. . . ,,. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . ==. . . ==. . . ,,. . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . ==. ,,. . . . . . . . . . . . . . . . . . . . . . . . ||
@@ -1639,8 +1639,8 @@ map=[[
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ==. . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ,,. . ||
-||. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ==. . ||
-||. . . S . . . . s.s.. . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
+||. . . S . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ==. . ||
+||. . . . . . . . s.s.. . . . . . . . . . . . . . . . . . . . . . . . . . . . ||
 ||,,,,,,,,,,,,,,,,s.s.,,,,. ,,. . ,,,,. . . ,,. . . ,,,,. . . . ,,,,,,,,,,,,,,||
 ||========================. ==. . ====. . . ==. . . ====. . . . ==============||
 ||0 0 0 0 0 0 0 0 0 0 0 0 . 0 . . 0 0 . . . 0 . . . 0 0 . . . . 0 0 0 0 0 0 0 ||
