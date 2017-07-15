@@ -1351,7 +1351,37 @@ add=function(opts)
 	bird.frame=0
 	bird.frames={ names.bird_1.idx+0 }
 		
+	bird.flap_cooldown=0
+	
 	bird.update=function()
+	
+		bird.body:force(0,-60)
+
+		if bird.flap_cooldown > 0 then
+		
+			bird.flap_cooldown=bird.flap_cooldown-1
+
+		else
+
+			for i,player in pairs(entities.caste("player")) do
+				
+				local ppx,ppy=player.body:position()
+				local bpx,bpy=bird.body:position()
+				
+				local dx=bpx-ppx
+				local dy=bpy-ppy
+				
+				if dx*dx + dy*dy < 32*32 then
+				
+					bird.flap_cooldown=30
+				
+					bird.body:force( dx*100,-3000)
+					bird.body:angle(0)
+				
+				end
+				
+			end
+		end
 	end
 	
 	bird.draw=function()
@@ -1367,11 +1397,14 @@ add=function(opts)
 	bird.body=space:body(1,1)
 	bird.body:position(opts.px,opts.py)
 --	bird.body:velocity(opts.vx,opts.vy)
+	bird.body:mass(0.1)
+
+--	bird.body:moment(0)
 	
 
 	bird.shape=bird.body:shape("circle",4,0,0)
-	bird.shape:friction(1)
-	bird.shape:elasticity(0)
+	bird.shape:friction(0.5)
+	bird.shape:elasticity(0.8)
 	bird.shape:collision_type(space:type("bird"))
 --	bird.shape.loot=bird
 
