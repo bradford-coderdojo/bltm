@@ -1497,6 +1497,18 @@ entities.tiles.npc=function(tile)
 	local item=entities.systems.npc.add({px=tile.x*8,py=tile.y*8})
 
 end
+-----------------------------------------------------------------------------
+--[[#entities.tiles.bird
+
+Display a bird
+
+]]
+-----------------------------------------------------------------------------
+entities.tiles.bird=function(tile)
+
+	local item=entities.systems.bird.add({px=tile.x*8,py=tile.y*8})
+
+end
 
 -----------------------------------------------------------------------------
 --[[#levels
