@@ -1,5 +1,3 @@
-![BLTM](/docs/logo.png)
-
 # Bacon Lettuce Tomato Mayo
 
 # Project Aims
