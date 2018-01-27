@@ -1,4 +1,4 @@
-![alt tag](https://github.com/bradford-coderdojo/bltm/blob/master/Mr%20.BLT.fatpixel.png)
+![alt tag](https://github.com/bradford-coderdojo/bltm/blob/master/Mr%20.%20B1T.fatpixel.png)
 
 # Bacon Lettuce Tomato Mayo
 
